@@ -1,7 +1,8 @@
 {
   "name": "fj-buttons",
   "private": true,
-  "version": "0.1.1",
+  "version": "0.1.2",
+  "main": "src/buttons.less",
   "dependencies": {
     "fj-colors": "git://fake.ghe.domain/flapjack/fj-colors.git",
     "fj-typography": "git://fake.ghe.domain/flapjack/fj-typography.git",
