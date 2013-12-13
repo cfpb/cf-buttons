@@ -3,10 +3,12 @@
    Button Styling
    ========================================================================== */
 
-@btn-base-font-size-px: 14;
-@btn-base-font-size-em: unit( @btn-base-font-size-px / 16, em );
+@btn-base-font-size-px: 14px;
+@btn-base-font-size-em: unit( @btn-base-font-size-px / @base-font-size-px, em );
 
-.btn {
+.btn,
+.btn:link,
+.btn:visited {
     box-sizing: border-box;
     display: inline-block;
     
@@ -19,13 +21,12 @@
 
     margin: 0;
     
-    background-color: @pacific; /* Pacific */
-    
+    background-color: @pacific;
     color: #FFF;
+
+    .webfont-medium;
     font-size: @btn-base-font-size-em;
     line-height: 1;
-    font-family: "Avenir Next Medium", Arial, sans-serif;
-    font-weight: 500;
     text-decoration: none;
 
     -webkit-transition: .1s;
@@ -35,36 +36,36 @@
 
 .btn:hover,
 .btn:focus {
-    background-color: @pacific-80; /* Pacific/80 */
+    background-color: @pacific-80;
 }
 .btn:active {
-    background-color: @navy-80; /* Navy/80 */
+    background-color: @navy-80;
 }
 
 /* Secondary Button Styles */
 .btn-secondary {
-    background-color: @gray; /* Dark Field */
+    background-color: @gray;
     color: #FFF;
 }
 .btn-secondary:hover,
 .btn-secondary:focus {
-    background-color: @gray-80; /* Dark Field/80 */
+    background-color: @gray-80;
 }
 .btn-secondary:active {
-    background-color: @gray-80; /* Dark Field/80 */
+    background-color: @gray-80;
 }
 
 /* Tertiary Button Styles */
 .btn-tertiary {
-    background-color: @gray-20; /* Light Field/50 */
-    color: @black; /* Black */
+    background-color: @gray-20;
+    color: @black;
 }
 .btn-tertiary:hover,
 .btn-tertiary:focus {
-    background-color: @green-midtone; /* Midtone Green */
+    background-color: @green-midtone;
 }
 .btn-tertiary:active {
-    background-color: @green; /* CFPB Green */
+    background-color: @green;
     color: #FFF;
 }
 
@@ -75,18 +76,18 @@
 }
 .btn-super:hover,
 .btn-super:focus {
-    /*background-color: @pacific-80;*/ /* Pacific/80 */
+    /*background-color: @pacific-80;*/
 }
 .btn-super:active {
-    /*background-color: @navy-80;*/ /* Navy/80 */
+    /*background-color: @navy-80;*/
 }
 
 /* Disabled Button Styles */
 .btn-disabled,
 .btn-disabled:hover,
 .btn-group:focus {
-    background-color: @gray-20; /* Light Field/50 */
-    color: @gray; /* Dark Field */
+    background-color: @gray-20;
+    color: @gray;
     cursor: default; /* Fallback for IE/Opera */
     cursor: not-allowed;
 }
@@ -94,17 +95,20 @@
 /* Simple link with same dimensions as button */
 .btn-link {
     padding: 0;
-    border-bottom: 1px dotted @pacific; /* Pacific */
+    border-bottom: 1px dotted @pacific;
     -webkit-border-radius: 0;
        -moz-border-radius: 0;
             border-radius: 0;
     margin: 0;
     background-color: transparent;
-    color: @pacific; /* Pacific */
+    color: @pacific;
+}
+.btn-link:visited {
+    color: @pacific;
 }
 .btn-link:hover {
-    color: @pacific-50; /* Pacific/50 */
-    border-bottom: 1px solid @pacific-50; /* Pacific/50 */
+    color: @pacific-50;
+    border-bottom: 1px solid @pacific-50;
     background-color: transparent;
 }
 .btn-link:focus {
@@ -113,38 +117,38 @@
     background-color: transparent;
 }
 .btn-link:active {
-    border-bottom: 1px solid @navy; /* Navy */
+    border-bottom: 1px solid @navy;
     background-color: transparent;
-    color: @navy; /* Navy */
+    color: @navy;
 }
 
 /* Destructive Action Button Styles */
 .btn-warning {
-    background-color: @redorange; /* Red Orange */
+    background-color: @redorange;
     color: #FFF;
 }
 .btn-warning:hover,
 .btn-warning:focus {
-    background-color: @redorange-80; /* Red Orange/80 */
+    background-color: @redorange-80;
 }
 .btn-warning:active {
-    background-color: @dark-redorange; /* Red Orange/darker */
+    background-color: @dark-redorange;
 }
 
 /* Simple link + destructive action */
 .btn-link.btn-warning {
     border-bottom-color: @redorange;
     background-color: transparent;
-    color: @redorange; /* Red Orange/darker */
+    color: @redorange;
 }
 .btn-link.btn-warning:hover,
 .btn-link.btn-warning:focus {
-    border-bottom-color: @redorange-80; /* Red Orange/80 */
-    color: @redorange-80; /* Red Orange/80 */
+    border-bottom-color: @redorange-80;
+    color: @redorange-80;
 }
 .btn-link.btn-warning:active {
     border-bottom-color: @dark-redorange;
-    color: @dark-redorange; /* Red Orange/darker */
+    color: @dark-redorange;
 }
 
 
@@ -165,14 +169,14 @@
        -moz-border-radius-bottomleft: 0;
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
-    background-color: @pacific-80; /* Pacific/80 */
+    background-color: @pacific-80;
 }
 .btn-group .secondary-action:hover,
 .btn-group .secondary-action:focus {
-    background-color: @pacific; /* Pacific */
+    background-color: @pacific;
 }
 .btn-group .secondary-action:active {
-    background-color: @navy-80; /* Navy/80 */
+    background-color: @navy-80;
 }
 
 
