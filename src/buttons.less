@@ -93,17 +93,20 @@
 }
 
 /* Simple link with same dimensions as button */
-.btn-link {
+.btn-link,
+.btn-link:link,
+.btn-link:visited {
     padding: 0;
     border-bottom: 1px dotted @pacific;
     -webkit-border-radius: 0;
        -moz-border-radius: 0;
             border-radius: 0;
-    margin: 0;
+
+    // This margin is necessary to vertically align link buttons with regular buttons.
+    // You can add to the left and right margin, but be wary of changing the top/bottom.
+    margin: unit( 10 / @btn-base-font-size-px, em);
+
     background-color: transparent;
-    color: @pacific;
-}
-.btn-link:visited {
     color: @pacific;
 }
 .btn-link:hover {
