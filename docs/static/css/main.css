@@ -52,11 +52,11 @@
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn btn-secondary">Sign up</button>
+      markup: <button class="btn btn-secondary">Sort</button>
     - name: Hovered/focused state
-      markup: <button class="btn btn-secondary hover">Sign up</button>
+      markup: <button class="btn btn-secondary hover">Sort</button>
     - name: Active state
-      markup: <button class="btn btn-secondary active">Sign up</button>
+      markup: <button class="btn btn-secondary active">Sort</button>
     tags:
     - fj-buttons
 */
@@ -78,11 +78,11 @@
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn btn-tertiary">Sign up</button>
+      markup: <button class="btn btn-tertiary">Clear</button>
     - name: Hovered/focused state
-      markup: <button class="btn btn-tertiary hover">Sign up</button>
+      markup: <button class="btn btn-tertiary hover">Clear</button>
     - name: Active state
-      markup: <button class="btn btn-tertiary active">Sign up</button>
+      markup: <button class="btn btn-tertiary active">Clear</button>
     tags:
     - fj-buttons
 */
@@ -105,11 +105,11 @@
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn btn-super">Sign up</button>
+      markup: <button class="btn btn-super">Sign me up!</button>
     - name: Hovered/focused state
-      markup: <button class="btn btn-super hover">Sign up</button>
+      markup: <button class="btn btn-super hover">Sign me up!</button>
     - name: Active state
-      markup: <button class="btn btn-super active">Sign up</button>
+      markup: <button class="btn btn-super active">Sign me up!</button>
     tags:
     - fj-buttons
 */
@@ -122,7 +122,7 @@
     family: fj-buttons
     patterns:
     - name: Default/hovered/focused/active state
-      markup: <button class="btn btn-disabled">Sign up</button>
+      markup: <button class="btn btn-disabled">Submit</button>
     tags:
     - fj-buttons
 */
@@ -141,13 +141,13 @@
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn btn-link">Sign up</button>
+      markup: <button class="btn btn-link">Find out more</button>
     - name: Hovered state
-      markup: <button class="btn btn-link hover">Sign up</button>
+      markup: <button class="btn btn-link hover">Find out more</button>
     - name: Focused state
-      markup: <button class="btn btn-link focus">Sign up</button>
+      markup: <button class="btn btn-link focus">Find out more</button>
     - name: Active state
-      markup: <button class="btn btn-link active">Sign up</button>
+      markup: <button class="btn btn-link active">Find out more</button>
     tags:
     - fj-buttons
 */
@@ -184,11 +184,11 @@
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn btn-warning">Sign up</button>
+      markup: <button class="btn btn-warning">Delete</button>
     - name: Hovered/focused state
-      markup: <button class="btn btn-warning hover">Sign up</button>
+      markup: <button class="btn btn-warning hover">Delete</button>
     - name: Active state
-      markup: <button class="btn btn-warning active">Sign up</button>
+      markup: <button class="btn btn-warning active">Delete</button>
     tags:
     - fj-buttons
 */
@@ -210,11 +210,11 @@
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn btn-link btn-warning">Sign up</button>
+      markup: <button class="btn btn-link btn-warning">Delete</button>
     - name: Hovered/focused state
-      markup: <button class="btn btn-link btn-warning hover">Sign up</button>
+      markup: <button class="btn btn-link btn-warning hover">Delete</button>
     - name: Active state
-      markup: <button class="btn btn-link btn-warning active">Sign up</button>
+      markup: <button class="btn btn-link btn-warning active">Delete</button>
     tags:
     - fj-buttons
 */
@@ -241,12 +241,12 @@
     - name: Icon left
       markup:
         <button class="btn">
-            <i class="icon-chevron-left"><span class="jekyll-bug"></span></i> Sign up
+            <i class="icon-chevron-left"><span class="jekyll-bug"></span></i> Previous
         </button>
     - name: Icon right
       markup:
         <button class="btn">
-            Sign up <i class='icon-chevron-right'><span class='jekyll-bug' /></i>
+            Next <i class='icon-chevron-right'><span class='jekyll-bug' /></i>
         </button>
     tags:
     - fj-buttons
