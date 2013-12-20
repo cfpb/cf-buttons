@@ -18,39 +18,43 @@
     - fj-buttons
 */
 
-.btn,
-.btn:link,
-.btn:visited {
+.btn {
+
     @font-size: 14px;
 
-    box-sizing: border-box;
-    display: inline-block;
-    margin: 0;
-    padding: unit( 10px / @font-size, em ) 1em;
-    .webfont-medium;
-    font-size: unit( @font-size / @base-font-size-px, em );
-    line-height: 1;
-    text-decoration: none;
-    background-color: @pacific;
-    color: @white;
-    border-width: 0;
-    border-radius: unit( 4px / @font-size, em );
-    -webkit-transition: .1s;
-       -moz-transition: .1s;
-         -o-transition: .1s;
-        -ms-transition: .1s;
-            transition: .1s;
-}
+    &,
+    &:link,
+    &:visited {
+        box-sizing: border-box;
+        display: inline-block;
+        margin: 0;
+        padding: unit( 10px / @font-size, em ) 1em;
+        .webfont-medium;
+        font-size: unit( @font-size / @base-font-size-px, em );
+        line-height: 1;
+        text-decoration: none;
+        background-color: @pacific;
+        color: @white;
+        border-width: 0;
+        border-radius: unit( 4px / @font-size, em );
+        -webkit-transition: .1s;
+           -moz-transition: .1s;
+             -o-transition: .1s;
+            -ms-transition: .1s;
+                transition: .1s;
+    }
 
-.btn:hover,
-.btn:focus,
-.btn.hover {
-    background-color: @pacific-80;
-}
+    &:hover,
+    &:focus,
+    &.hover {
+        background-color: @pacific-80;
+    }
 
-.btn:active,
-.btn.active {
-    background-color: @navy-80;
+    &:active,
+    &.active {
+        background-color: @navy-80;
+    }
+
 }
 
 
@@ -69,21 +73,22 @@
 */
 
 .btn-secondary {
+
     background-color: @gray;
     color: @white;
-}
 
-.btn-secondary:hover,
-.btn-secondary:focus,
-.btn-secondary.hover {
-    background-color: @gray-80;
-}
+    &:hover,
+    &:focus,
+    &.hover {
+        background-color: @gray-80;
+    }
 
-.btn-secondary:active,
-.btn-secondary.active {
-    background-color: @gray-80;
-}
+    &:active,
+    &.active {
+        background-color: @gray-80;
+    }
 
+}
 
 /* topdoc
     name: Tertiary button
@@ -100,20 +105,24 @@
 */
 
 .btn-tertiary {
-    background-color: @gray-20;
-    color: @black;
-}
 
-.btn-tertiary:hover,
-.btn-tertiary:focus,
-.btn-tertiary.hover {
-    background-color: @green-midtone;
-}
+    & {
+        background-color: @gray-20;
+        color: @black;
+    }
 
-.btn-tertiary:active,
-.btn-tertiary.active {
-    background-color: @green;
-    color: @white;
+    &:hover,
+    &:focus,
+    &.hover {
+        background-color: @green-midtone;
+    }
+
+    &:active,
+    &.active {
+        background-color: @green;
+        color: @white;
+    }
+
 }
 
 
@@ -132,10 +141,14 @@
 */
 
 .btn-super {
+
     @font-size: 18px;
 
-    padding: unit( 15px / @font-size, em ) unit( 30 / @font-size, em );
-    font-size: unit( @font-size / @base-font-size-px, em );
+    & {
+        padding: unit( 15px / @font-size, em ) unit( 30 / @font-size, em );
+        font-size: unit( @font-size / @base-font-size-px, em );
+    }
+
 }
 
 
@@ -149,15 +162,19 @@
     - fj-buttons
 */
 
-.btn-disabled,
-.btn-disabled:hover,
-.btn-disabled:focus,
-.btn-disabled.hover,
-.btn-disabled.active {
-    background-color: @gray-20;
-    color: @gray;
-    cursor: default; // Fallback for IE/Opera
-    cursor: not-allowed;
+.btn-disabled {
+
+    &,
+    &:hover,
+    &:focus,
+    &.hover,
+    &.active {
+        background-color: @gray-20;
+        color: @gray;
+        cursor: default; // Fallback for IE/Opera
+        cursor: not-allowed;
+    }
+
 }
 
 
@@ -177,40 +194,44 @@
     - fj-buttons
 */
 
-.btn-link,
-.btn-link:link,
-.btn-link:visited {
+.btn-link {
+
     @font-size: 14px;
 
-    // This margin is necessary to vertically align link buttons with regular buttons.
-    // You can add to the left and right margin, but be wary of changing the top/bottom.
-    margin: unit( 10px / @font-size, em);
-    padding: 0;
-    background-color: transparent;
-    color: @pacific;
-    border-bottom: 1px dotted @pacific;
-    border-radius: 0;
-}
+    &,
+    &:link,
+    &:visited {
+        // This margin is necessary to vertically align link buttons with regular buttons.
+        // You can add to the left and right margin, but be wary of changing the top/bottom.
+        margin: unit( 10px / @font-size, em);
+        padding: 0;
+        background-color: transparent;
+        color: @pacific;
+        border-bottom: 1px dotted @pacific;
+        border-radius: 0;
+    }
 
-.btn-link:hover,
-.btn-link.hover {
-    color: @pacific-50;
-    border-bottom: 1px solid @pacific-50;
-    background-color: transparent;
-}
+    &:hover,
+    &.hover {
+        color: @pacific-50;
+        border-bottom: 1px solid @pacific-50;
+        background-color: transparent;
+    }
 
-.btn-link:focus,
-.btn-link.focus {
-    border-bottom-style: solid;
-    outline: thin dotted;
-    background-color: transparent;
-}
+    &:focus,
+    &.focus {
+        border-bottom-style: solid;
+        outline: thin dotted;
+        background-color: transparent;
+    }
 
-.btn-link:active,
-.btn-link.active {
-    border-bottom: 1px solid @navy;
-    background-color: transparent;
-    color: @navy;
+    &:active,
+    &.active {
+        border-bottom: 1px solid @navy;
+        background-color: transparent;
+        color: @navy;
+    }
+
 }
 
 
@@ -229,19 +250,23 @@
 */
 
 .btn-warning {
-    background-color: @redorange;
-    color: @white;
-}
 
-.btn-warning:hover,
-.btn-warning:focus,
-.btn-warning.hover {
-    background-color: @redorange-80;
-}
+    & {
+        background-color: @redorange;
+        color: @white;
+    }
 
-.btn-warning:active,
-.btn-warning.active {
-    background-color: @dark-redorange;
+    &:hover,
+    &:focus,
+    &.hover {
+        background-color: @redorange-80;
+    }
+
+    &:active,
+    &.active {
+        background-color: @dark-redorange;
+    }
+
 }
 
 
@@ -260,22 +285,26 @@
 */
 
 .btn-link.btn-warning {
-    border-bottom-color: @redorange;
-    background-color: transparent;
-    color: @redorange;
-}
 
-.btn-link.btn-warning:hover,
-.btn-link.btn-warning:focus,
-.btn-link.btn-warning.hover {
-    border-bottom-color: @redorange-80;
-    color: @redorange-80;
-}
+    & {
+        border-bottom-color: @redorange;
+        background-color: transparent;
+        color: @redorange;
+    }
 
-.btn-link.btn-warning:active,
-.btn-link.btn-warning.active {
-    border-bottom-color: @dark-redorange;
-    color: @dark-redorange;
+    &:hover,
+    &:focus,
+    &.hover {
+        border-bottom-color: @redorange-80;
+        color: @redorange-80;
+    }
+
+    &:active,
+    &.active {
+        border-bottom-color: @dark-redorange;
+        color: @dark-redorange;
+    }
+
 }
 
 
@@ -298,25 +327,29 @@
     - fj-icons
 */
 
-.btn [class^="icon-"] {
-    @font-size: 14px;
+.btn {
 
-    margin: 0 unit( 7px / @font-size, em) 0 0;
-    padding: 0 unit( 10.5px / @font-size, em) 0 0;
-    color: @white;
-    border-right: 1px solid @white; // Fallback
-    border-right: 1px solid rgba(255, 255, 255, 0.4);
-    position: relative;
-}
+    & [class^="icon-"] {
+        @font-size: 14px;
 
-.btn [class$="-right"] {
-    @font-size: 14px;
+        margin: 0 unit( 7px / @font-size, em) 0 0;
+        padding: 0 unit( 10.5px / @font-size, em) 0 0;
+        color: @white;
+        border-right: 1px solid @white; // Fallback
+        border-right: 1px solid rgba(255, 255, 255, 0.4);
+        position: relative;
+    }
 
-    margin: 0 0 0 unit( 7px / @font-size, em);
-    padding: 0 0 0 unit( 10.5px / @font-size, em);
-    border-right: 0;
-    border-left: 1px solid @white; // Fallback
-    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    & [class$="-right"] {
+        @font-size: 14px;
+
+        margin: 0 0 0 unit( 7px / @font-size, em);
+        padding: 0 0 0 unit( 10.5px / @font-size, em);
+        border-right: 0;
+        border-left: 1px solid @white; // Fallback
+        border-left: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
 }
 
 /* topdoc
