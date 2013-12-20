@@ -185,13 +185,13 @@
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn btn-link">Find out more</button>
+      markup: <button class="btn btn-link">Find out more</button> <button class="btn">Buttony</button>
     - name: Hovered state
-      markup: <button class="btn btn-link hover">Find out more</button>
+      markup: <button class="btn btn-link hover">Find out more</button> <button class="btn">Buttony</button>
     - name: Focused state
-      markup: <button class="btn btn-link focus">Find out more</button>
+      markup: <button class="btn btn-link focus">Find out more</button> <button class="btn">Buttony</button>
     - name: Active state
-      markup: <button class="btn btn-link active">Find out more</button>
+      markup: <button class="btn btn-link active">Find out more</button> <button class="btn">Buttony</button>
     tags:
     - fj-buttons
 */
@@ -278,8 +278,10 @@
     patterns:
     - name: Default state
       markup: <button class="btn btn-link btn-warning">Delete</button>
-    - name: Hovered/focused state
+    - name: Hovered state
       markup: <button class="btn btn-link btn-warning hover">Delete</button>
+    - name: Focused state
+      markup: <button class="btn btn-link btn-warning focus">Delete</button>
     - name: Active state
       markup: <button class="btn btn-link btn-warning active">Delete</button>
     tags:
@@ -289,22 +291,27 @@
 .btn-link.btn-warning {
 
     & {
+        color: @redorange;
         border-bottom-color: @redorange;
         background-color: transparent;
-        color: @redorange;
     }
 
     &:hover,
-    &:focus,
     &.hover {
-        border-bottom-color: @redorange-80;
         color: @redorange-80;
+        border-bottom-color: @redorange-80;
+    }
+
+    &:focus,
+    &.focus {
+        border-bottom-color: @redorange-80;
+        outline: thin dotted;
     }
 
     &:active,
     &.active {
-        border-bottom-color: @dark-redorange;
         color: @dark-redorange;
+        border-bottom-color: @dark-redorange;
     }
 
 }

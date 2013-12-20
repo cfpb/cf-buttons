@@ -142,13 +142,13 @@
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn btn-link">Find out more</button>
+      markup: <button class="btn btn-link">Find out more</button> <button class="btn">Buttony</button>
     - name: Hovered state
-      markup: <button class="btn btn-link hover">Find out more</button>
+      markup: <button class="btn btn-link hover">Find out more</button> <button class="btn">Buttony</button>
     - name: Focused state
-      markup: <button class="btn btn-link focus">Find out more</button>
+      markup: <button class="btn btn-link focus">Find out more</button> <button class="btn">Buttony</button>
     - name: Active state
-      markup: <button class="btn btn-link active">Find out more</button>
+      markup: <button class="btn btn-link active">Find out more</button> <button class="btn">Buttony</button>
     tags:
     - fj-buttons
 */
@@ -212,28 +212,34 @@
     patterns:
     - name: Default state
       markup: <button class="btn btn-link btn-warning">Delete</button>
-    - name: Hovered/focused state
+    - name: Hovered state
       markup: <button class="btn btn-link btn-warning hover">Delete</button>
+    - name: Focused state
+      markup: <button class="btn btn-link btn-warning focus">Delete</button>
     - name: Active state
       markup: <button class="btn btn-link btn-warning active">Delete</button>
     tags:
     - fj-buttons
 */
 .btn-link.btn-warning {
+  color: #d12124;
   border-bottom-color: #d12124;
   background-color: transparent;
-  color: #d12124;
 }
 .btn-link.btn-warning:hover,
-.btn-link.btn-warning:focus,
 .btn-link.btn-warning.hover {
-  border-bottom-color: #da6750;
   color: #da6750;
+  border-bottom-color: #da6750;
+}
+.btn-link.btn-warning:focus,
+.btn-link.btn-warning.focus {
+  border-bottom-color: #da6750;
+  outline: thin dotted;
 }
 .btn-link.btn-warning:active,
 .btn-link.btn-warning.active {
-  border-bottom-color: #9c301b;
   color: #9c301b;
+  border-bottom-color: #9c301b;
 }
 /* topdoc
     name: Button with icon
