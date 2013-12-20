@@ -3,12 +3,17 @@
    Button Styling
    ========================================================================== */
 
+
 /* topdoc
     name: Default button
     family: fj-buttons
     patterns:
-    - name: Default button
+    - name: Default state
       markup: <button class="btn">Buttony</button>
+    - name: Hovered/focused state
+      markup: <button class="btn hover">Buttony</button>
+    - name: Active state
+      markup: <button class="btn active">Buttony</button>
     tags:
     - fj-buttons
 */
@@ -38,19 +43,27 @@
 }
 
 .btn:hover,
-.btn:focus {
+.btn:focus,
+.btn.hover {
     background-color: @pacific-80;
 }
-.btn:active {
+
+.btn:active,
+.btn.active {
     background-color: @navy-80;
 }
+
 
 /* topdoc
     name: Secondary button
     family: fj-buttons
     patterns:
-    - name: Secondary button
+    - name: Default state
       markup: <button class="btn btn-secondary">Buttony</button>
+    - name: Hovered/focused state
+      markup: <button class="btn btn-secondary hover">Buttony</button>
+    - name: Active state
+      markup: <button class="btn btn-secondary active">Buttony</button>
     tags:
     - fj-buttons
 */
@@ -59,148 +72,254 @@
     background-color: @gray;
     color: @white;
 }
+
 .btn-secondary:hover,
-.btn-secondary:focus {
-    background-color: @gray-80;
-}
-.btn-secondary:active {
+.btn-secondary:focus,
+.btn-secondary.hover {
     background-color: @gray-80;
 }
 
-// Tertiary Button Styles
+.btn-secondary:active,
+.btn-secondary.active {
+    background-color: @gray-80;
+}
+
+
+/* topdoc
+    name: Tertiary button
+    family: fj-buttons
+    patterns:
+    - name: Default state
+      markup: <button class="btn btn-tertiary">Buttony</button>
+    - name: Hovered/focused state
+      markup: <button class="btn btn-tertiary hover">Buttony</button>
+    - name: Active state
+      markup: <button class="btn btn-tertiary active">Buttony</button>
+    tags:
+    - fj-buttons
+*/
+
 .btn-tertiary {
     background-color: @gray-20;
     color: @black;
 }
+
 .btn-tertiary:hover,
-.btn-tertiary:focus {
+.btn-tertiary:focus,
+.btn-tertiary.hover {
     background-color: @green-midtone;
 }
-.btn-tertiary:active {
+
+.btn-tertiary:active,
+.btn-tertiary.active {
     background-color: @green;
     color: @white;
 }
 
-// Super Button Styles
+
+/* topdoc
+    name: Super button
+    family: fj-buttons
+    patterns:
+    - name: Default state
+      markup: <button class="btn btn-super">Buttony</button>
+    - name: Hovered/focused state
+      markup: <button class="btn btn-super hover">Buttony</button>
+    - name: Active state
+      markup: <button class="btn btn-super active">Buttony</button>
+    tags:
+    - fj-buttons
+*/
+
 .btn-super {
     @font-size: 18px;
 
     padding: unit( 15px / @font-size, em ) unit( 30 / @font-size, em );
     font-size: unit( @font-size / @base-font-size-px, em );
 }
-.btn-super:hover,
-.btn-super:focus {
-    // background-color: @pacific-80;
-}
-.btn-super:active {
-    // background-color: @navy-80;
-}
 
-// Disabled Button Styles
+
+/* topdoc
+    name: Disabled button
+    family: fj-buttons
+    patterns:
+    - name: Default/hovered/focused/active state
+      markup: <button class="btn btn-disabled">Buttony</button>
+    tags:
+    - fj-buttons
+*/
+
 .btn-disabled,
 .btn-disabled:hover,
-.btn-group:focus {
+.btn-disabled:focus,
+.btn-disabled.hover,
+.btn-disabled.active {
     background-color: @gray-20;
     color: @gray;
     cursor: default; // Fallback for IE/Opera
     cursor: not-allowed;
 }
 
-// Simple link with same dimensions as button
+
+/* topdoc
+    name: Button link
+    family: fj-buttons
+    patterns:
+    - name: Default state
+      markup: <button class="btn btn-link">Buttony</button>
+    - name: Hovered state
+      markup: <button class="btn btn-link hover">Buttony</button>
+    - name: Focused state
+      markup: <button class="btn btn-link focus">Buttony</button>
+    - name: Active state
+      markup: <button class="btn btn-link active">Buttony</button>
+    tags:
+    - fj-buttons
+*/
+
 .btn-link,
 .btn-link:link,
 .btn-link:visited {
     @font-size: 14px;
-    padding: 0;
-    border-bottom: 1px dotted @pacific;
-    border-radius: 0;
 
     // This margin is necessary to vertically align link buttons with regular buttons.
     // You can add to the left and right margin, but be wary of changing the top/bottom.
     margin: unit( 10px / @font-size, em);
-
+    padding: 0;
     background-color: transparent;
     color: @pacific;
+    border-bottom: 1px dotted @pacific;
+    border-radius: 0;
 }
-.btn-link:hover {
+
+.btn-link:hover,
+.btn-link.hover {
     color: @pacific-50;
     border-bottom: 1px solid @pacific-50;
     background-color: transparent;
 }
-.btn-link:focus {
+
+.btn-link:focus,
+.btn-link.focus {
     border-bottom-style: solid;
     outline: thin dotted;
     background-color: transparent;
 }
-.btn-link:active {
+
+.btn-link:active,
+.btn-link.active {
     border-bottom: 1px solid @navy;
     background-color: transparent;
     color: @navy;
 }
 
-//Destructive Action Button Styles
+
+/* topdoc
+    name: Destructive action buttons
+    family: fj-buttons
+    patterns:
+    - name: Default state
+      markup: <button class="btn btn-warning">Buttony</button>
+    - name: Hovered/focused state
+      markup: <button class="btn btn-warning hover">Buttony</button>
+    - name: Active state
+      markup: <button class="btn btn-warning active">Buttony</button>
+    tags:
+    - fj-buttons
+*/
+
 .btn-warning {
     background-color: @redorange;
     color: @white;
 }
+
 .btn-warning:hover,
-.btn-warning:focus {
+.btn-warning:focus,
+.btn-warning.hover {
     background-color: @redorange-80;
 }
-.btn-warning:active {
+
+.btn-warning:active,
+.btn-warning.active {
     background-color: @dark-redorange;
 }
 
-//Simple link + destructive action
+
+/* topdoc
+    name: Destructive action button link
+    family: fj-buttons
+    patterns:
+    - name: Default state
+      markup: <button class="btn btn-link btn-warning">Buttony</button>
+    - name: Hovered/focused state
+      markup: <button class="btn btn-link btn-warning hover">Buttony</button>
+    - name: Active state
+      markup: <button class="btn btn-link btn-warning active">Buttony</button>
+    tags:
+    - fj-buttons
+*/
+
 .btn-link.btn-warning {
     border-bottom-color: @redorange;
     background-color: transparent;
     color: @redorange;
 }
+
 .btn-link.btn-warning:hover,
-.btn-link.btn-warning:focus {
+.btn-link.btn-warning:focus,
+.btn-link.btn-warning.hover {
     border-bottom-color: @redorange-80;
     color: @redorange-80;
 }
-.btn-link.btn-warning:active {
+
+.btn-link.btn-warning:active,
+.btn-link.btn-warning.active {
     border-bottom-color: @dark-redorange;
     color: @dark-redorange;
 }
 
 
-//Compound button styles
-.btn-group .btn:first-child {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-right: -0.26em;
-}
-.btn-group .secondary-action {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    background-color: @pacific-80;
-}
-.btn-group .secondary-action:hover,
-.btn-group .secondary-action:focus {
-    background-color: @pacific;
-}
-.btn-group .secondary-action:active {
-    background-color: @navy-80;
-}
+/* topdoc
+    name: Button with icon
+    family: fj-buttons
+    patterns:
+    - name: Icon left
+      markup:
+        <button class="btn">
+            <i class="icon-chevron-left"><span class="jekyll-bug"></span></i> Buttony
+        </button>
+    - name: Icon right
+      markup:
+        <button class="btn">
+            Buttony <i class='icon-chevron-right'><span class='jekyll-bug' /></i>
+        </button>
+    tags:
+    - fj-buttons
+    - fj-icons
+*/
 
+.btn [class^="icon-"] {
+    @font-size: 14px;
 
-//Button icons
-.btn-icon [class^="icon-"] {
-    padding-right: 0.75em;
-    border-right: 1px solid rgba(255, 255, 255, 0.4);
-    margin: -0.35em 0.5em -0.5em 0;
+    margin: 0 unit( 7px / @font-size, em) 0 0;
+    padding: 0 unit( 10.5px / @font-size, em) 0 0;
     color: @white;
+    border-right: 1px solid @white; // Fallback
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
     position: relative;
-    line-height: 1.42857142857143;
 }
-.btn-icon [class$="-right"] {
-    padding-right: 0;
-    padding-left: 0.75em;
+
+.btn [class$="-right"] {
+    @font-size: 14px;
+
+    margin: 0 0 0 unit( 7px / @font-size, em);
+    padding: 0 0 0 unit( 10.5px / @font-size, em);
     border-right: 0;
+    border-left: 1px solid @white; // Fallback
     border-left: 1px solid rgba(255, 255, 255, 0.4);
-    margin: -0.35em 0 -0.5em 0.5em;
 }
+
+/* topdoc
+  name: EOF
+  eof: true
+*/
