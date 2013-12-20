@@ -3,6 +3,7 @@
    Button Styling
    ========================================================================== */
 
+@btn-font-size-px: 14px;
 
 /* topdoc
     name: Default button
@@ -20,7 +21,7 @@
 
 .btn {
 
-    @font-size: 14px;
+    @font-size: @btn-font-size-px;
 
     &,
     &:link,
@@ -197,7 +198,7 @@
 
 .btn-link {
 
-    @font-size: 14px;
+    @font-size: @btn-font-size-px;
 
     &,
     &:link,
@@ -331,7 +332,7 @@
 .btn {
 
     & [class^="icon-"] {
-        @font-size: 14px;
+        @font-size: @btn-font-size-px;
 
         margin: 0 unit( 7px / @font-size, em) 0 0;
         padding: 0 unit( 10.5px / @font-size, em) 0 0;
@@ -342,7 +343,7 @@
     }
 
     & [class$="-right"] {
-        @font-size: 14px;
+        @font-size: @btn-font-size-px;
 
         margin: 0 0 0 unit( 7px / @font-size, em);
         padding: 0 0 0 unit( 10.5px / @font-size, em);
