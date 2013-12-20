@@ -32,6 +32,7 @@
   color: #ffffff;
   border-width: 0;
   border-radius: 0.2857142857142857em;
+  cursor: pointer;
   -webkit-transition: .1s;
   -moz-transition: .1s;
   -o-transition: .1s;
