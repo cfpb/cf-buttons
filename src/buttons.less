@@ -3,32 +3,35 @@
    Button Styling
    ========================================================================== */
 
-@btn-base-font-size-px: 14px;
-@btn-base-font-size-em: unit( @btn-base-font-size-px / @base-font-size-px, em );
+/* topdoc
+    name: Default button
+    family: fj-buttons
+    patterns:
+    - name: Default button
+      markup: <button class="btn">Buttony</button>
+    tags:
+    - fj-buttons
+*/
 
 .btn,
 .btn:link,
 .btn:visited {
+    @font-size: 14px;
+
     box-sizing: border-box;
     display: inline-block;
-    
-    padding: 0.625em 1em;
-    
-    border-width: 0;
-    -webkit-border-radius: 4px;
-       -moz-border-radius: 4px;
-            border-radius: 4px;
-
     margin: 0;
-    
-    background-color: @pacific;
-    color: #FFF;
-
+    padding: unit( 10px / @font-size, em ) 1em;
     .webfont-medium;
-    font-size: @btn-base-font-size-em;
+    font-size: unit( @font-size / @base-font-size-px, em );
     line-height: 1;
     text-decoration: none;
-
+    background-color: @pacific;
+    color: @white;
+    border-width: 0;
+    -webkit-border-radius: unit( 4px / @font-size, em );
+       -moz-border-radius: unit( 4px / @font-size, em );
+            border-radius: unit( 4px / @font-size, em );
     -webkit-transition: .1s;
        -moz-transition: .1s;
             transition: .1s;
@@ -42,10 +45,19 @@
     background-color: @navy-80;
 }
 
-/* Secondary Button Styles */
+/* topdoc
+    name: Secondary button
+    family: fj-buttons
+    patterns:
+    - name: Secondary button
+      markup: <button class="btn btn-secondary">Buttony</button>
+    tags:
+    - fj-buttons
+*/
+
 .btn-secondary {
     background-color: @gray;
-    color: #FFF;
+    color: @white;
 }
 .btn-secondary:hover,
 .btn-secondary:focus {
@@ -55,7 +67,7 @@
     background-color: @gray-80;
 }
 
-/* Tertiary Button Styles */
+// Tertiary Button Styles
 .btn-tertiary {
     background-color: @gray-20;
     color: @black;
@@ -66,36 +78,39 @@
 }
 .btn-tertiary:active {
     background-color: @green;
-    color: #FFF;
+    color: @white;
 }
 
-/* Super Button Styles */
+// Super Button Styles
 .btn-super {
-    padding: 0.83333333333333em 1.66666666666667em; /* 15/18 30/18 */
-    font-size: 1.28571428571429em; /* 18px */
+    @font-size: 18px;
+
+    padding: unit( 15px / @font-size, em ) unit( 30 / @font-size, em );
+    font-size: unit( @font-size / @base-font-size-px, em );
 }
 .btn-super:hover,
 .btn-super:focus {
-    /*background-color: @pacific-80;*/
+    // background-color: @pacific-80;
 }
 .btn-super:active {
-    /*background-color: @navy-80;*/
+    // background-color: @navy-80;
 }
 
-/* Disabled Button Styles */
+// Disabled Button Styles
 .btn-disabled,
 .btn-disabled:hover,
 .btn-group:focus {
     background-color: @gray-20;
     color: @gray;
-    cursor: default; /* Fallback for IE/Opera */
+    cursor: default; // Fallback for IE/Opera
     cursor: not-allowed;
 }
 
-/* Simple link with same dimensions as button */
+// Simple link with same dimensions as button
 .btn-link,
 .btn-link:link,
 .btn-link:visited {
+    @font-size: 14px;
     padding: 0;
     border-bottom: 1px dotted @pacific;
     -webkit-border-radius: 0;
@@ -104,7 +119,7 @@
 
     // This margin is necessary to vertically align link buttons with regular buttons.
     // You can add to the left and right margin, but be wary of changing the top/bottom.
-    margin: unit( 10 / @btn-base-font-size-px, em);
+    margin: unit( 10px / @font-size, em);
 
     background-color: transparent;
     color: @pacific;
@@ -125,10 +140,10 @@
     color: @navy;
 }
 
-/* Destructive Action Button Styles */
+//Destructive Action Button Styles
 .btn-warning {
     background-color: @redorange;
-    color: #FFF;
+    color: @white;
 }
 .btn-warning:hover,
 .btn-warning:focus {
@@ -138,7 +153,7 @@
     background-color: @dark-redorange;
 }
 
-/* Simple link + destructive action */
+//Simple link + destructive action
 .btn-link.btn-warning {
     border-bottom-color: @redorange;
     background-color: transparent;
@@ -155,7 +170,7 @@
 }
 
 
-/* Compound button styles */
+//Compound button styles
 .btn-group .btn:first-child {
     -webkit-border-top-right-radius: 0;
     -webkit-border-bottom-right-radius: 0;
@@ -183,12 +198,12 @@
 }
 
 
-/* Button icons */
+//Button icons
 .btn-icon [class^="icon-"] {
     padding-right: 0.75em;
     border-right: 1px solid rgba(255, 255, 255, 0.4);
     margin: -0.35em 0.5em -0.5em 0;
-    color: #FFF;
+    color: @white;
     position: relative;
     line-height: 1.42857142857143;
 }
