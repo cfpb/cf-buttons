@@ -75,33 +75,6 @@
   background-color: #919395;
 }
 /* topdoc
-    name: Tertiary button
-    family: fj-buttons
-    patterns:
-    - name: Default state
-      markup: <button class="btn btn-tertiary">Clear</button>
-    - name: Hovered/focused state
-      markup: <button class="btn btn-tertiary hover">Clear</button>
-    - name: Active state
-      markup: <button class="btn btn-tertiary active">Clear</button>
-    tags:
-    - fj-buttons
-*/
-.btn-tertiary {
-  background-color: #e3e4e5;
-  color: #101820;
-}
-.btn-tertiary:hover,
-.btn-tertiary:focus,
-.btn-tertiary.hover {
-  background-color: #addc91;
-}
-.btn-tertiary:active,
-.btn-tertiary.active {
-  background-color: #2cb34a;
-  color: #ffffff;
-}
-/* topdoc
     name: Super button
     family: fj-buttons
     patterns:
