@@ -145,14 +145,23 @@
         <button class="btn">
             <i class="btn-leading-icon icon-chevron-left"><span class="jekyll-bug"></span></i> Previous
         </button>
+        <button class="btn btn-super">
+            <i class="btn-leading-icon icon-chevron-left"><span class="jekyll-bug"></span></i> Previous
+        </button>
     - name: Trailing icon
       markup:
         <button class="btn">
             Next <i class='btn-trailing-icon icon-chevron-right'><span class='jekyll-bug' /></i>
         </button>
+        <button class="btn btn-super">
+            Next <i class='btn-trailing-icon icon-chevron-right'><span class='jekyll-bug' /></i>
+        </button>
     - name: Just an icon
       markup:
         <button class="btn">
+            <i class='icon-search'><span class='jekyll-bug' /></i>
+        </button>
+        <button class="btn btn-super">
             <i class='icon-search'><span class='jekyll-bug' /></i>
         </button>
     tags:
