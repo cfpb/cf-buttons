@@ -34,9 +34,9 @@
         font-size: unit( @font-size / @base-font-size-px, em );
         line-height: 1;
         text-decoration: none;
-        background-color: @pacific;
         color: @white;
-        border-width: 0;
+        background-color: @pacific;
+        border: 0;
         border-radius: unit( 4px / @font-size, em );
         cursor: pointer;
         -webkit-transition: .1s;
@@ -318,47 +318,48 @@
 
 
 /* topdoc
-    name: Button with icon
+    name: Buttons with icons
     family: fj-buttons
     patterns:
-    - name: Icon left
+    - name: Leading icon
       markup:
         <button class="btn">
-            <i class="icon-chevron-left"><span class="jekyll-bug"></span></i> Previous
+            <i class="btn-leading-icon icon-chevron-left"><span class="jekyll-bug"></span></i> Previous
         </button>
-    - name: Icon right
+    - name: Trailing icon
       markup:
         <button class="btn">
-            Next <i class='icon-chevron-right'><span class='jekyll-bug' /></i>
+            Next <i class='btn-trailing-icon icon-chevron-right'><span class='jekyll-bug' /></i>
+        </button>
+    - name: Just an icon
+      markup:
+        <button class="btn">
+            <i class='icon-search'><span class='jekyll-bug' /></i>
         </button>
     tags:
     - fj-buttons
     - fj-icons
 */
 
-.btn {
+.btn-leading-icon {
+    @font-size: @btn-font-size-px;
 
-    & [class^="icon-"] {
-        @font-size: @btn-font-size-px;
+    margin: 0 unit( 7px / @font-size, em) 0 0;
+    padding: 0 unit( 10.5px / @font-size, em) 0 0;
+    color: @white;
+    border-right: 1px solid @white; // Fallback
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    position: relative;
+}
 
-        margin: 0 unit( 7px / @font-size, em) 0 0;
-        padding: 0 unit( 10.5px / @font-size, em) 0 0;
-        color: @white;
-        border-right: 1px solid @white; // Fallback
-        border-right: 1px solid rgba(255, 255, 255, 0.4);
-        position: relative;
-    }
+.btn-trailing-icon {
+    @font-size: @btn-font-size-px;
 
-    & [class$="-right"] {
-        @font-size: @btn-font-size-px;
-
-        margin: 0 0 0 unit( 7px / @font-size, em);
-        padding: 0 0 0 unit( 10.5px / @font-size, em);
-        border-right: 0;
-        border-left: 1px solid @white; // Fallback
-        border-left: 1px solid rgba(255, 255, 255, 0.4);
-    }
-
+    margin: 0 0 0 unit( 7px / @font-size, em);
+    padding: 0 0 0 unit( 10.5px / @font-size, em);
+    border-right: 0;
+    border-left: 1px solid @white; // Fallback
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 /* topdoc

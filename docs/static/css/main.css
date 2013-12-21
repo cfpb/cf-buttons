@@ -28,9 +28,9 @@
   font-size: 0.875em;
   line-height: 1;
   text-decoration: none;
-  background-color: #0072ce;
   color: #ffffff;
-  border-width: 0;
+  background-color: #0072ce;
+  border: 0;
   border-radius: 0.2857142857142857em;
   cursor: pointer;
   -webkit-transition: .1s;
@@ -242,24 +242,29 @@
   border-bottom-color: #9c301b;
 }
 /* topdoc
-    name: Button with icon
+    name: Buttons with icons
     family: fj-buttons
     patterns:
-    - name: Icon left
+    - name: Leading icon
       markup:
         <button class="btn">
-            <i class="icon-chevron-left"><span class="jekyll-bug"></span></i> Previous
+            <i class="btn-leading-icon icon-chevron-left"><span class="jekyll-bug"></span></i> Previous
         </button>
-    - name: Icon right
+    - name: Trailing icon
       markup:
         <button class="btn">
-            Next <i class='icon-chevron-right'><span class='jekyll-bug' /></i>
+            Next <i class='btn-trailing-icon icon-chevron-right'><span class='jekyll-bug' /></i>
+        </button>
+    - name: Just an icon
+      markup:
+        <button class="btn">
+            <i class='icon-search'><span class='jekyll-bug' /></i>
         </button>
     tags:
     - fj-buttons
     - fj-icons
 */
-.btn [class^="icon-"] {
+.btn-leading-icon {
   margin: 0 0.5em 0 0;
   padding: 0 0.75em 0 0;
   color: #ffffff;
@@ -267,7 +272,7 @@
   border-right: 1px solid rgba(255, 255, 255, 0.4);
   position: relative;
 }
-.btn [class$="-right"] {
+.btn-trailing-icon {
   margin: 0 0 0 0.5em;
   padding: 0 0 0 0.75em;
   border-right: 0;
