@@ -126,6 +126,128 @@
 }</code></pre>
           </div>
         </li>
+        <li id="destructive-actionbuttons" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">Destructive action buttons</h1>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Default state</h3>
+              </header>
+              <section><button class="btn btn-warning">Delete</button></section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;button class=&quot;btn btn-warning&quot;&gt;Delete&lt;/button&gt;</code></pre>
+              </footer>
+            </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Hovered/focused state</h3>
+              </header>
+              <section><button class="btn btn-warning hover">Delete</button></section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;button class=&quot;btn btn-warning hover&quot;&gt;Delete&lt;/button&gt;</code></pre>
+              </footer>
+            </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Active state</h3>
+              </header>
+              <section><button class="btn btn-warning active">Delete</button></section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;button class=&quot;btn btn-warning active&quot;&gt;Delete&lt;/button&gt;</code></pre>
+              </footer>
+            </li>
+          </ul>
+          <div class="demo-pattern-css">
+            <pre class="css"><code data-language="css">.btn-warning {
+  background-color: #d12124;
+  color: #ffffff;
+}
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning.hover {
+  background-color: #da6750;
+}
+.btn-warning:active,
+.btn-warning.active {
+  background-color: #9c301b;
+}</code></pre>
+          </div>
+        </li>
+        <li id="buttons-withicons" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">Buttons with icons</h1>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Leading icon</h3>
+              </header>
+              <section><button class="btn"> <i class="btn-leading-icon icon-chevron-left"><span class="jekyll-bug"></span></i> Previous </button></section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;button class=&quot;btn&quot;&gt; &lt;i class=&quot;btn-leading-icon icon-chevron-left&quot;&gt;&lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;&lt;/i&gt; Previous &lt;/button&gt;</code></pre>
+              </footer>
+            </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Trailing icon</h3>
+              </header>
+              <section><button class="btn"> Next <i class='btn-trailing-icon icon-chevron-right'><span class='jekyll-bug' /></i> </button></section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;button class=&quot;btn&quot;&gt; Next &lt;i class='btn-trailing-icon icon-chevron-right'&gt;&lt;span class='jekyll-bug' /&gt;&lt;/i&gt; &lt;/button&gt;</code></pre>
+              </footer>
+            </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Just an icon</h3>
+              </header>
+              <section><button class="btn"> <i class='icon-search'><span class='jekyll-bug' /></i> </button></section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;button class=&quot;btn&quot;&gt; &lt;i class='icon-search'&gt;&lt;span class='jekyll-bug' /&gt;&lt;/i&gt; &lt;/button&gt;</code></pre>
+              </footer>
+            </li>
+          </ul>
+          <div class="demo-pattern-css">
+            <pre class="css"><code data-language="css">.btn-leading-icon {
+  margin: 0 0.5em 0 0;
+  padding: 0 0.75em 0 0;
+  color: #ffffff;
+  border-right: 1px solid #ffffff;
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+  position: relative;
+}
+.btn-trailing-icon {
+  margin: 0 0 0 0.5em;
+  padding: 0 0 0 0.75em;
+  border-right: 0;
+  border-left: 1px solid #ffffff;
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}</code></pre>
+          </div>
+        </li>
+        <li id="disabled-button" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">Disabled button</h1>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Default/hovered/focused/active state</h3>
+              </header>
+              <section><button class="btn btn-disabled">Submit</button></section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;button class=&quot;btn btn-disabled&quot;&gt;Submit&lt;/button&gt;</code></pre>
+              </footer>
+            </li>
+          </ul>
+          <div class="demo-pattern-css">
+            <pre class="css"><code data-language="css">.btn-disabled,
+.btn-disabled:hover,
+.btn-disabled:focus,
+.btn-disabled.hover,
+.btn-disabled.active {
+  background-color: #e3e4e5;
+  color: #75787b;
+  cursor: default;
+  cursor: not-allowed;
+}</code></pre>
+          </div>
+        </li>
         <li id="super-button" class="demo-component-list_item wrapper">
           <h1 class="demo-component-list_header">Super button</h1>
           <ul class="demo-pattern-list">
@@ -161,32 +283,6 @@
             <pre class="css"><code data-language="css">.btn-super {
   padding: 0.8333333333333334em 1.6666666666666667em;
   font-size: 1.125em;
-}</code></pre>
-          </div>
-        </li>
-        <li id="disabled-button" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Disabled button</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default/hovered/focused/active state</h3>
-              </header>
-              <section><button class="btn btn-disabled">Submit</button></section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;button class=&quot;btn btn-disabled&quot;&gt;Submit&lt;/button&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.btn-disabled,
-.btn-disabled:hover,
-.btn-disabled:focus,
-.btn-disabled.hover,
-.btn-disabled.active {
-  background-color: #e3e4e5;
-  color: #75787b;
-  cursor: default;
-  cursor: not-allowed;
 }</code></pre>
           </div>
         </li>
@@ -261,53 +357,6 @@
 }</code></pre>
           </div>
         </li>
-        <li id="destructive-actionbuttons" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Destructive action buttons</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default state</h3>
-              </header>
-              <section><button class="btn btn-warning">Delete</button></section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;button class=&quot;btn btn-warning&quot;&gt;Delete&lt;/button&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Hovered/focused state</h3>
-              </header>
-              <section><button class="btn btn-warning hover">Delete</button></section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;button class=&quot;btn btn-warning hover&quot;&gt;Delete&lt;/button&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Active state</h3>
-              </header>
-              <section><button class="btn btn-warning active">Delete</button></section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;button class=&quot;btn btn-warning active&quot;&gt;Delete&lt;/button&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.btn-warning {
-  background-color: #d12124;
-  color: #ffffff;
-}
-.btn-warning:hover,
-.btn-warning:focus,
-.btn-warning.hover {
-  background-color: #da6750;
-}
-.btn-warning:active,
-.btn-warning.active {
-  background-color: #9c301b;
-}</code></pre>
-          </div>
-        </li>
         <li id="destructive-actionbutton link" class="demo-component-list_item wrapper">
           <h1 class="demo-component-list_header">Destructive action button link</h1>
           <ul class="demo-pattern-list">
@@ -368,55 +417,6 @@
 .btn-link.btn-warning.active {
   color: #9c301b;
   border-bottom-color: #9c301b;
-}</code></pre>
-          </div>
-        </li>
-        <li id="buttons-withicons" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Buttons with icons</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Leading icon</h3>
-              </header>
-              <section><button class="btn"> <i class="btn-leading-icon icon-chevron-left"><span class="jekyll-bug"></span></i> Previous </button></section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;button class=&quot;btn&quot;&gt; &lt;i class=&quot;btn-leading-icon icon-chevron-left&quot;&gt;&lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;&lt;/i&gt; Previous &lt;/button&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Trailing icon</h3>
-              </header>
-              <section><button class="btn"> Next <i class='btn-trailing-icon icon-chevron-right'><span class='jekyll-bug' /></i> </button></section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;button class=&quot;btn&quot;&gt; Next &lt;i class='btn-trailing-icon icon-chevron-right'&gt;&lt;span class='jekyll-bug' /&gt;&lt;/i&gt; &lt;/button&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Just an icon</h3>
-              </header>
-              <section><button class="btn"> <i class='icon-search'><span class='jekyll-bug' /></i> </button></section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;button class=&quot;btn&quot;&gt; &lt;i class='icon-search'&gt;&lt;span class='jekyll-bug' /&gt;&lt;/i&gt; &lt;/button&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.btn-leading-icon {
-  margin: 0 0.5em 0 0;
-  padding: 0 0.75em 0 0;
-  color: #ffffff;
-  border-right: 1px solid #ffffff;
-  border-right: 1px solid rgba(255, 255, 255, 0.4);
-  position: relative;
-}
-.btn-trailing-icon {
-  margin: 0 0 0 0.5em;
-  padding: 0 0 0 0.75em;
-  border-right: 0;
-  border-left: 1px solid #ffffff;
-  border-left: 1px solid rgba(255, 255, 255, 0.4);
 }</code></pre>
           </div>
         </li>

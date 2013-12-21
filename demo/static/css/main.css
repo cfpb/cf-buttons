@@ -75,21 +75,68 @@
   background-color: #919395;
 }
 /* topdoc
-    name: Super button
+    name: Destructive action buttons
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn btn-super">Sign me up!</button>
+      markup: <button class="btn btn-warning">Delete</button>
     - name: Hovered/focused state
-      markup: <button class="btn btn-super hover">Sign me up!</button>
+      markup: <button class="btn btn-warning hover">Delete</button>
     - name: Active state
-      markup: <button class="btn btn-super active">Sign me up!</button>
+      markup: <button class="btn btn-warning active">Delete</button>
     tags:
     - fj-buttons
 */
-.btn-super {
-  padding: 0.8333333333333334em 1.6666666666666667em;
-  font-size: 1.125em;
+.btn-warning {
+  background-color: #d12124;
+  color: #ffffff;
+}
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning.hover {
+  background-color: #da6750;
+}
+.btn-warning:active,
+.btn-warning.active {
+  background-color: #9c301b;
+}
+/* topdoc
+    name: Buttons with icons
+    family: fj-buttons
+    patterns:
+    - name: Leading icon
+      markup:
+        <button class="btn">
+            <i class="btn-leading-icon icon-chevron-left"><span class="jekyll-bug"></span></i> Previous
+        </button>
+    - name: Trailing icon
+      markup:
+        <button class="btn">
+            Next <i class='btn-trailing-icon icon-chevron-right'><span class='jekyll-bug' /></i>
+        </button>
+    - name: Just an icon
+      markup:
+        <button class="btn">
+            <i class='icon-search'><span class='jekyll-bug' /></i>
+        </button>
+    tags:
+    - fj-buttons
+    - fj-icons
+*/
+.btn-leading-icon {
+  margin: 0 0.5em 0 0;
+  padding: 0 0.75em 0 0;
+  color: #ffffff;
+  border-right: 1px solid #ffffff;
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+  position: relative;
+}
+.btn-trailing-icon {
+  margin: 0 0 0 0.5em;
+  padding: 0 0 0 0.75em;
+  border-right: 0;
+  border-left: 1px solid #ffffff;
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
 }
 /* topdoc
     name: Disabled button
@@ -109,6 +156,23 @@
   color: #75787b;
   cursor: default;
   cursor: not-allowed;
+}
+/* topdoc
+    name: Super button
+    family: fj-buttons
+    patterns:
+    - name: Default state
+      markup: <button class="btn btn-super">Sign me up!</button>
+    - name: Hovered/focused state
+      markup: <button class="btn btn-super hover">Sign me up!</button>
+    - name: Active state
+      markup: <button class="btn btn-super active">Sign me up!</button>
+    tags:
+    - fj-buttons
+*/
+.btn-super {
+  padding: 0.8333333333333334em 1.6666666666666667em;
+  font-size: 1.125em;
 }
 /* topdoc
     name: Button link
@@ -154,32 +218,6 @@
   color: #002d72;
 }
 /* topdoc
-    name: Destructive action buttons
-    family: fj-buttons
-    patterns:
-    - name: Default state
-      markup: <button class="btn btn-warning">Delete</button>
-    - name: Hovered/focused state
-      markup: <button class="btn btn-warning hover">Delete</button>
-    - name: Active state
-      markup: <button class="btn btn-warning active">Delete</button>
-    tags:
-    - fj-buttons
-*/
-.btn-warning {
-  background-color: #d12124;
-  color: #ffffff;
-}
-.btn-warning:hover,
-.btn-warning:focus,
-.btn-warning.hover {
-  background-color: #da6750;
-}
-.btn-warning:active,
-.btn-warning.active {
-  background-color: #9c301b;
-}
-/* topdoc
     name: Destructive action button link
     family: fj-buttons
     patterns:
@@ -213,44 +251,6 @@
 .btn-link.btn-warning.active {
   color: #9c301b;
   border-bottom-color: #9c301b;
-}
-/* topdoc
-    name: Buttons with icons
-    family: fj-buttons
-    patterns:
-    - name: Leading icon
-      markup:
-        <button class="btn">
-            <i class="btn-leading-icon icon-chevron-left"><span class="jekyll-bug"></span></i> Previous
-        </button>
-    - name: Trailing icon
-      markup:
-        <button class="btn">
-            Next <i class='btn-trailing-icon icon-chevron-right'><span class='jekyll-bug' /></i>
-        </button>
-    - name: Just an icon
-      markup:
-        <button class="btn">
-            <i class='icon-search'><span class='jekyll-bug' /></i>
-        </button>
-    tags:
-    - fj-buttons
-    - fj-icons
-*/
-.btn-leading-icon {
-  margin: 0 0.5em 0 0;
-  padding: 0 0.75em 0 0;
-  color: #ffffff;
-  border-right: 1px solid #ffffff;
-  border-right: 1px solid rgba(255, 255, 255, 0.4);
-  position: relative;
-}
-.btn-trailing-icon {
-  margin: 0 0 0 0.5em;
-  padding: 0 0 0 0.75em;
-  border-right: 0;
-  border-left: 1px solid #ffffff;
-  border-left: 1px solid rgba(255, 255, 255, 0.4);
 }
 /* topdoc
   name: EOF
