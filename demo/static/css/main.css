@@ -188,7 +188,7 @@
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn btn-link">Find out more</button> <button class="btn">Buttony</button>
+      markup: <button class="btn btn-link">Find out more </button> <button class="btn">Buttony</button>
     - name: Hovered state
       markup: <button class="btn btn-link hover">Find out more</button> <button class="btn">Buttony</button>
     - name: Focused state
