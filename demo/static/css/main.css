@@ -101,6 +101,42 @@
   background-color: #9c301b;
 }
 /* topdoc
+    name: Disabled button
+    family: fj-buttons
+    patterns:
+    - name: Default/hovered/focused/active state
+      markup: <button class="btn btn-disabled">Submit</button>
+    tags:
+    - fj-buttons
+*/
+.btn-disabled,
+.btn-disabled:hover,
+.btn-disabled:focus,
+.btn-disabled.hover,
+.btn-disabled.active {
+  background-color: #e3e4e5;
+  color: #75787b;
+  cursor: default;
+  cursor: not-allowed;
+}
+/* topdoc
+    name: Super button
+    family: fj-buttons
+    patterns:
+    - name: Default state
+      markup: <button class="btn btn-super">Sign me up!</button>
+    - name: Hovered/focused state
+      markup: <button class="btn btn-super hover">Sign me up!</button>
+    - name: Active state
+      markup: <button class="btn btn-super active">Sign me up!</button>
+    tags:
+    - fj-buttons
+*/
+.btn-super {
+  padding: 0.8333333333333334em 1.6666666666666667em;
+  font-size: 1.125em;
+}
+/* topdoc
     name: Buttons with icons
     family: fj-buttons
     patterns:
@@ -137,42 +173,6 @@
   border-right: 0;
   border-left: 1px solid #ffffff;
   border-left: 1px solid rgba(255, 255, 255, 0.4);
-}
-/* topdoc
-    name: Disabled button
-    family: fj-buttons
-    patterns:
-    - name: Default/hovered/focused/active state
-      markup: <button class="btn btn-disabled">Submit</button>
-    tags:
-    - fj-buttons
-*/
-.btn-disabled,
-.btn-disabled:hover,
-.btn-disabled:focus,
-.btn-disabled.hover,
-.btn-disabled.active {
-  background-color: #e3e4e5;
-  color: #75787b;
-  cursor: default;
-  cursor: not-allowed;
-}
-/* topdoc
-    name: Super button
-    family: fj-buttons
-    patterns:
-    - name: Default state
-      markup: <button class="btn btn-super">Sign me up!</button>
-    - name: Hovered/focused state
-      markup: <button class="btn btn-super hover">Sign me up!</button>
-    - name: Active state
-      markup: <button class="btn btn-super active">Sign me up!</button>
-    tags:
-    - fj-buttons
-*/
-.btn-super {
-  padding: 0.8333333333333334em 1.6666666666666667em;
-  font-size: 1.125em;
 }
 /* topdoc
     name: Button link
