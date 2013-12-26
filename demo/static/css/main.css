@@ -9,7 +9,7 @@
     - name: Default state
       markup: <button class="btn">Sign up</button>
     - name: Hovered/focused state
-      markup: <button class="btn hover">Sign up</button>
+      markup: <button class="btn hover">Sign up</button>s
     - name: Active state
       markup: <button class="btn active">Sign up</button>
     tags:
@@ -141,17 +141,17 @@
     family: fj-buttons
     patterns:
     - name: Leading icon
-      markup:
+      markup: |
         <button class="btn">
             <i class="btn-leading-icon icon-chevron-left"><span class="jekyll-bug"></span></i> Previous
         </button>
     - name: Trailing icon
-      markup:
+      markup: |
         <button class="btn">
             Next <i class='btn-trailing-icon icon-chevron-right'><span class='jekyll-bug' /></i>
         </button>
     - name: Just an icon
-      markup:
+      markup: |
         <button class="btn">
             <i class='icon-search'><span class='jekyll-bug' /></i>
         </button>
@@ -179,7 +179,7 @@
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn btn-link">Find out more </button>
+      markup: <button class="btn btn-link">Find out more</button>
     - name: Hovered state
       markup: <button class="btn btn-link hover">Find out more</button>
     - name: Focused state
