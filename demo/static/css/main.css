@@ -9,7 +9,7 @@
     - name: Default state
       markup: <button class="btn">Sign up</button>
     - name: Hovered/focused state
-      markup: <button class="btn hover">Sign up</button>s
+      markup: <button class="btn hover">Sign up</button>
     - name: Active state
       markup: <button class="btn active">Sign up</button>
     tags:
