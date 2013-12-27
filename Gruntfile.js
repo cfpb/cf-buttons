@@ -148,7 +148,8 @@ module.exports = function(grunt) {
           templateData: {
             family: '<%= pkg.name %>',
             title: '<%= pkg.name %> demo',
-            repo: '<%= pkg.repository.url %>'
+            repo: '<%= pkg.repository.url %>',
+            custom: '<%= grunt.file.read("demo/custom.html") %>'
           }
         }
       },
