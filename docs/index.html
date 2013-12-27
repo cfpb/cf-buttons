@@ -126,8 +126,8 @@
 }</code></pre>
           </div>
         </li>
-        <li id="destructive-actionbuttons" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Destructive action buttons</h1>
+        <li id="destructive-actionbutton" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">Destructive action button</h1>
           <ul class="demo-pattern-list">
             <li class="demo-pattern-list_item">
               <header class="demo-pattern-list_header">
@@ -237,8 +237,8 @@
 }</code></pre>
           </div>
         </li>
-        <li id="buttons-withicons" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Buttons with icons</h1>
+        <li id="button-withicons" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">Button with icons</h1>
           <ul class="demo-pattern-list">
             <li class="demo-pattern-list_item">
               <header class="demo-pattern-list_header">
@@ -301,6 +301,142 @@
   border-right: 0;
   border-left: 1px solid #ffffff;
   border-left: 1px solid rgba(255, 255, 255, 0.4);
+}</code></pre>
+          </div>
+        </li>
+        <li id="button-group" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">Button group</h1>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Default buttons in a button group</h3>
+              </header>
+              <section>
+<div class="btn-group">
+    <button class="btn">Action 1</button>
+    <button class="btn">Action 2</button>
+    <button class="btn">Action 3</button>
+</div>
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button class=&quot;btn&quot;&gt;Action 1&lt;/button&gt;
+    &lt;button class=&quot;btn&quot;&gt;Action 2&lt;/button&gt;
+    &lt;button class=&quot;btn&quot;&gt;Action 3&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+              </footer>
+            </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Super buttons in a button group</h3>
+              </header>
+              <section>
+<div class="btn-group">
+    <button class="btn btn-super">Action 1</button>
+    <button class="btn btn-super">Action 2</button>
+    <button class="btn btn-super">Action 3</button>
+</div>
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button class=&quot;btn btn-super&quot;&gt;Action 1&lt;/button&gt;
+    &lt;button class=&quot;btn btn-super&quot;&gt;Action 2&lt;/button&gt;
+    &lt;button class=&quot;btn btn-super&quot;&gt;Action 3&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+              </footer>
+            </li>
+          </ul>
+          <div class="demo-pattern-css">
+            <pre class="css"><code data-language="css">.btn-group .btn:first-child:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group .btn + .btn {
+  margin-left: -0.21428571428571427em;
+}
+.btn-group .btn + .btn:not(:last-child) {
+  border-radius: 0;
+}
+.btn-group .btn:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.btn-group .btn-super + .btn-super {
+  margin-left: -0.16666666666666666em;
+}</code></pre>
+          </div>
+        </li>
+        <li id="compound-button" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">Compound button</h1>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Default button style</h3>
+              </header>
+              <section>
+<div class="btn-group">
+    <button class="btn">Action 1</button>
+    <button class="btn btn-compound-action"><i class="icon-caret-down"><span class="jekyll-bug"></span></i></button>
+</div>
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button class=&quot;btn&quot;&gt;Action 1&lt;/button&gt;
+    &lt;button class=&quot;btn btn-compound-action&quot;&gt;&lt;i class=&quot;icon-caret-down&quot;&gt;&lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+              </footer>
+            </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Secondary button style</h3>
+              </header>
+              <section>
+<div class="btn-group">
+    <button class="btn btn-secondary">Action 1</button>
+    <button class="btn btn-secondary btn-compound-action"><i class="icon-caret-down"><span class="jekyll-bug"></span></i></button>
+</div>
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button class=&quot;btn btn-secondary&quot;&gt;Action 1&lt;/button&gt;
+    &lt;button class=&quot;btn btn-secondary btn-compound-action&quot;&gt;&lt;i class=&quot;icon-caret-down&quot;&gt;&lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+              </footer>
+            </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Super button style</h3>
+              </header>
+              <section>
+<div class="btn-group">
+    <button class="btn btn-super">Action 1</button>
+    <button class="btn btn-super btn-compound-action"><i class="icon-caret-down"><span class="jekyll-bug"></span></i></button>
+</div>
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;div class=&quot;btn-group&quot;&gt;
+    &lt;button class=&quot;btn btn-super&quot;&gt;Action 1&lt;/button&gt;
+    &lt;button class=&quot;btn btn-super btn-compound-action&quot;&gt;&lt;i class=&quot;icon-caret-down&quot;&gt;&lt;span class=&quot;jekyll-bug&quot;&gt;&lt;/span&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+              </footer>
+            </li>
+          </ul>
+          <div class="demo-pattern-css">
+            <pre class="css"><code data-language="css">.btn-compound-action {
+  background-color: #328ed8;
+}
+.btn-compound-action:hover,
+.btn-compound-action:focus,
+.btn-compound-action.hover {
+  background-color: #0072ce;
+}
+.btn-compound-action.btn-secondary {
+  background-color: #919395;
+}
+.btn-compound-action.btn-secondary:hover,
+.btn-compound-action.btn-secondary:focus,
+.btn-compound-action.btn-secondary.hover {
+  background-color: #75787b;
 }</code></pre>
           </div>
         </li>
