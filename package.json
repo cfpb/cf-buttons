@@ -1,0 +1,42 @@
+{
+  "name": "fj-buttons",
+  "description": "Basic form styling for the Flapjack front-end framework.",
+  "version": "0.4.1",
+  "homepage": "http://fake.ghe.domain/pages/flapjack/fj-buttons",
+  "author": {
+    "name": "Consumer Financial Protection Bureau",
+    "email": "michael.morici@cfpb.gov",
+    "url": "http://cfpb.github.io/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://fake.ghe.domain/flapjack/fj-buttons.git"
+  },
+  "bugs": {
+    "url": "http://fake.ghe.domain/flapjack/fj-buttons/issues"
+  },
+  "licenses": [
+    {
+      "type": "Public Domain",
+      "url": "http://fake.ghe.domain/pages/flapjack/fj-buttons/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "scripts": {
+    "test": "grunt jasmine"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-bower-task": "~0.3.2",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-less": "~0.6.0",
+    "grunt-string-replace": "latest",
+    "grunt-topdoc": "~0.2.0",
+    "fj-component-demo": "git://fake.ghe.domain/flapjack/fj-component-demo.git#0.3.0"
+  },
+  "keywords": []
+}
