@@ -75,7 +75,7 @@
   background-color: #919395;
 }
 /* topdoc
-    name: Destructive action buttons
+    name: Destructive action button
     family: fj-buttons
     patterns:
     - name: Default state
@@ -137,7 +137,7 @@
   font-size: 1.125em;
 }
 /* topdoc
-    name: Buttons with icons
+    name: Button with icons
     family: fj-buttons
     patterns:
     - name: Leading icon
@@ -173,6 +173,86 @@
   border-right: 0;
   border-left: 1px solid #ffffff;
   border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+/* topdoc
+    name: Button group
+    family: fj-buttons
+    patterns:
+    - name: Default buttons in a button group
+      markup: |
+        <div class="btn-group">
+            <button class="btn">Action 1</button>
+            <button class="btn">Action 2</button>
+            <button class="btn">Action 3</button>
+        </div>
+    - name: Super buttons in a button group
+      markup: |
+        <div class="btn-group">
+            <button class="btn btn-super">Action 1</button>
+            <button class="btn btn-super">Action 2</button>
+            <button class="btn btn-super">Action 3</button>
+        </div>
+    tags:
+    - fj-buttons
+*/
+.btn-group .btn:first-child:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group .btn + .btn {
+  margin-left: -0.21428571428571427em;
+}
+.btn-group .btn + .btn:not(:last-child) {
+  border-radius: 0;
+}
+.btn-group .btn:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.btn-group .btn-super + .btn-super {
+  margin-left: -0.16666666666666666em;
+}
+/* topdoc
+    name: Compound button
+    family: fj-buttons
+    patterns:
+    - name: Default button style
+      markup: |
+        <div class="btn-group">
+            <button class="btn">Action 1</button>
+            <button class="btn btn-compound-action"><i class="icon-caret-down"><span class="jekyll-bug"></span></i></button>
+        </div>
+    - name: Secondary button style
+      markup: |
+        <div class="btn-group">
+            <button class="btn btn-secondary">Action 1</button>
+            <button class="btn btn-secondary btn-compound-action"><i class="icon-caret-down"><span class="jekyll-bug"></span></i></button>
+        </div>
+    - name: Super button style
+      markup: |
+        <div class="btn-group">
+            <button class="btn btn-super">Action 1</button>
+            <button class="btn btn-super btn-compound-action"><i class="icon-caret-down"><span class="jekyll-bug"></span></i></button>
+        </div>
+    tags:
+    - fj-buttons
+    - fj-icons
+*/
+.btn-compound-action {
+  background-color: #328ed8;
+}
+.btn-compound-action:hover,
+.btn-compound-action:focus,
+.btn-compound-action.hover {
+  background-color: #0072ce;
+}
+.btn-compound-action.btn-secondary {
+  background-color: #919395;
+}
+.btn-compound-action.btn-secondary:hover,
+.btn-compound-action.btn-secondary:focus,
+.btn-compound-action.btn-secondary.hover {
+  background-color: #75787b;
 }
 /* topdoc
     name: Button link

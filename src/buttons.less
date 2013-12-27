@@ -4,6 +4,7 @@
    ========================================================================== */
 
 @btn-font-size-px: 14px;
+@super-btn-font-size-px: 18px;
 
 /* topdoc
     name: Default button
@@ -129,7 +130,7 @@
 
 
 /* topdoc
-    name: Destructive action buttons
+    name: Destructive action button
     family: fj-buttons
     patterns:
     - name: Default state
@@ -205,7 +206,7 @@
 
 .btn-super {
 
-    @font-size: 18px;
+    @font-size: @super-btn-font-size-px;
 
     & {
         padding: unit( 15px / @font-size, em ) unit( 30 / @font-size, em );
@@ -216,7 +217,7 @@
 
 
 /* topdoc
-    name: Buttons with icons
+    name: Button with icons
     family: fj-buttons
     patterns:
     - name: Leading icon
@@ -258,6 +259,112 @@
     border-right: 0;
     border-left: 1px solid @white; // Fallback
     border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+
+/* topdoc
+    name: Button group
+    family: fj-buttons
+    patterns:
+    - name: Default buttons in a button group
+      markup: |
+        <div class="btn-group">
+            <button class="btn">Action 1</button>
+            <button class="btn">Action 2</button>
+            <button class="btn">Action 3</button>
+        </div>
+    - name: Super buttons in a button group
+      markup: |
+        <div class="btn-group">
+            <button class="btn btn-super">Action 1</button>
+            <button class="btn btn-super">Action 2</button>
+            <button class="btn btn-super">Action 3</button>
+        </div>
+    tags:
+    - fj-buttons
+*/
+
+.btn-group {
+
+     @font-size: @btn-font-size-px;
+
+    .btn:first-child:not(:last-child) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .btn + .btn {
+        margin-left: unit( -3px / @font-size, em );
+    }
+
+    .btn + .btn:not(:last-child) {
+        border-radius: 0;
+    }
+
+    .btn:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .btn-super + .btn-super {
+        @font-size: @super-btn-font-size-px;
+        margin-left: unit( -3px / @font-size, em );
+    }
+
+}
+
+
+/* topdoc
+    name: Compound button
+    family: fj-buttons
+    patterns:
+    - name: Default button style
+      markup: |
+        <div class="btn-group">
+            <button class="btn">Action 1</button>
+            <button class="btn btn-compound-action"><i class="icon-caret-down"><span class="jekyll-bug"></span></i></button>
+        </div>
+    - name: Secondary button style
+      markup: |
+        <div class="btn-group">
+            <button class="btn btn-secondary">Action 1</button>
+            <button class="btn btn-secondary btn-compound-action"><i class="icon-caret-down"><span class="jekyll-bug"></span></i></button>
+        </div>
+    - name: Super button style
+      markup: |
+        <div class="btn-group">
+            <button class="btn btn-super">Action 1</button>
+            <button class="btn btn-super btn-compound-action"><i class="icon-caret-down"><span class="jekyll-bug"></span></i></button>
+        </div>
+    tags:
+    - fj-buttons
+    - fj-icons
+*/
+
+.btn-compound-action {
+
+    @font-size: @btn-font-size-px;
+
+    & {
+        background-color: @pacific-80;
+    }
+
+    &:hover,
+    &:focus,
+    &.hover {
+        background-color: @pacific;
+    }
+
+    &.btn-secondary {
+        background-color: @gray-80;
+    }
+
+    &.btn-secondary:hover,
+    &.btn-secondary:focus,
+    &.btn-secondary.hover {
+        background-color: @gray;
+    }
+
 }
 
 
