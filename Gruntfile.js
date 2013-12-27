@@ -183,7 +183,6 @@ module.exports = function(grunt) {
   /**
    * Create custom task aliases and combinations
    */
-  grunt.registerTask('all', ['clean', 'bower', 'copy:docs_assets', 'concat', 'less', 'string-replace', 'copy:docs', 'topdoc:demo', 'topdoc:docs']);
   grunt.registerTask('vendor', ['clean', 'bower', 'copy:docs_assets', 'concat']);
   grunt.registerTask('default', ['clean', 'concat', 'less', 'string-replace', 'copy:docs', 'topdoc:demo', 'topdoc:docs']);
 
