@@ -38,6 +38,7 @@
   -o-transition: .1s;
   -ms-transition: .1s;
   transition: .1s;
+  vertical-align: middle;
 }
 .btn:hover,
 .btn:focus,
@@ -50,8 +51,7 @@
 }
 .lt-ie8 button.btn,
 .lt-ie8 input.btn {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  padding: 0.5714285714285714em 0.42857142857142855em;
 }
 /* topdoc
     name: Secondary button
@@ -137,9 +137,15 @@
     tags:
     - fj-buttons
 */
-.btn-super {
+.btn-super,
+.btn-super:link,
+.btn-super:visited {
   padding: 0.8333333333333334em 1.6666666666666667em;
   font-size: 1.125em;
+}
+.lt-ie8 button.btn-super,
+.lt-ie8 input.btn-super {
+  padding: 0.6666666666666666em 0.3888888888888889em;
 }
 /* topdoc
     name: Button with icons

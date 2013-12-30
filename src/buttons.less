@@ -45,6 +45,7 @@
              -o-transition: .1s;
             -ms-transition: .1s;
                 transition: .1s;
+        vertical-align: middle;
     }
 
     &:hover,
@@ -60,13 +61,15 @@
 
 }
 
-.lt-ie8 button.btn,
-.lt-ie8 input.btn {
+.lt-ie8 {
 
     @font-size: @btn-font-size-px;
 
-    padding-left: unit( 7px / @font-size, em );
-    padding-right: unit( 7px / @font-size, em );
+    button.btn,
+    input.btn {
+        padding: unit( 8px / @font-size, em ) unit( 6px / @font-size, em );
+    }
+
 }
 
 
@@ -217,9 +220,22 @@
 
     @font-size: @super-btn-font-size-px;
 
-    & {
+    &,
+    &:link,
+    &:visited {
         padding: unit( 15px / @font-size, em ) unit( 30px / @font-size, em );
         font-size: unit( @font-size / @base-font-size-px, em );
+    }
+
+}
+
+.lt-ie8 {
+
+    @font-size: @super-btn-font-size-px;
+
+    button.btn-super,
+    input.btn-super {
+        padding: unit( 12px / @font-size, em ) unit( 7px / @font-size, em );
     }
 
 }
