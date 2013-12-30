@@ -30,7 +30,7 @@
         box-sizing: border-box;
         display: inline-block;
         margin: 0;
-        padding: unit( 10px / @font-size, em ) 1em;
+        padding: unit( 10px / @font-size, em ) unit( 14px / @font-size, em );
         .webfont-medium;
         font-size: unit( @font-size / @base-font-size-px, em );
         line-height: 1;
@@ -58,6 +58,15 @@
         background-color: @navy-80;
     }
 
+}
+
+.lt-ie8 button.btn,
+.lt-ie8 input.btn {
+
+    @font-size: @btn-font-size-px;
+
+    padding-left: unit( 7px / @font-size, em );
+    padding-right: unit( 7px / @font-size, em );
 }
 
 
@@ -209,7 +218,7 @@
     @font-size: @super-btn-font-size-px;
 
     & {
-        padding: unit( 15px / @font-size, em ) unit( 30 / @font-size, em );
+        padding: unit( 15px / @font-size, em ) unit( 30px / @font-size, em );
         font-size: unit( @font-size / @base-font-size-px, em );
     }
 

@@ -48,6 +48,11 @@
 .btn.active {
   background-color: #33578e;
 }
+.lt-ie8 button.btn,
+.lt-ie8 input.btn {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
 /* topdoc
     name: Secondary button
     family: fj-buttons
@@ -148,12 +153,12 @@
     - name: Trailing icon
       markup: |
         <button class="btn">
-            Next <i class='btn-trailing-icon icon-chevron-right'><span class="jekyll-bug"></span></i>
+            Next <i class="btn-trailing-icon icon-chevron-right"><span class="jekyll-bug"></span></i>
         </button>
     - name: Just an icon
       markup: |
         <button class="btn">
-            <i class='icon-search'><span class="jekyll-bug"></span></i>
+            <i class="icon-search"><span class="jekyll-bug"></span></i>
         </button>
     tags:
     - fj-buttons
