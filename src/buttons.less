@@ -213,12 +213,6 @@
         font-size: unit( @font-size / @base-font-size-px, em );
     }
 
-    // Fixes fj-buttons/issues/8
-    & [class^="icon-"],
-    & [class*="icon-"] {
-        line-height: .99;
-    }
-
 }
 
 
@@ -245,6 +239,17 @@
     - fj-buttons
     - fj-icons
 */
+
+
+.btn {
+
+    // Fixes #8, #15
+    & [class^="icon-"],
+    & [class*="icon-"] {
+        line-height: .99;
+    }
+
+}
 
 .btn-leading-icon {
     @font-size: @btn-font-size-px;

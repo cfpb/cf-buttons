@@ -234,10 +234,6 @@
             <pre class="css"><code data-language="css">.btn-super {
   padding: 0.8333333333333334em 1.6666666666666667em;
   font-size: 1.125em;
-}
-.btn-super [class^=&quot;icon-&quot;],
-.btn-super [class*=&quot;icon-&quot;] {
-  line-height: .99;
 }</code></pre>
           </div>
         </li>
@@ -291,7 +287,11 @@
             </li>
           </ul>
           <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.btn-leading-icon {
+            <pre class="css"><code data-language="css">.btn [class^=&quot;icon-&quot;],
+.btn [class*=&quot;icon-&quot;] {
+  line-height: .99;
+}
+.btn-leading-icon {
   margin: 0 0.5em 0 0;
   padding: 0 0.75em 0 0;
   color: #ffffff;
