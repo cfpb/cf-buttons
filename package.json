@@ -36,7 +36,7 @@
     "grunt-contrib-less": "~0.6.0",
     "grunt-string-replace": "latest",
     "grunt-topdoc": "~0.2.0",
-    "fj-component-demo": "git://fake.ghe.domain/flapjack/fj-component-demo.git#0.5.0"
+    "fj-component-demo": "git://fake.ghe.domain/flapjack/fj-component-demo.git"
   },
   "keywords": []
 }
