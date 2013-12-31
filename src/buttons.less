@@ -3,9 +3,6 @@
    Button Styling
    ========================================================================== */
 
-@btn-font-size-px: 14px;
-@super-btn-font-size-px: 18px;
-
 /* topdoc
     name: Default button
     family: fj-buttons
@@ -20,6 +17,10 @@
     - fj-buttons
 */
 
+@btn-font-size-px: 14px;
+@btn-v-padding-px: 9px;
+@btn-h-padding-px: 14px;
+
 .btn {
 
     @font-size: @btn-font-size-px;
@@ -30,10 +31,12 @@
         box-sizing: border-box;
         display: inline-block;
         margin: 0;
-        padding: unit( 10px / @font-size, em ) unit( 14px / @font-size, em );
+        padding:
+            unit( @btn-v-padding-px / @font-size, em )
+            unit( @btn-h-padding-px / @font-size, em );
         .webfont-medium;
         font-size: unit( @font-size / @base-font-size-px, em );
-        line-height: 1;
+        line-height: normal;
         color: @white;
         background-color: @pacific;
         border: 0;
@@ -60,15 +63,32 @@
         background-color: @navy-80;
     }
 
+    button&::-moz-focus-inner,
+    input&::-moz-focus-inner {
+        // Fixes inconsistent button.btn height in FireFox
+        // Helps with inconsistent input.btn height in FireFox but not completely
+        border: 0;
+    }
+
 }
 
 .lt-ie8 {
 
     @font-size: @btn-font-size-px;
 
+    // Fixes scroll rendering bug
+    // http://snipplr.com/view/518/
+    & {
+        background : url(null) fixed no-repeat;
+    }
+
+    // Fixes button and input sizes in IE7
+    // Note that the "2" below is a magic number
     button.btn,
     input.btn {
-        padding: unit( 8px / @font-size, em ) unit( 6px / @font-size, em );
+        overflow: visible;
+        padding-top: unit( (@btn-v-padding-px - 2) / @font-size, em );
+        padding-bottom: unit( (@btn-v-padding-px - 2) / @font-size, em );
     }
 
 }
@@ -217,6 +237,10 @@
     - fj-buttons
 */
 
+@super-btn-font-size-px: 18px;
+@super-btn-v-padding-px: 15px;
+@super-btn-h-padding-px: 30px;
+
 .btn-super {
 
     @font-size: @super-btn-font-size-px;
@@ -224,7 +248,9 @@
     &,
     &:link,
     &:visited {
-        padding: unit( 15px / @font-size, em ) unit( 30px / @font-size, em );
+        padding:
+            unit( @super-btn-v-padding-px / @font-size, em )
+            unit( @super-btn-h-padding-px / @font-size, em );
         font-size: unit( @font-size / @base-font-size-px, em );
     }
 
@@ -234,9 +260,12 @@
 
     @font-size: @super-btn-font-size-px;
 
+    // Fixes button and input sizes in IE7
+    // Note that the "3" below is a magic number
     button.btn-super,
     input.btn-super {
-        padding: unit( 12px / @font-size, em ) unit( 7px / @font-size, em );
+        padding-top: unit( (@super-btn-v-padding-px - 3) / @font-size, em );
+        padding-bottom: unit( (@super-btn-v-padding-px - 3) / @font-size, em );
     }
 
 }
@@ -272,7 +301,7 @@
     // Fixes #8, #15
     & [class^="icon-"],
     & [class*="icon-"] {
-        line-height: .99;
+        line-height: 1;
     }
 
 }
@@ -429,7 +458,7 @@
     &:link,
     &:visited {
         // This margin is necessary to vertically align link buttons with regular buttons.
-        margin: unit( 10px / @font-size, em) 0;
+        margin: unit( @btn-v-padding-px / @font-size, em) 0;
         padding: 0;
         color: @pacific;
         background-color: transparent;
@@ -462,15 +491,9 @@
 
 .lt-ie8 {
 
-    @font-size: @btn-font-size-px;
-
     button.btn-link,
     input.btn-link {
-        // Sizes the width appropriately
-        overflow: visible;
-        // Needed to override .lt-ie8 button.btn and .lt-ie8 input.btn and
-        // needed to push the border away from low hanging letters like "g"
-        padding: 0 0 unit( 2px / @font-size, em ) 0;
+        padding: 0;
     }
 
 }

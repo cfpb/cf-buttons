@@ -21,12 +21,12 @@
   box-sizing: border-box;
   display: inline-block;
   margin: 0;
-  padding: 0.7142857142857143em 1em;
+  padding: 0.6428571428571429em 1em;
   font-family: "Avenir Next Medium", Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 0.875em;
-  line-height: 1;
+  line-height: normal;
   color: #ffffff;
   background-color: #0072ce;
   border: 0;
@@ -50,9 +50,18 @@
 .btn.active {
   background-color: #33578e;
 }
+button.btn::-moz-focus-inner,
+input.btn::-moz-focus-inner {
+  border: 0;
+}
+.lt-ie8 {
+  background: url(null) fixed no-repeat;
+}
 .lt-ie8 button.btn,
 .lt-ie8 input.btn {
-  padding: 0.5714285714285714em 0.42857142857142855em;
+  overflow: visible;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 /* topdoc
     name: Secondary button
@@ -146,7 +155,8 @@
 }
 .lt-ie8 button.btn-super,
 .lt-ie8 input.btn-super {
-  padding: 0.6666666666666666em 0.3888888888888889em;
+  padding-top: 0.6666666666666666em;
+  padding-bottom: 0.6666666666666666em;
 }
 /* topdoc
     name: Button with icons
@@ -173,7 +183,7 @@
 */
 .btn [class^="icon-"],
 .btn [class*="icon-"] {
-  line-height: .99;
+  line-height: 1;
 }
 .btn-leading-icon {
   margin: 0 0.5em 0 0;
@@ -288,7 +298,7 @@
 .btn-link,
 .btn-link:link,
 .btn-link:visited {
-  margin: 0.7142857142857143em 0;
+  margin: 0.6428571428571429em 0;
   padding: 0;
   color: #0072ce;
   background-color: transparent;
@@ -315,8 +325,7 @@
 }
 .lt-ie8 button.btn-link,
 .lt-ie8 input.btn-link {
-  overflow: visible;
-  padding: 0 0 0.14285714285714285em 0;
+  padding: 0;
 }
 /* topdoc
     name: Destructive action button link
