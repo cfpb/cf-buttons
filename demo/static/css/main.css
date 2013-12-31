@@ -27,12 +27,12 @@
   font-weight: 500;
   font-size: 0.875em;
   line-height: 1;
-  text-decoration: none;
   color: #ffffff;
   background-color: #0072ce;
   border: 0;
   border-radius: 0.2857142857142857em;
   cursor: pointer;
+  text-decoration: none;
   -webkit-transition: .1s;
   -moz-transition: .1s;
   -o-transition: .1s;
@@ -274,41 +274,25 @@
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn-link">Find out more</button>
+      markup: <button class="btn btn-link">Find out more</button>
     - name: Hovered state
-      markup: <button class="btn-link hover">Find out more</button>
+      markup: <button class="btn btn-link hover">Find out more</button>
     - name: Focused state
-      markup: <button class="btn-link focus">Find out more</button>
+      markup: <button class="btn btn-link focus">Find out more</button>
     - name: Active state
-      markup: <button class="btn-link active">Find out more</button>
+      markup: <button class="btn btn-link active">Find out more</button>
     tags:
     - fj-buttons
 */
 .btn-link,
 .btn-link:link,
 .btn-link:visited {
-  box-sizing: border-box;
-  display: inline-block;
   margin: 0.7142857142857143em 0;
   padding: 0;
-  font-family: "Avenir Next Medium", Arial, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 0.875em;
-  line-height: 1;
   color: #0072ce;
   background-color: transparent;
-  border: 0;
   border-bottom: 1px dotted #0072ce;
   border-radius: 0;
-  cursor: pointer;
-  text-decoration: none;
-  -webkit-transition: .1s;
-  -moz-transition: .1s;
-  -o-transition: .1s;
-  -ms-transition: .1s;
-  transition: .1s;
-  vertical-align: middle;
 }
 .btn-link:hover,
 .btn-link.hover {
@@ -331,20 +315,20 @@
 .lt-ie8 button.btn-link,
 .lt-ie8 input.btn-link {
   overflow: visible;
-  padding-bottom: 2px;
+  padding: 0 0 0.14285714285714285em 0;
 }
 /* topdoc
     name: Destructive action button link
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn-link btn-warning">Delete</button>
+      markup: <button class="btn btn-link btn-warning">Delete</button>
     - name: Hovered state
-      markup: <button class="btn-link btn-warning hover">Delete</button>
+      markup: <button class="btn btn-link btn-warning hover">Delete</button>
     - name: Focused state
-      markup: <button class="btn-link btn-warning focus">Delete</button>
+      markup: <button class="btn btn-link btn-warning focus">Delete</button>
     - name: Active state
-      markup: <button class="btn-link btn-warning active">Delete</button>
+      markup: <button class="btn btn-link btn-warning active">Delete</button>
     tags:
     - fj-buttons
 */

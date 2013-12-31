@@ -34,12 +34,12 @@
         .webfont-medium;
         font-size: unit( @font-size / @base-font-size-px, em );
         line-height: 1;
-        text-decoration: none;
         color: @white;
         background-color: @pacific;
         border: 0;
         border-radius: unit( 4px / @font-size, em );
         cursor: pointer;
+        text-decoration: none;
         -webkit-transition: .1s;
            -moz-transition: .1s;
              -o-transition: .1s;
@@ -409,13 +409,13 @@
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn-link">Find out more</button>
+      markup: <button class="btn btn-link">Find out more</button>
     - name: Hovered state
-      markup: <button class="btn-link hover">Find out more</button>
+      markup: <button class="btn btn-link hover">Find out more</button>
     - name: Focused state
-      markup: <button class="btn-link focus">Find out more</button>
+      markup: <button class="btn btn-link focus">Find out more</button>
     - name: Active state
-      markup: <button class="btn-link active">Find out more</button>
+      markup: <button class="btn btn-link active">Find out more</button>
     tags:
     - fj-buttons
 */
@@ -427,27 +427,13 @@
     &,
     &:link,
     &:visited {
-        box-sizing: border-box;
-        display: inline-block;
         // This margin is necessary to vertically align link buttons with regular buttons.
         margin: unit( 10px / @font-size, em) 0;
         padding: 0;
-        .webfont-medium;
-        font-size: unit( @font-size / @base-font-size-px, em );
-        line-height: 1;
         color: @pacific;
         background-color: transparent;
-        border: 0;
         border-bottom: 1px dotted @pacific;
         border-radius: 0;
-        cursor: pointer;
-        text-decoration: none;
-        -webkit-transition: .1s;
-           -moz-transition: .1s;
-             -o-transition: .1s;
-            -ms-transition: .1s;
-                transition: .1s;
-        vertical-align: middle;
     }
 
     &:hover,
@@ -475,11 +461,14 @@
 
 .lt-ie8 {
 
+    @font-size: @btn-font-size-px;
+
     button.btn-link,
     input.btn-link {
         // Sizes the width appropriately
         overflow: visible;
-        padding-bottom: 2px;
+        // Needed to override .lt-ie8 button.btn and .lt-ie8 input.btn
+        padding: 0 0 unit( 2px / @font-size, em ) 0;
     }
 
 }
@@ -490,13 +479,13 @@
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn-link btn-warning">Delete</button>
+      markup: <button class="btn btn-link btn-warning">Delete</button>
     - name: Hovered state
-      markup: <button class="btn-link btn-warning hover">Delete</button>
+      markup: <button class="btn btn-link btn-warning hover">Delete</button>
     - name: Focused state
-      markup: <button class="btn-link btn-warning focus">Delete</button>
+      markup: <button class="btn btn-link btn-warning focus">Delete</button>
     - name: Active state
-      markup: <button class="btn-link btn-warning active">Delete</button>
+      markup: <button class="btn btn-link btn-warning active">Delete</button>
     tags:
     - fj-buttons
 */
