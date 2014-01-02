@@ -72,8 +72,6 @@ input.btn::-moz-focus-inner {
 .lt-ie8 button.btn,
 .lt-ie8 input.btn {
   overflow: visible;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
   padding-top: 0.5142857142857143em;
   padding-bottom: 0.5142857142857143em;
 }
