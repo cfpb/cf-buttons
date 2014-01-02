@@ -525,6 +525,13 @@
         background-color: @gray;
     }
 
+    &.btn-super {
+        @font-size: @super-btn-font-size-px;
+
+        padding-left: unit( (@super-btn-h-padding-px / 1.4) / @font-size, em );
+        padding-right: unit( (@super-btn-h-padding-px / 1.4) / @font-size, em );
+    }
+
 }
 
 
