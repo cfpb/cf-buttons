@@ -162,8 +162,9 @@ input.btn::-moz-focus-inner {
 .btn-disabled:link,
 .btn-disabled:visited,
 .btn-disabled:hover,
-.btn-disabled:focus,
 .btn-disabled.hover,
+.btn-disabled:focus,
+.btn-disabled:active,
 .btn-disabled.active {
   color: #75787b;
   background-color: #e3e4e5;
@@ -207,21 +208,25 @@ input.btn::-moz-focus-inner {
     name: Button with icons
     family: fj-buttons
     patterns:
-    - name: Leading icon
+    - name: Button icon left
       markup: |
         <a href="#" class="btn">
-            <i class="btn-leading-icon icon-chevron-left"><span class="jekyll-bug"></span></i> Anchor Tag
+            <i class="btn-icon-left icon-chevron-left"><span class="jekyll-bug"></span></i>
+            Anchor Tag
         </a>
         <button class="btn">
-            <i class="btn-leading-icon icon-chevron-left"><span class="jekyll-bug"></span></i> Button Tag
+            <i class="btn-icon-left icon-chevron-left"><span class="jekyll-bug"></span></i>
+            Button Tag
         </button>
-    - name: Trailing icon
+    - name: Button icon right
       markup: |
         <a href="#" class="btn">
-            Anchor Tag <i class="btn-trailing-icon icon-chevron-right"><span class="jekyll-bug"></span></i>
+            Anchor Tag
+            <i class="btn-icon-right icon-chevron-right"><span class="jekyll-bug"></span></i>
         </a>
         <button class="btn">
-            Button Tag <i class="btn-trailing-icon icon-chevron-right"><span class="jekyll-bug"></span></i>
+            Button Tag
+            <i class="btn-icon-right icon-chevron-right"><span class="jekyll-bug"></span></i>
         </button>
     - name: Just an icon
       markup: |
@@ -239,7 +244,7 @@ input.btn::-moz-focus-inner {
 .btn [class*="icon-"] {
   line-height: 1;
 }
-.btn-leading-icon {
+.btn-icon-left {
   margin: 0 0.5em 0 0;
   padding: 0 0.75em 0 0;
   color: #ffffff;
@@ -247,7 +252,7 @@ input.btn::-moz-focus-inner {
   border-right: 1px solid rgba(255, 255, 255, 0.4);
   position: relative;
 }
-.btn-trailing-icon {
+.btn-icon-right {
   margin: 0 0 0 0.5em;
   padding: 0 0 0 0.75em;
   border-right: 0;

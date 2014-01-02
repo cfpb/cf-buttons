@@ -249,8 +249,9 @@
     &:link,
     &:visited,
     &:hover,
-    &:focus,
     &.hover,
+    &:focus,
+    &:active,
     &.active {
         color: @gray;
         background-color: @gray-20;
@@ -322,21 +323,25 @@
     name: Button with icons
     family: fj-buttons
     patterns:
-    - name: Leading icon
+    - name: Button icon left
       markup: |
         <a href="#" class="btn">
-            <i class="btn-leading-icon icon-chevron-left"><span class="jekyll-bug"></span></i> Anchor Tag
+            <i class="btn-icon-left icon-chevron-left"><span class="jekyll-bug"></span></i>
+            Anchor Tag
         </a>
         <button class="btn">
-            <i class="btn-leading-icon icon-chevron-left"><span class="jekyll-bug"></span></i> Button Tag
+            <i class="btn-icon-left icon-chevron-left"><span class="jekyll-bug"></span></i>
+            Button Tag
         </button>
-    - name: Trailing icon
+    - name: Button icon right
       markup: |
         <a href="#" class="btn">
-            Anchor Tag <i class="btn-trailing-icon icon-chevron-right"><span class="jekyll-bug"></span></i>
+            Anchor Tag
+            <i class="btn-icon-right icon-chevron-right"><span class="jekyll-bug"></span></i>
         </a>
         <button class="btn">
-            Button Tag <i class="btn-trailing-icon icon-chevron-right"><span class="jekyll-bug"></span></i>
+            Button Tag
+            <i class="btn-icon-right icon-chevron-right"><span class="jekyll-bug"></span></i>
         </button>
     - name: Just an icon
       markup: |
@@ -362,7 +367,7 @@
 
 }
 
-.btn-leading-icon {
+.btn-icon-left {
     @font-size: @btn-font-size-px;
 
     margin: 0 unit( 7px / @font-size, em) 0 0;
@@ -373,7 +378,7 @@
     position: relative;
 }
 
-.btn-trailing-icon {
+.btn-icon-right {
     @font-size: @btn-font-size-px;
 
     margin: 0 0 0 unit( 7px / @font-size, em);
