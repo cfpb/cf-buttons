@@ -53,12 +53,12 @@
         cursor: pointer;
         text-decoration: none;
         vertical-align: middle;
-        -webkit-appearance: none;
         -webkit-transition: .1s;
            -moz-transition: .1s;
              -o-transition: .1s;
             -ms-transition: .1s;
                 transition: .1s;
+        -webkit-appearance: none;
     }
 
     &:hover,
@@ -131,8 +131,8 @@
     &,
     &:link,
     &:visited {
-        background-color: @gray;
         color: @white;
+        background-color: @gray;
     }
 
     &:hover,
@@ -212,8 +212,8 @@
     &,
     &:link,
     &:visited {
-        background-color: @redorange;
         color: @white;
+        background-color: @redorange;
     }
 
     &:hover,
@@ -252,8 +252,8 @@
     &:focus,
     &.hover,
     &.active {
-        background-color: @gray-20;
         color: @gray;
+        background-color: @gray-20;
         cursor: default; // Fallback for IE/Opera
         cursor: not-allowed;
     }
@@ -571,22 +571,22 @@
     &:hover,
     &.hover {
         color: @pacific-50;
-        border-bottom: 1px solid @pacific-50;
         background-color: transparent;
+        border-bottom: 1px solid @pacific-50;
     }
 
     &:focus,
     &.focus {
+        background-color: transparent;
         border-bottom-style: solid;
         outline: thin dotted;
-        background-color: transparent;
     }
 
     &:active,
     &.active {
-        border-bottom: 1px solid @navy;
-        background-color: transparent;
         color: @navy;
+        background-color: transparent;
+        border-bottom: 1px solid @navy;
     }
 
 }
@@ -635,8 +635,8 @@
     &:link,
     &:visited {
         color: @redorange;
-        border-bottom-color: @redorange;
         background-color: transparent;
+        border-bottom-color: @redorange;
     }
 
     &:hover,
