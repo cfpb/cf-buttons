@@ -94,7 +94,9 @@ input.btn::-moz-focus-inner {
     tags:
     - fj-buttons
 */
-.btn-secondary {
+.btn-secondary,
+.btn-secondary:link,
+.btn-secondary:visited {
   background-color: #75787b;
   color: #ffffff;
 }
@@ -129,7 +131,9 @@ input.btn::-moz-focus-inner {
     tags:
     - fj-buttons
 */
-.btn-warning {
+.btn-warning,
+.btn-warning:link,
+.btn-warning:visited {
   background-color: #d12124;
   color: #ffffff;
 }
@@ -155,6 +159,8 @@ input.btn::-moz-focus-inner {
     - fj-buttons
 */
 .btn-disabled,
+.btn-disabled:link,
+.btn-disabled:visited,
 .btn-disabled:hover,
 .btn-disabled:focus,
 .btn-disabled.hover,
@@ -344,7 +350,9 @@ input.btn::-moz-focus-inner {
     - fj-buttons
     - fj-icons
 */
-.btn-compound-action {
+.btn-compound-action,
+.btn-compound-action:link,
+.btn-compound-action:visited {
   background-color: #328ed8;
 }
 .btn-compound-action:hover,
@@ -446,7 +454,9 @@ input.btn::-moz-focus-inner {
     tags:
     - fj-buttons
 */
-.btn-link.btn-warning {
+.btn-link.btn-warning,
+.btn-link.btn-warning:link,
+.btn-link.btn-warning:visited {
   color: #d12124;
   border-bottom-color: #d12124;
   background-color: transparent;
