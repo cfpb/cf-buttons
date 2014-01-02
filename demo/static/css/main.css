@@ -88,9 +88,9 @@ input.btn::-moz-focus-inner {
         <input type="submit" value="Input Tag" class="btn btn-secondary hover" />
     - name: Active state
       markup: |
-        <a href="#" class="btn btn-secondary focus">Anchor Tag</a>
-        <button class="btn btn-secondary focus">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn-secondary focus" />
+        <a href="#" class="btn btn-secondary active">Anchor Tag</a>
+        <button class="btn btn-secondary active">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn btn-secondary active" />
     tags:
     - fj-buttons
 */
@@ -107,7 +107,7 @@ input.btn::-moz-focus-inner {
 }
 .btn-secondary:active,
 .btn-secondary.active {
-  background-color: #919395;
+  background-color: #43484e;
 }
 /* topdoc
     name: Destructive action button
