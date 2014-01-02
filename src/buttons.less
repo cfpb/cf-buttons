@@ -28,6 +28,8 @@
 
 @btn-font-size-px: 14px;
 @btn-v-padding-px: 9px;
+@btn-v-padding-modifier-ie: .8;
+@btn-v-padding-px-ie: @btn-v-padding-modifier-ie * @btn-v-padding-px;
 @btn-h-padding-px: 14px;
 
 .btn {
@@ -102,6 +104,8 @@
         overflow: visible;
         padding-top: unit( (@btn-v-padding-px - 2) / @font-size, em );
         padding-bottom: unit( (@btn-v-padding-px - 2) / @font-size, em );
+        padding-top: unit( @btn-v-padding-px-ie / @font-size, em );
+        padding-bottom: unit( @btn-v-padding-px-ie / @font-size, em );
     }
 
 }
@@ -291,6 +295,7 @@
 
 @super-btn-font-size-px: 18px;
 @super-btn-v-padding-px: 15px;
+@super-btn-v-padding-px-ie: @btn-v-padding-modifier-ie * @super-btn-v-padding-px;
 @super-btn-h-padding-px: 30px;
 
 .btn-super {
@@ -320,8 +325,8 @@
     // Note that the "3" below is a magic number
     button.btn-super,
     input.btn-super {
-        padding-top: unit( (@super-btn-v-padding-px - 3) / @font-size, em );
-        padding-bottom: unit( (@super-btn-v-padding-px - 3) / @font-size, em );
+        padding-top: unit( @super-btn-v-padding-px-ie / @font-size, em );
+        padding-bottom: unit( @super-btn-v-padding-px-ie / @font-size, em );
     }
 
 }
