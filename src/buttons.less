@@ -26,35 +26,38 @@
     - fj-buttons
 */
 
-@btn-font-size-px: 14px;
-@btn-v-padding-px: 9px;
+// Used across the various .btn styles
+@btn-font-size: 14px;
+@btn-v-padding: 9px;
+
+// Used to fix the vertical padding bug in IE for <button>'s and <inputs>'s across various .btn styles
 @btn-v-padding-modifier-ie: .8;
-@btn-v-padding-px-ie: @btn-v-padding-modifier-ie * @btn-v-padding-px;
-@btn-h-padding-px: 14px;
 
 .btn {
-
-    @font-size: @btn-font-size-px;
 
     &,
     &:link,
     &:visited {
-        box-sizing: border-box;
         display: inline-block;
-        margin: 0;
+        box-sizing: border-box;
         padding:
-            unit( @btn-v-padding-px / @font-size, em )
-            unit( @btn-h-padding-px / @font-size, em );
-        .webfont-medium;
-        font-size: unit( @font-size / @base-font-size-px, em );
-        line-height: normal;
-        color: @white;
-        background-color: @pacific;
+            unit( @btn-v-padding / @btn-font-size, em )
+            unit( 14px / @btn-font-size, em );
         border: 0;
-        border-radius: unit( 4px / @font-size, em );
-        cursor: pointer;
-        text-decoration: none;
+        border-radius: unit( 4px / @btn-font-size, em );
+        margin: 0;
+
         vertical-align: middle;
+
+        background-color: @pacific;
+
+        color: @white;
+        .webfont-medium;
+        font-size: unit( @btn-font-size / @base-font-size-px, em );
+        line-height: normal;
+        text-decoration: none;
+
+        cursor: pointer;
         -webkit-transition: .1s;
            -moz-transition: .1s;
              -o-transition: .1s;
@@ -75,7 +78,7 @@
     }
 
     & + & {
-        margin-left: unit( 6px / @font-size, em);
+        margin-left: unit( 6px / @btn-font-size, em);
     }
 
     button&::-moz-focus-inner,
@@ -89,8 +92,6 @@
 
 .lt-ie8 {
 
-    @font-size: @btn-font-size-px;
-
     // Fixes scroll rendering bug
     // http://snipplr.com/view/518/
     & {
@@ -102,8 +103,8 @@
     button.btn,
     input.btn {
         overflow: visible;
-        padding-top: unit( @btn-v-padding-px-ie / @font-size, em );
-        padding-bottom: unit( @btn-v-padding-px-ie / @font-size, em );
+        padding-top: unit( (@btn-v-padding-modifier-ie * @btn-v-padding) / @btn-font-size, em );
+        padding-bottom: unit( (@btn-v-padding-modifier-ie * @btn-v-padding) / @btn-font-size, em );
     }
 
 }
@@ -137,8 +138,8 @@
     &,
     &:link,
     &:visited {
-        color: @white;
         background-color: @gray;
+        color: @white;
     }
 
     &:hover,
@@ -218,8 +219,8 @@
     &,
     &:link,
     &:visited {
-        color: @white;
         background-color: @redorange;
+        color: @white;
     }
 
     &:hover,
@@ -259,8 +260,8 @@
     &:focus,
     &:active,
     &.active {
-        color: @gray;
         background-color: @gray-20;
+        color: @gray;
         cursor: default; // Fallback for IE/Opera
         cursor: not-allowed;
     }
@@ -291,40 +292,33 @@
     - fj-buttons
 */
 
-@super-btn-font-size-px: 18px;
-@super-btn-v-padding-px: 15px;
-@super-btn-v-padding-px-ie: @btn-v-padding-modifier-ie * @super-btn-v-padding-px;
-@super-btn-h-padding-px: 30px;
+@super-btn-font-size: 18px;
 
 .btn-super {
-
-    @font-size: @super-btn-font-size-px;
 
     &,
     &:link,
     &:visited {
         padding:
-            unit( @super-btn-v-padding-px / @font-size, em )
-            unit( @super-btn-h-padding-px / @font-size, em );
-        font-size: unit( @font-size / @base-font-size-px, em );
+            unit( 15px / @super-btn-font-size, em )
+            unit( 30px / @super-btn-font-size, em );
+        font-size: unit( @super-btn-font-size / @base-font-size-px, em );
     }
 
     & + & {
-        margin-left: unit( 6px / @font-size, em);
+        margin-left: unit( 6px / @super-btn-font-size, em);
     }
 
 }
 
 .lt-ie8 {
 
-    @font-size: @super-btn-font-size-px;
-
     // Fixes button and input sizes in IE7
     // Note that the "3" below is a magic number
     button.btn-super,
     input.btn-super {
-        padding-top: unit( @super-btn-v-padding-px-ie / @font-size, em );
-        padding-bottom: unit( @super-btn-v-padding-px-ie / @font-size, em );
+        padding-top: unit( (@btn-v-padding-modifier-ie * 15px) / @super-btn-font-size, em );
+        padding-bottom: unit( (@btn-v-padding-modifier-ie * 15px) / @super-btn-font-size, em );
     }
 
 }
@@ -379,23 +373,19 @@
 }
 
 .btn-icon-left {
-    @font-size: @btn-font-size-px;
-
-    margin: 0 unit( 7px / @font-size, em) 0 0;
-    padding: 0 unit( 10.5px / @font-size, em) 0 0;
-    color: @white;
+    padding: 0 unit( 10.5px / @btn-font-size, em) 0 0;
     border-right: 1px solid @white; // Fallback
     border-right: 1px solid rgba(255, 255, 255, 0.4);
+    margin: 0 unit( 7px / @btn-font-size, em) 0 0;
+    color: @white;
 }
 
 .btn-icon-right {
-    @font-size: @btn-font-size-px;
-
-    margin: 0 0 0 unit( 7px / @font-size, em);
-    padding: 0 0 0 unit( 10.5px / @font-size, em);
+    padding: 0 0 0 unit( 10.5px / @btn-font-size, em);
     border-right: 0;
     border-left: 1px solid @white; // Fallback
     border-left: 1px solid rgba(255, 255, 255, 0.4);
+    margin: 0 0 0 unit( 7px / @btn-font-size, em);
 }
 
 
@@ -443,15 +433,13 @@
 
 .btn-group {
 
-     @font-size: @btn-font-size-px;
-
-    .btn:first-child:not(:last-child) {
+     .btn:first-child:not(:last-child) {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
     }
 
     .btn + .btn {
-        margin-left: unit( -3px / @font-size, em );
+        margin-left: unit( -3px / @btn-font-size, em );
     }
 
     .btn + .btn:not(:last-child) {
@@ -464,8 +452,7 @@
     }
 
     .btn-super + .btn-super {
-        @font-size: @super-btn-font-size-px;
-        margin-left: unit( -3px / @font-size, em );
+        margin-left: unit( -3px / @super-btn-font-size, em );
     }
 
 }
@@ -512,8 +499,6 @@
 
 .btn-compound-action {
 
-    @font-size: @btn-font-size-px;
-
     &,
     &:link,
     &:visited {
@@ -537,10 +522,8 @@
     }
 
     &.btn-super {
-        @font-size: @super-btn-font-size-px;
-
-        padding-left: unit( (@super-btn-h-padding-px / 1.4) / @font-size, em );
-        padding-right: unit( (@super-btn-h-padding-px / 1.4) / @font-size, em );
+        padding-left: unit( 22px / @super-btn-font-size, em );
+        padding-right: unit( 22px / @super-btn-font-size, em );
     }
 
 }
@@ -576,39 +559,37 @@
 
 .btn-link {
 
-    @font-size: @btn-font-size-px;
-
     &,
     &:link,
     &:visited {
-        // This margin is necessary to vertically align link buttons with regular buttons.
-        margin: unit( @btn-v-padding-px / @font-size, em) 0;
         padding: 0;
-        color: @pacific;
-        background-color: transparent;
         border-bottom: 1px dotted @pacific;
         border-radius: 0;
+        // This margin is necessary to vertically align link buttons with regular buttons.
+        margin: unit( @btn-v-padding / @btn-font-size, em) 0;
+        background-color: transparent;
+        color: @pacific;
     }
 
     &:hover,
     &.hover {
-        color: @pacific-50;
-        background-color: transparent;
         border-bottom: 1px solid @pacific-50;
+        background-color: transparent;
+        color: @pacific-50;
     }
 
     &:focus,
     &.focus {
-        background-color: transparent;
         border-bottom-style: solid;
+        background-color: transparent;
         outline: thin dotted;
     }
 
     &:active,
     &.active {
-        color: @navy;
-        background-color: transparent;
         border-bottom: 1px solid @navy;
+        background-color: transparent;
+        color: @navy;
     }
 
 }
@@ -656,15 +637,15 @@
     &,
     &:link,
     &:visited {
-        color: @redorange;
-        background-color: transparent;
         border-bottom-color: @redorange;
+        background-color: transparent;
+        color: @redorange;
     }
 
     &:hover,
     &.hover {
-        color: @redorange-80;
         border-bottom-color: @redorange-80;
+        color: @redorange-80;
     }
 
     &:focus,
@@ -675,8 +656,8 @@
 
     &:active,
     &.active {
-        color: @dark-redorange;
         border-bottom-color: @dark-redorange;
+        color: @dark-redorange;
     }
 
 }
