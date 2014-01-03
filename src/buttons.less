@@ -38,22 +38,26 @@
     &,
     &:link,
     &:visited {
-        box-sizing: border-box;
         display: inline-block;
-        margin: 0;
+        box-sizing: border-box;
         padding:
             unit( @btn-v-padding / @btn-font-size, em )
             unit( 14px / @btn-font-size, em );
+        border: 0;
+        border-radius: unit( 4px / @btn-font-size, em );
+        margin: 0;
+
+        vertical-align: middle;
+
+        background-color: @pacific;
+
+        color: @white;
         .webfont-medium;
         font-size: unit( @btn-font-size / @base-font-size-px, em );
         line-height: normal;
-        color: @white;
-        background-color: @pacific;
-        border: 0;
-        border-radius: unit( 4px / @btn-font-size, em );
-        cursor: pointer;
         text-decoration: none;
-        vertical-align: middle;
+
+        cursor: pointer;
         -webkit-transition: .1s;
            -moz-transition: .1s;
              -o-transition: .1s;
@@ -134,8 +138,8 @@
     &,
     &:link,
     &:visited {
-        color: @white;
         background-color: @gray;
+        color: @white;
     }
 
     &:hover,
@@ -215,8 +219,8 @@
     &,
     &:link,
     &:visited {
-        color: @white;
         background-color: @redorange;
+        color: @white;
     }
 
     &:hover,
@@ -256,8 +260,8 @@
     &:focus,
     &:active,
     &.active {
-        color: @gray;
         background-color: @gray-20;
+        color: @gray;
         cursor: default; // Fallback for IE/Opera
         cursor: not-allowed;
     }
@@ -369,19 +373,19 @@
 }
 
 .btn-icon-left {
-    margin: 0 unit( 7px / @btn-font-size, em) 0 0;
     padding: 0 unit( 10.5px / @btn-font-size, em) 0 0;
-    color: @white;
     border-right: 1px solid @white; // Fallback
     border-right: 1px solid rgba(255, 255, 255, 0.4);
+    margin: 0 unit( 7px / @btn-font-size, em) 0 0;
+    color: @white;
 }
 
 .btn-icon-right {
-    margin: 0 0 0 unit( 7px / @btn-font-size, em);
     padding: 0 0 0 unit( 10.5px / @btn-font-size, em);
     border-right: 0;
     border-left: 1px solid @white; // Fallback
     border-left: 1px solid rgba(255, 255, 255, 0.4);
+    margin: 0 0 0 unit( 7px / @btn-font-size, em);
 }
 
 
@@ -558,34 +562,34 @@
     &,
     &:link,
     &:visited {
-        // This margin is necessary to vertically align link buttons with regular buttons.
-        margin: unit( @btn-v-padding / @btn-font-size, em) 0;
         padding: 0;
-        color: @pacific;
-        background-color: transparent;
         border-bottom: 1px dotted @pacific;
         border-radius: 0;
+        // This margin is necessary to vertically align link buttons with regular buttons.
+        margin: unit( @btn-v-padding / @btn-font-size, em) 0;
+        background-color: transparent;
+        color: @pacific;
     }
 
     &:hover,
     &.hover {
-        color: @pacific-50;
-        background-color: transparent;
         border-bottom: 1px solid @pacific-50;
+        background-color: transparent;
+        color: @pacific-50;
     }
 
     &:focus,
     &.focus {
-        background-color: transparent;
         border-bottom-style: solid;
+        background-color: transparent;
         outline: thin dotted;
     }
 
     &:active,
     &.active {
-        color: @navy;
-        background-color: transparent;
         border-bottom: 1px solid @navy;
+        background-color: transparent;
+        color: @navy;
     }
 
 }
@@ -633,15 +637,15 @@
     &,
     &:link,
     &:visited {
-        color: @redorange;
-        background-color: transparent;
         border-bottom-color: @redorange;
+        background-color: transparent;
+        color: @redorange;
     }
 
     &:hover,
     &.hover {
-        color: @redorange-80;
         border-bottom-color: @redorange-80;
+        color: @redorange-80;
     }
 
     &:focus,
@@ -652,8 +656,8 @@
 
     &:active,
     &.active {
-        color: @dark-redorange;
         border-bottom-color: @dark-redorange;
+        color: @dark-redorange;
     }
 
 }
