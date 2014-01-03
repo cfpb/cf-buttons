@@ -45,6 +45,13 @@ module.exports = function(grunt) {
         ],
         dest: 'src/vendor/fj-fe/fj.less',
       },
+      ie7: {
+        src: [
+          'src/vendor/font-awesome/font-awesome-ie7.min.css'
+        ],
+        // Using .min keeps topdoc from rendering it as a demo page
+        dest: 'demo/static/css/main.ie7.min.css',
+      },
     },
 
     less: {
@@ -65,7 +72,10 @@ module.exports = function(grunt) {
     'string-replace': {
       vendor: {
         files: {
-          'demo/static/css/': ['demo/static/css/main.css']
+          'demo/static/css/': [
+            'demo/static/css/main.css',
+            'demo/static/css/main.ie7.css'
+          ]
         },
         options: {
           replacements: [{
@@ -149,6 +159,7 @@ module.exports = function(grunt) {
             family: '<%= pkg.name %>',
             title: '<%= pkg.name %> demo',
             repo: '<%= pkg.repository.url %>',
+            ieSource: 'static/css/main.ie7.min.css',
             custom: '<%= grunt.file.read("demo/custom.html") %>'
           }
         }

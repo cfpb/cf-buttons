@@ -3,48 +3,67 @@
    Button Styling
    ========================================================================== */
 
-@btn-font-size-px: 14px;
-@super-btn-font-size-px: 18px;
-
 /* topdoc
     name: Default button
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn">Sign up</button>
+      markup: |
+        <a href="#" class="btn">Anchor Tag</a>
+        <button class="btn">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn" />
     - name: Hovered/focused state
-      markup: <button class="btn hover">Sign up</button>
+      markup: |
+        <a href="#" class="btn hover">Anchor Tag</a>
+        <button class="btn hover">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn hover" />
     - name: Active state
-      markup: <button class="btn active">Sign up</button>
+      markup: |
+        <a href="#" class="btn active">Anchor Tag</a>
+        <button class="btn active">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn active" />
     tags:
     - fj-buttons
 */
 
-.btn {
+// Used across the various .btn styles
+@btn-font-size: 14px;
+@btn-v-padding: 9px;
 
-    @font-size: @btn-font-size-px;
+// Used to fix the vertical padding bug in IE for <button>'s and <inputs>'s across various .btn styles
+@btn-v-padding-modifier-ie: .8;
+
+.btn {
 
     &,
     &:link,
     &:visited {
-        box-sizing: border-box;
         display: inline-block;
-        margin: 0;
-        padding: unit( 10px / @font-size, em ) 1em;
-        .webfont-medium;
-        font-size: unit( @font-size / @base-font-size-px, em );
-        line-height: 1;
-        text-decoration: none;
-        color: @white;
-        background-color: @pacific;
+        box-sizing: border-box;
+        padding:
+            unit( @btn-v-padding / @btn-font-size, em )
+            unit( 14px / @btn-font-size, em );
         border: 0;
-        border-radius: unit( 4px / @font-size, em );
+        border-radius: unit( 4px / @btn-font-size, em );
+        margin: 0;
+
+        vertical-align: middle;
+
+        background-color: @pacific;
+
+        color: @white;
+        .webfont-medium;
+        font-size: unit( @btn-font-size / @base-font-size-px, em );
+        line-height: normal;
+        text-decoration: none;
+
         cursor: pointer;
         -webkit-transition: .1s;
            -moz-transition: .1s;
              -o-transition: .1s;
             -ms-transition: .1s;
                 transition: .1s;
+        -webkit-appearance: none;
     }
 
     &:hover,
@@ -58,6 +77,36 @@
         background-color: @navy-80;
     }
 
+    & + & {
+        margin-left: unit( 6px / @btn-font-size, em);
+    }
+
+    button&::-moz-focus-inner,
+    input&::-moz-focus-inner {
+        // Fixes inconsistent button.btn height in FireFox
+        // Helps with inconsistent input.btn height in FireFox but not completely
+        border: 0;
+    }
+
+}
+
+.lt-ie8 {
+
+    // Fixes scroll rendering bug
+    // http://snipplr.com/view/518/
+    & {
+        background : url(null) fixed no-repeat;
+    }
+
+    // Fixes button and input sizes in IE7
+    // Note that the "2" below is a magic number
+    button.btn,
+    input.btn {
+        overflow: visible;
+        padding-top: unit( (@btn-v-padding-modifier-ie * @btn-v-padding) / @btn-font-size, em );
+        padding-bottom: unit( (@btn-v-padding-modifier-ie * @btn-v-padding) / @btn-font-size, em );
+    }
+
 }
 
 
@@ -66,19 +115,32 @@
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn btn-secondary">Sort</button>
+      markup: |
+        <a href="#" class="btn btn-secondary">Anchor Tag</a>
+        <button class="btn btn-secondary">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn btn-secondary" />
     - name: Hovered/focused state
-      markup: <button class="btn btn-secondary hover">Sort</button>
+      markup: |
+        <a href="#" class="btn btn-secondary hover">Anchor Tag</a>
+        <button class="btn btn-secondary hover">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn btn-secondary hover" />
     - name: Active state
-      markup: <button class="btn btn-secondary active">Sort</button>
+      markup: |
+        <a href="#" class="btn btn-secondary active">Anchor Tag</a>
+        <button class="btn btn-secondary active">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn btn-secondary active" />
     tags:
     - fj-buttons
 */
 
 .btn-secondary {
 
-    background-color: @gray;
-    color: @white;
+    &,
+    &:link,
+    &:visited {
+        background-color: @gray;
+        color: @white;
+    }
 
     &:hover,
     &:focus,
@@ -88,7 +150,7 @@
 
     &:active,
     &.active {
-        background-color: @gray-80;
+        background-color: @darkgray;
     }
 
 }
@@ -134,18 +196,29 @@
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn btn-warning">Delete</button>
+      markup: |
+        <a href="#" class="btn btn-warning">Anchor Tag</a>
+        <button class="btn btn-warning">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn btn-warning" />
     - name: Hovered/focused state
-      markup: <button class="btn btn-warning hover">Delete</button>
+      markup: |
+        <a href="#" class="btn btn-warning hover">Anchor Tag</a>
+        <button class="btn btn-warning hover">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn btn-warning hover" />
     - name: Active state
-      markup: <button class="btn btn-warning active">Delete</button>
+      markup: |
+        <a href="#" class="btn btn-warning active">Anchor Tag</a>
+        <button class="btn btn-warning active">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn btn-warning active" />
     tags:
     - fj-buttons
 */
 
 .btn-warning {
 
-    & {
+    &,
+    &:link,
+    &:visited {
         background-color: @redorange;
         color: @white;
     }
@@ -169,7 +242,10 @@
     family: fj-buttons
     patterns:
     - name: Default/hovered/focused/active state
-      markup: <button class="btn btn-disabled">Submit</button>
+      markup: |
+        <a href="#" class="btn btn-disabled">Anchor Tag</a>
+        <button class="btn btn-disabled">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn btn-disabled" />
     tags:
     - fj-buttons
 */
@@ -177,9 +253,12 @@
 .btn-disabled {
 
     &,
+    &:link,
+    &:visited,
     &:hover,
-    &:focus,
     &.hover,
+    &:focus,
+    &:active,
     &.active {
         background-color: @gray-20;
         color: @gray;
@@ -195,22 +274,51 @@
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn btn-super">Get Started!</button>
+      markup: |
+        <a href="#" class="btn btn-super">Anchor Tag</a>
+        <button class="btn btn-super">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn btn-super" />
     - name: Hovered/focused state
-      markup: <button class="btn btn-super hover">Get Started!</button>
+      markup: |
+        <a href="#" class="btn btn-super hover">Anchor Tag</a>
+        <button class="btn btn-super hover">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn btn-super hover" />
     - name: Active state
-      markup: <button class="btn btn-super active">Get Started!</button>
+      markup: |
+        <a href="#" class="btn btn-super active">Anchor Tag</a>
+        <button class="btn btn-super active">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn btn-super active" />
     tags:
     - fj-buttons
 */
 
+@super-btn-font-size: 18px;
+
 .btn-super {
 
-    @font-size: @super-btn-font-size-px;
+    &,
+    &:link,
+    &:visited {
+        padding:
+            unit( 15px / @super-btn-font-size, em )
+            unit( 30px / @super-btn-font-size, em );
+        font-size: unit( @super-btn-font-size / @base-font-size-px, em );
+    }
 
-    & {
-        padding: unit( 15px / @font-size, em ) unit( 30 / @font-size, em );
-        font-size: unit( @font-size / @base-font-size-px, em );
+    & + & {
+        margin-left: unit( 6px / @super-btn-font-size, em);
+    }
+
+}
+
+.lt-ie8 {
+
+    // Fixes button and input sizes in IE7
+    // Note that the "3" below is a magic number
+    button.btn-super,
+    input.btn-super {
+        padding-top: unit( (@btn-v-padding-modifier-ie * 15px) / @super-btn-font-size, em );
+        padding-bottom: unit( (@btn-v-padding-modifier-ie * 15px) / @super-btn-font-size, em );
     }
 
 }
@@ -220,45 +328,64 @@
     name: Button with icons
     family: fj-buttons
     patterns:
-    - name: Leading icon
+    - name: Button icon left
       markup: |
+        <a href="#" class="btn">
+            <i class="btn-icon-left icon-chevron-left"><span class="jekyll-bug"></span></i>
+            Anchor Tag
+        </a>
         <button class="btn">
-            <i class="btn-leading-icon icon-chevron-left"><span class="jekyll-bug"></span></i> Previous
+            <i class="btn-icon-left icon-chevron-left"><span class="jekyll-bug"></span></i>
+            Button Tag
         </button>
-    - name: Trailing icon
+    - name: Button icon right
       markup: |
+        <a href="#" class="btn">
+            Anchor Tag
+            <i class="btn-icon-right icon-chevron-right"><span class="jekyll-bug"></span></i>
+        </a>
         <button class="btn">
-            Next <i class='btn-trailing-icon icon-chevron-right'><span class="jekyll-bug"></span></i>
+            Button Tag
+            <i class="btn-icon-right icon-chevron-right"><span class="jekyll-bug"></span></i>
         </button>
     - name: Just an icon
       markup: |
+        <a href="#" class="btn">
+            <i class="icon-search"><span class="jekyll-bug"></span></i>
+        </a>
         <button class="btn">
-            <i class='icon-search'><span class="jekyll-bug"></span></i>
+            <i class="icon-search"><span class="jekyll-bug"></span></i>
         </button>
     tags:
     - fj-buttons
     - fj-icons
 */
 
-.btn-leading-icon {
-    @font-size: @btn-font-size-px;
 
-    margin: 0 unit( 7px / @font-size, em) 0 0;
-    padding: 0 unit( 10.5px / @font-size, em) 0 0;
-    color: @white;
-    border-right: 1px solid @white; // Fallback
-    border-right: 1px solid rgba(255, 255, 255, 0.4);
-    position: relative;
+.btn {
+
+    // Fixes #8, #15
+    & [class^="icon-"],
+    & [class*="icon-"] {
+        line-height: 1;
+    }
+
 }
 
-.btn-trailing-icon {
-    @font-size: @btn-font-size-px;
+.btn-icon-left {
+    padding: 0 unit( 10.5px / @btn-font-size, em) 0 0;
+    border-right: 1px solid @white; // Fallback
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    margin: 0 unit( 7px / @btn-font-size, em) 0 0;
+    color: @white;
+}
 
-    margin: 0 0 0 unit( 7px / @font-size, em);
-    padding: 0 0 0 unit( 10.5px / @font-size, em);
+.btn-icon-right {
+    padding: 0 0 0 unit( 10.5px / @btn-font-size, em);
     border-right: 0;
     border-left: 1px solid @white; // Fallback
     border-left: 1px solid rgba(255, 255, 255, 0.4);
+    margin: 0 0 0 unit( 7px / @btn-font-size, em);
 }
 
 
@@ -269,16 +396,36 @@
     - name: Default buttons in a button group
       markup: |
         <div class="btn-group">
-            <button class="btn">Action 1</button>
-            <button class="btn">Action 2</button>
-            <button class="btn">Action 3</button>
+            <a href="#" class="btn">Anchor 1</a>
+            <a href="#" class="btn">Anchor 2</a>
+            <a href="#" class="btn">Anchor 3</a>
+        </div><br>
+        <div class="btn-group">
+            <button class="btn">Button 1</button>
+            <button class="btn">Button 2</button>
+            <button class="btn">Button 3</button>
+        </div><br>
+        <div class="btn-group">
+            <input type="button" value="Input 1" class="btn" />
+            <input type="button" value="Input 2" class="btn" />
+            <input type="button" value="Input 3" class="btn" />
         </div>
     - name: Super buttons in a button group
       markup: |
         <div class="btn-group">
-            <button class="btn btn-super">Action 1</button>
-            <button class="btn btn-super">Action 2</button>
-            <button class="btn btn-super">Action 3</button>
+            <a href="#" class="btn btn-super">Anchor 1</a>
+            <a href="#" class="btn btn-super">Anchor 2</a>
+            <a href="#" class="btn btn-super">Anchor 3</a>
+        </div><br>
+        <div class="btn-group">
+            <button class="btn btn-super">Button 1</button>
+            <button class="btn btn-super">Button 2</button>
+            <button class="btn btn-super">Button 3</button>
+        </div><br>
+        <div class="btn-group">
+            <input type="button" value="Input 1" class="btn btn-super" />
+            <input type="button" value="Input 2" class="btn btn-super" />
+            <input type="button" value="Input 3" class="btn btn-super" />
         </div>
     tags:
     - fj-buttons
@@ -286,15 +433,13 @@
 
 .btn-group {
 
-     @font-size: @btn-font-size-px;
-
-    .btn:first-child:not(:last-child) {
+     .btn:first-child:not(:last-child) {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
     }
 
     .btn + .btn {
-        margin-left: unit( -3px / @font-size, em );
+        margin-left: unit( -3px / @btn-font-size, em );
     }
 
     .btn + .btn:not(:last-child) {
@@ -307,8 +452,7 @@
     }
 
     .btn-super + .btn-super {
-        @font-size: @super-btn-font-size-px;
-        margin-left: unit( -3px / @font-size, em );
+        margin-left: unit( -3px / @super-btn-font-size, em );
     }
 
 }
@@ -321,19 +465,31 @@
     - name: Default button style
       markup: |
         <div class="btn-group">
-            <button class="btn">Action 1</button>
+            <a href="#" class="btn">Anchor</a>
+            <a href="#" class="btn btn-compound-action"><i class="icon-caret-down"><span class="jekyll-bug"></span></i></a>
+        </div><br>
+        <div class="btn-group">
+            <button class="btn">Button</button>
             <button class="btn btn-compound-action"><i class="icon-caret-down"><span class="jekyll-bug"></span></i></button>
-        </div>
+        </div><br>
     - name: Secondary button style
       markup: |
         <div class="btn-group">
-            <button class="btn btn-secondary">Action 1</button>
+            <a href="#" class="btn btn-secondary">Anchor</a>
+            <a href="#" class="btn btn-secondary btn-compound-action"><i class="icon-caret-down"><span class="jekyll-bug"></span></i></a>
+        </div><br>
+        <div class="btn-group">
+            <button class="btn btn-secondary">Button</button>
             <button class="btn btn-secondary btn-compound-action"><i class="icon-caret-down"><span class="jekyll-bug"></span></i></button>
         </div>
     - name: Super button style
       markup: |
         <div class="btn-group">
-            <button class="btn btn-super">Action 1</button>
+            <a href="#" class="btn btn-super">Anchor</a>
+            <a href="#" class="btn btn-super btn-compound-action"><i class="icon-caret-down"><span class="jekyll-bug"></span></i></a>
+        </div><br>
+        <div class="btn-group">
+            <button class="btn btn-super">Button</button>
             <button class="btn btn-super btn-compound-action"><i class="icon-caret-down"><span class="jekyll-bug"></span></i></button>
         </div>
     tags:
@@ -343,9 +499,9 @@
 
 .btn-compound-action {
 
-    @font-size: @btn-font-size-px;
-
-    & {
+    &,
+    &:link,
+    &:visited {
         background-color: @pacific-80;
     }
 
@@ -365,6 +521,11 @@
         background-color: @gray;
     }
 
+    &.btn-super {
+        padding-left: unit( 22px / @super-btn-font-size, em );
+        padding-right: unit( 22px / @super-btn-font-size, em );
+    }
+
 }
 
 
@@ -373,46 +534,55 @@
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn btn-link">Find out more</button>
+      markup: |
+        <a href="#" class="btn btn-link">Anchor Tag</a>
+        <button class="btn btn-link">Button Tag</button>
+        <input type="button" value="Input Tag" class="btn btn-link" />
     - name: Hovered state
-      markup: <button class="btn btn-link hover">Find out more</button>
+      markup: |
+        <a href="#" class="btn btn-link hover">Anchor Tag</a>
+        <button class="btn btn-link hover">Button Tag</button>
+        <input type="button" value="Input Tag" class="btn btn-link hover" />
     - name: Focused state
-      markup: <button class="btn btn-link focus">Find out more</button>
+      markup: |
+        <a href="#" class="btn btn-link focus">Anchor Tag</a>
+        <button class="btn btn-link focus">Button Tag</button>
+        <input type="button" value="Input Tag" class="btn btn-link focus" />
     - name: Active state
-      markup: <button class="btn btn-link active">Find out more</button>
+      markup: |
+        <a href="#" class="btn btn-link active">Anchor Tag</a>
+        <button class="btn btn-link active">Button Tag</button>
+        <input type="button" value="Input Tag" class="btn btn-link active" />
     tags:
     - fj-buttons
 */
 
 .btn-link {
 
-    @font-size: @btn-font-size-px;
-
     &,
     &:link,
     &:visited {
-        // This margin is necessary to vertically align link buttons with regular buttons.
-        // You can add to the left and right margin, but be wary of changing the top/bottom.
-        margin: unit( 10px / @font-size, em);
         padding: 0;
-        background-color: transparent;
-        color: @pacific;
         border-bottom: 1px dotted @pacific;
         border-radius: 0;
+        // This margin is necessary to vertically align link buttons with regular buttons.
+        margin: unit( @btn-v-padding / @btn-font-size, em) 0;
+        background-color: transparent;
+        color: @pacific;
     }
 
     &:hover,
     &.hover {
-        color: @pacific-50;
         border-bottom: 1px solid @pacific-50;
         background-color: transparent;
+        color: @pacific-50;
     }
 
     &:focus,
     &.focus {
         border-bottom-style: solid;
-        outline: thin dotted;
         background-color: transparent;
+        outline: thin dotted;
     }
 
     &:active,
@@ -424,35 +594,58 @@
 
 }
 
+.lt-ie8 {
+
+    button.btn-link,
+    input.btn-link {
+        padding: 0;
+    }
+
+}
+
 
 /* topdoc
     name: Destructive action button link
     family: fj-buttons
     patterns:
     - name: Default state
-      markup: <button class="btn btn-link btn-warning">Delete</button>
+      markup: |
+        <a href="#" class="btn btn-link btn-warning">Anchor Tag</a>
+        <button class="btn btn-link btn-warning">Button Tag</button>
+        <input type="button" value="Input Tag" class="btn btn-link btn-warning" />
     - name: Hovered state
-      markup: <button class="btn btn-link btn-warning hover">Delete</button>
+      markup: |
+        <a href="#" class="btn btn-link btn-warning hover">Anchor Tag</a>
+        <button class="btn btn-link btn-warning hover">Button Tag</button>
+        <input type="button" value="Input Tag" class="btn btn-link btn-warning hover" />
     - name: Focused state
-      markup: <button class="btn btn-link btn-warning focus">Delete</button>
+      markup: |
+        <a href="#" class="btn btn-link btn-warning focus">Anchor Tag</a>
+        <button class="btn btn-link btn-warning focus">Button Tag</button>
+        <input type="button" value="Input Tag" class="btn btn-link btn-warning focus" />
     - name: Active state
-      markup: <button class="btn btn-link btn-warning active">Delete</button>
+      markup: |
+        <a href="#" class="btn btn-link btn-warning active">Anchor Tag</a>
+        <button class="btn btn-link btn-warning active">Button Tag</button>
+        <input type="button" value="Input Tag" class="btn btn-link btn-warning active" />
     tags:
     - fj-buttons
 */
 
 .btn-link.btn-warning {
 
-    & {
-        color: @redorange;
+    &,
+    &:link,
+    &:visited {
         border-bottom-color: @redorange;
         background-color: transparent;
+        color: @redorange;
     }
 
     &:hover,
     &.hover {
-        color: @redorange-80;
         border-bottom-color: @redorange-80;
+        color: @redorange-80;
     }
 
     &:focus,
@@ -463,8 +656,8 @@
 
     &:active,
     &.active {
-        color: @dark-redorange;
         border-bottom-color: @dark-redorange;
+        color: @dark-redorange;
     }
 
 }
