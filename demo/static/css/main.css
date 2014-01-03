@@ -379,8 +379,8 @@ input.btn::-moz-focus-inner {
   background-color: #75787b;
 }
 .btn-compound-action.btn-super {
-  padding-left: 1.1904761904761907em;
-  padding-right: 1.1904761904761907em;
+  padding-left: 1.2222222222222223em;
+  padding-right: 1.2222222222222223em;
 }
 /* topdoc
     name: Button link
