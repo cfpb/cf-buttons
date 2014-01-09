@@ -255,7 +255,6 @@ input.btn::-moz-focus-inner {
   border-right: 1px solid #ffffff;
   border-right: 1px solid rgba(255, 255, 255, 0.4);
   margin: 0 0.5em 0 0;
-  color: #ffffff;
 }
 .btn-icon-right {
   padding: 0 0 0 0.75em;
