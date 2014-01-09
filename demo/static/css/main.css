@@ -255,7 +255,9 @@ input.btn::-moz-focus-inner {
   border-right: 1px solid #ffffff;
   border-right: 1px solid rgba(255, 255, 255, 0.4);
   margin: 0 0.5em 0 0;
-  color: #ffffff;
+}
+.btn-disabled .btn-icon-left {
+  border-right-color: #babbbd;
 }
 .btn-icon-right {
   padding: 0 0 0 0.75em;
@@ -263,6 +265,9 @@ input.btn::-moz-focus-inner {
   border-left: 1px solid #ffffff;
   border-left: 1px solid rgba(255, 255, 255, 0.4);
   margin: 0 0 0 0.5em;
+}
+.btn-disabled .btn-icon-right {
+  border-left-color: #babbbd;
 }
 /* topdoc
     name: Button group
