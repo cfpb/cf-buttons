@@ -377,7 +377,10 @@
     border-right: 1px solid @white; // Fallback
     border-right: 1px solid rgba(255, 255, 255, 0.4);
     margin: 0 unit( 7px / @btn-font-size, em) 0 0;
-    color: @white;
+
+    .btn-disabled & {
+        border-right-color: @gray;
+    }
 }
 
 .btn-icon-right {
@@ -386,6 +389,10 @@
     border-left: 1px solid @white; // Fallback
     border-left: 1px solid rgba(255, 255, 255, 0.4);
     margin: 0 0 0 unit( 7px / @btn-font-size, em);
+
+    .btn-disabled & {
+        border-left-color: @gray;
+    }
 }
 
 
