@@ -45,12 +45,12 @@ module.exports = function(grunt) {
         ],
         dest: 'src/vendor/fj-fe/fj.less',
       },
-      ie7: {
+      'lt-ie8': {
         src: [
           'src/vendor/font-awesome/font-awesome-ie7.min.css'
         ],
         // Using .min keeps topdoc from rendering it as a demo page
-        dest: 'demo/static/css/main.ie7.min.css',
+        dest: 'demo/static/css/main.lt-ie8.min.css',
       },
     },
 
@@ -74,7 +74,7 @@ module.exports = function(grunt) {
         files: {
           'demo/static/css/': [
             'demo/static/css/main.css',
-            'demo/static/css/main.ie7.css'
+            'demo/static/css/main.lt-ie8.css'
           ]
         },
         options: {
@@ -172,7 +172,7 @@ module.exports = function(grunt) {
             family: '<%= pkg.name %>',
             title: '<%= pkg.name %> demo',
             repo: '<%= pkg.repository.url %>',
-            ieSource: 'static/css/main.ie7.min.css',
+            ltIE8Source: 'static/css/main.lt-ie8.min.css',
             custom: '<%= grunt.file.read("demo/custom.html") %>'
           }
         }
