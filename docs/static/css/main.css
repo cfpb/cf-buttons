@@ -10,17 +10,17 @@
       markup: |
         <a href="#" class="btn">Anchor Tag</a>
         <button class="btn">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn" />
+        <input type="submit" value="Input Tag" class="btn">
     - name: Hovered/focused state
       markup: |
         <a href="#" class="btn hover">Anchor Tag</a>
         <button class="btn hover">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn hover" />
+        <input type="submit" value="Input Tag" class="btn hover">
     - name: Active state
       markup: |
         <a href="#" class="btn active">Anchor Tag</a>
         <button class="btn active">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn active" />
+        <input type="submit" value="Input Tag" class="btn active">
     tags:
     - cf-buttons
 */
@@ -82,17 +82,17 @@ input.btn::-moz-focus-inner {
       markup: |
         <a href="#" class="btn btn-secondary">Anchor Tag</a>
         <button class="btn btn-secondary">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn-secondary" />
+        <input type="submit" value="Input Tag" class="btn btn-secondary">
     - name: Hovered/focused state
       markup: |
         <a href="#" class="btn btn-secondary hover">Anchor Tag</a>
         <button class="btn btn-secondary hover">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn-secondary hover" />
+        <input type="submit" value="Input Tag" class="btn btn-secondary hover">
     - name: Active state
       markup: |
         <a href="#" class="btn btn-secondary active">Anchor Tag</a>
         <button class="btn btn-secondary active">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn-secondary active" />
+        <input type="submit" value="Input Tag" class="btn btn-secondary active">
     tags:
     - cf-buttons
 */
@@ -119,17 +119,17 @@ input.btn::-moz-focus-inner {
       markup: |
         <a href="#" class="btn btn-warning">Anchor Tag</a>
         <button class="btn btn-warning">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn-warning" />
+        <input type="submit" value="Input Tag" class="btn btn-warning">
     - name: Hovered/focused state
       markup: |
         <a href="#" class="btn btn-warning hover">Anchor Tag</a>
         <button class="btn btn-warning hover">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn-warning hover" />
+        <input type="submit" value="Input Tag" class="btn btn-warning hover">
     - name: Active state
       markup: |
         <a href="#" class="btn btn-warning active">Anchor Tag</a>
         <button class="btn btn-warning active">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn-warning active" />
+        <input type="submit" value="Input Tag" class="btn btn-warning active">
     tags:
     - cf-buttons
 */
@@ -156,7 +156,7 @@ input.btn::-moz-focus-inner {
       markup: |
         <a href="#" class="btn btn-disabled">Anchor Tag</a>
         <button class="btn btn-disabled">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn-disabled" />
+        <input type="submit" value="Input Tag" class="btn btn-disabled">
     tags:
     - cf-buttons
 */
@@ -181,17 +181,17 @@ input.btn::-moz-focus-inner {
       markup: |
         <a href="#" class="btn btn-super">Anchor Tag</a>
         <button class="btn btn-super">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn-super" />
+        <input type="submit" value="Input Tag" class="btn btn-super">
     - name: Hovered/focused state
       markup: |
         <a href="#" class="btn btn-super hover">Anchor Tag</a>
         <button class="btn btn-super hover">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn-super hover" />
+        <input type="submit" value="Input Tag" class="btn btn-super hover">
     - name: Active state
       markup: |
         <a href="#" class="btn btn-super active">Anchor Tag</a>
         <button class="btn btn-super active">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn-super active" />
+        <input type="submit" value="Input Tag" class="btn btn-super active">
     tags:
     - cf-buttons
 */
@@ -285,9 +285,9 @@ input.btn::-moz-focus-inner {
             <button class="btn">Button 3</button>
         </div><br>
         <div class="btn-group">
-            <input type="button" value="Input 1" class="btn" />
-            <input type="button" value="Input 2" class="btn" />
-            <input type="button" value="Input 3" class="btn" />
+            <input type="button" value="Input 1" class="btn">
+            <input type="button" value="Input 2" class="btn">
+            <input type="button" value="Input 3" class="btn">
         </div>
     - name: Super buttons in a button group
       markup: |
@@ -302,9 +302,9 @@ input.btn::-moz-focus-inner {
             <button class="btn btn-super">Button 3</button>
         </div><br>
         <div class="btn-group">
-            <input type="button" value="Input 1" class="btn btn-super" />
-            <input type="button" value="Input 2" class="btn btn-super" />
-            <input type="button" value="Input 3" class="btn btn-super" />
+            <input type="button" value="Input 1" class="btn btn-super">
+            <input type="button" value="Input 2" class="btn btn-super">
+            <input type="button" value="Input 3" class="btn btn-super">
         </div>
     tags:
     - cf-buttons
@@ -394,22 +394,22 @@ input.btn::-moz-focus-inner {
       markup: |
         <a href="#" class="btn btn-link">Anchor Tag</a>
         <button class="btn btn-link">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn-link" />
+        <input type="button" value="Input Tag" class="btn btn-link">
     - name: Hovered state
       markup: |
         <a href="#" class="btn btn-link hover">Anchor Tag</a>
         <button class="btn btn-link hover">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn-link hover" />
+        <input type="button" value="Input Tag" class="btn btn-link hover">
     - name: Focused state
       markup: |
         <a href="#" class="btn btn-link focus">Anchor Tag</a>
         <button class="btn btn-link focus">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn-link focus" />
+        <input type="button" value="Input Tag" class="btn btn-link focus">
     - name: Active state
       markup: |
         <a href="#" class="btn btn-link active">Anchor Tag</a>
         <button class="btn btn-link active">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn-link active" />
+        <input type="button" value="Input Tag" class="btn btn-link active">
     tags:
     - cf-buttons
 */
@@ -453,22 +453,22 @@ input.btn::-moz-focus-inner {
       markup: |
         <a href="#" class="btn btn-link btn-warning">Anchor Tag</a>
         <button class="btn btn-link btn-warning">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn-link btn-warning" />
+        <input type="button" value="Input Tag" class="btn btn-link btn-warning">
     - name: Hovered state
       markup: |
         <a href="#" class="btn btn-link btn-warning hover">Anchor Tag</a>
         <button class="btn btn-link btn-warning hover">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn-link btn-warning hover" />
+        <input type="button" value="Input Tag" class="btn btn-link btn-warning hover">
     - name: Focused state
       markup: |
         <a href="#" class="btn btn-link btn-warning focus">Anchor Tag</a>
         <button class="btn btn-link btn-warning focus">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn-link btn-warning focus" />
+        <input type="button" value="Input Tag" class="btn btn-link btn-warning focus">
     - name: Active state
       markup: |
         <a href="#" class="btn btn-link btn-warning active">Anchor Tag</a>
         <button class="btn btn-link btn-warning active">Button Tag</button>
-        <input type="button" value="Input Tag" class="btn btn-link btn-warning active" />
+        <input type="button" value="Input Tag" class="btn btn-link btn-warning active">
     tags:
     - cf-buttons
 */
