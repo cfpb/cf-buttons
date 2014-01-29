@@ -1,5 +1,5 @@
 {
-  "name": "fj-buttons",
+  "name": "cf-buttons",
   "private": true,
   "version": "0.6.4",
   "main": "src/buttons.less",

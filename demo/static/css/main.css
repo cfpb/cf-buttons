@@ -4,7 +4,7 @@
    ========================================================================== */
 /* topdoc
     name: Default button
-    family: fj-buttons
+    family: cf-buttons
     patterns:
     - name: Default state
       markup: |
@@ -22,7 +22,7 @@
         <button class="btn active">Button Tag</button>
         <input type="submit" value="Input Tag" class="btn active" />
     tags:
-    - fj-buttons
+    - cf-buttons
 */
 .btn,
 .btn:link,
@@ -76,7 +76,7 @@ input.btn::-moz-focus-inner {
 }
 /* topdoc
     name: Secondary button
-    family: fj-buttons
+    family: cf-buttons
     patterns:
     - name: Default state
       markup: |
@@ -94,7 +94,7 @@ input.btn::-moz-focus-inner {
         <button class="btn btn-secondary active">Button Tag</button>
         <input type="submit" value="Input Tag" class="btn btn-secondary active" />
     tags:
-    - fj-buttons
+    - cf-buttons
 */
 .btn-secondary,
 .btn-secondary:link,
@@ -113,7 +113,7 @@ input.btn::-moz-focus-inner {
 }
 /* topdoc
     name: Destructive action button
-    family: fj-buttons
+    family: cf-buttons
     patterns:
     - name: Default state
       markup: |
@@ -131,7 +131,7 @@ input.btn::-moz-focus-inner {
         <button class="btn btn-warning active">Button Tag</button>
         <input type="submit" value="Input Tag" class="btn btn-warning active" />
     tags:
-    - fj-buttons
+    - cf-buttons
 */
 .btn-warning,
 .btn-warning:link,
@@ -150,7 +150,7 @@ input.btn::-moz-focus-inner {
 }
 /* topdoc
     name: Disabled button
-    family: fj-buttons
+    family: cf-buttons
     patterns:
     - name: Default/hovered/focused/active state
       markup: |
@@ -158,7 +158,7 @@ input.btn::-moz-focus-inner {
         <button class="btn btn-disabled">Button Tag</button>
         <input type="submit" value="Input Tag" class="btn btn-disabled" />
     tags:
-    - fj-buttons
+    - cf-buttons
 */
 .btn-disabled,
 .btn-disabled:link,
@@ -175,7 +175,7 @@ input.btn::-moz-focus-inner {
 }
 /* topdoc
     name: Super button
-    family: fj-buttons
+    family: cf-buttons
     patterns:
     - name: Default state
       markup: |
@@ -193,7 +193,7 @@ input.btn::-moz-focus-inner {
         <button class="btn btn-super active">Button Tag</button>
         <input type="submit" value="Input Tag" class="btn btn-super active" />
     tags:
-    - fj-buttons
+    - cf-buttons
 */
 .btn-super,
 .btn-super:link,
@@ -211,7 +211,7 @@ input.btn::-moz-focus-inner {
 }
 /* topdoc
     name: Button with icons
-    family: fj-buttons
+    family: cf-buttons
     patterns:
     - name: Button icon left
       markup: |
@@ -242,7 +242,7 @@ input.btn::-moz-focus-inner {
             <i class="icon-search"><span class="jekyll-bug"></span></i>
         </button>
     tags:
-    - fj-buttons
+    - cf-buttons
     - fj-icons
 */
 .btn [class^="icon-"],
@@ -270,7 +270,7 @@ input.btn::-moz-focus-inner {
 }
 /* topdoc
     name: Button group
-    family: fj-buttons
+    family: cf-buttons
     patterns:
     - name: Default buttons in a button group
       markup: |
@@ -307,7 +307,7 @@ input.btn::-moz-focus-inner {
             <input type="button" value="Input 3" class="btn btn-super" />
         </div>
     tags:
-    - fj-buttons
+    - cf-buttons
 */
 .btn-group .btn:first-child:not(:last-child) {
   border-top-right-radius: 0;
@@ -328,7 +328,7 @@ input.btn::-moz-focus-inner {
 }
 /* topdoc
     name: Compound button
-    family: fj-buttons
+    family: cf-buttons
     patterns:
     - name: Default button style
       markup: |
@@ -361,7 +361,7 @@ input.btn::-moz-focus-inner {
             <button class="btn btn-super btn-compound-action"><i class="icon-caret-down"><span class="jekyll-bug"></span></i></button>
         </div>
     tags:
-    - fj-buttons
+    - cf-buttons
     - fj-icons
 */
 .btn-compound-action,
@@ -388,7 +388,7 @@ input.btn::-moz-focus-inner {
 }
 /* topdoc
     name: Button link
-    family: fj-buttons
+    family: cf-buttons
     patterns:
     - name: Default state
       markup: |
@@ -411,7 +411,7 @@ input.btn::-moz-focus-inner {
         <button class="btn btn-link active">Button Tag</button>
         <input type="button" value="Input Tag" class="btn btn-link active" />
     tags:
-    - fj-buttons
+    - cf-buttons
 */
 .btn-link,
 .btn-link:link,
@@ -447,7 +447,7 @@ input.btn::-moz-focus-inner {
 }
 /* topdoc
     name: Destructive action button link
-    family: fj-buttons
+    family: cf-buttons
     patterns:
     - name: Default state
       markup: |
@@ -470,7 +470,7 @@ input.btn::-moz-focus-inner {
         <button class="btn btn-link btn-warning active">Button Tag</button>
         <input type="button" value="Input Tag" class="btn btn-link btn-warning active" />
     tags:
-    - fj-buttons
+    - cf-buttons
 */
 .btn-link.btn-warning,
 .btn-link.btn-warning:link,
