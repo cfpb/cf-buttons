@@ -2,8 +2,8 @@
 
 Standard CFPB button elements.
 
-Includes [Font Awesome](http://fontawesome.io/) for icons until the
-[CFPB icon font](https://github.cfpb.gob/adamscott/cfpb-icon-font) is released.
+Includes [Font Awesome](http://fontawesome.io/) for icons until the CFPB icon
+font is released.
 
 - [Docs](https://fake.ghe.domain/pages/flapjack/cf-buttons/docs/index.html)
 - [DPG buttons](https://fake.ghe.domain/pages/nicholasw/digital-product-guide/guide/common-web-elements/buttons.html)
