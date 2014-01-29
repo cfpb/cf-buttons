@@ -4,8 +4,36 @@
    ========================================================================== */
 
 /* topdoc
+    name: LESS notes
+    family: cf-buttons
+    patterns:
+    - name: Variables
+      codenotes:
+        - "@btn-font-size: 14px;"
+        - "@btn-v-padding: 9px;"
+        - "@btn-v-padding-modifier-ie: .8;"
+      notes:
+        - "@btn-v-padding-modifier-ie is used to fix the vertical padding bug in IE for <button>'s and <inputs>'s
+          across various .btn styles. We should revisit this after adding normalize.css to see if this is still needed."
+    tags:
+    - cf-buttons
+    - less
+*/
+
+// Used across the various .btn styles
+@btn-font-size: 14px;
+@btn-v-padding: 9px;
+
+// Used to fix the vertical padding bug in IE for <button>'s and <inputs>'s across various .btn styles
+@btn-v-padding-modifier-ie: .8;
+
+
+/* topdoc
     name: Default button
     family: cf-buttons
+    notes:
+      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+        be used in production."
     patterns:
     - name: Default state
       markup: |
@@ -25,13 +53,6 @@
     tags:
     - cf-buttons
 */
-
-// Used across the various .btn styles
-@btn-font-size: 14px;
-@btn-v-padding: 9px;
-
-// Used to fix the vertical padding bug in IE for <button>'s and <inputs>'s across various .btn styles
-@btn-v-padding-modifier-ie: .8;
 
 .btn {
 
@@ -113,6 +134,9 @@
 /* topdoc
     name: Secondary button
     family: cf-buttons
+    notes:
+      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+        be used in production."
     patterns:
     - name: Default state
       markup: |
@@ -194,6 +218,9 @@
 /* topdoc
     name: Destructive action button
     family: cf-buttons
+    notes:
+      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+        be used in production."
     patterns:
     - name: Default state
       markup: |
@@ -240,6 +267,9 @@
 /* topdoc
     name: Disabled button
     family: cf-buttons
+    notes:
+      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+        be used in production."
     patterns:
     - name: Default/hovered/focused/active state
       markup: |
@@ -468,6 +498,9 @@
 /* topdoc
     name: Compound button
     family: cf-buttons
+    notes:
+      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+        be used in production."
     patterns:
     - name: Default button style
       markup: |
@@ -539,6 +572,9 @@
 /* topdoc
     name: Button link
     family: cf-buttons
+    notes:
+      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+        be used in production."
     patterns:
     - name: Default state
       markup: |
@@ -614,6 +650,9 @@
 /* topdoc
     name: Destructive action button link
     family: cf-buttons
+    notes:
+      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+        be used in production."
     patterns:
     - name: Default state
       markup: |
