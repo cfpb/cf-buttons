@@ -11,6 +11,9 @@
   </head>
   <body>
     <div class="wrapper">
+      <header class="demo_header">
+        <h1 class="h5">fj-buttons demo</h1>
+      </header>
       <ul class="demo-component-list">
         <li id="default-button" class="demo-component-list_item wrapper">
           <h1 class="demo-component-list_header">Default button</h1>
@@ -66,6 +69,8 @@
 .btn:link,
 .btn:visited {
   display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0.6428571428571429em 1em;
   border: 0;
@@ -82,9 +87,6 @@
   text-decoration: none;
   cursor: pointer;
   -webkit-transition: .1s;
-  -moz-transition: .1s;
-  -o-transition: .1s;
-  -ms-transition: .1s;
   transition: .1s;
   -webkit-appearance: none;
 }

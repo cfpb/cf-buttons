@@ -128,6 +128,19 @@ module.exports = function(grunt) {
       }
     },
 
+    autoprefixer: {
+      options: {
+        // Options we might want to enable in the future.
+        diff: false,
+        map: false
+      },
+      multiple_files: {
+        // Prefix all CSS files found in `src/static/css` and overwrite.
+        expand: true,
+        src: 'demo/static/css/main.css'
+      },
+    },
+
     copy: {
       docs_assets: {
         files:
@@ -183,6 +196,7 @@ module.exports = function(grunt) {
   /**
    * The above tasks are loaded here.
    */
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -195,6 +209,6 @@ module.exports = function(grunt) {
    * Create custom task aliases and combinations
    */
   grunt.registerTask('vendor', ['clean', 'bower', 'copy:docs_assets', 'concat']);
-  grunt.registerTask('default', ['clean', 'concat', 'less', 'string-replace', 'copy:docs', 'topdoc:demo', 'topdoc:docs']);
+  grunt.registerTask('default', ['clean', 'concat', 'less', 'string-replace', 'autoprefixer', 'copy:docs', 'topdoc']);
 
 };

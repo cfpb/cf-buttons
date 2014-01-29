@@ -14,6 +14,10 @@ body {
   clear: both;
 }
 
+.demo_header {
+  border-bottom: 1px solid black;
+}
+
 .demo-component-list,
 .demo-component-list_item,
 .demo-pattern-list,
