@@ -41,7 +41,6 @@ module.exports = function(grunt) {
           'src/*.less',
           'src/vendor/fj-*/*.less',
           'src/vendor/cf-*/*.less',
-          'src/vendor/ghost/ghost.less',
           'src/vendor/font-awesome/font-awesome.css'
         ],
         dest: 'src/vendor/fj-fe/fj.less',
