@@ -1,11 +1,11 @@
 {
-  "name": "fj-buttons",
+  "name": "cf-buttons",
   "private": true,
-  "version": "0.6.4",
+  "version": "0.7.0",
   "main": "src/buttons.less",
   "dependencies": {
     "fj-colors": "git://fake.ghe.domain/flapjack/fj-colors.git",
-    "fj-typography": "git://fake.ghe.domain/flapjack/fj-typography.git",
+    "cf-typography": "git://fake.ghe.domain/flapjack/cf-typography.git",
     "font-awesome": "~3.2.1"
   },
   "exportsOverride": {
