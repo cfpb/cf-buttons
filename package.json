@@ -1,7 +1,6 @@
 {
   "name": "cf-buttons",
-  "description": "Button styles including default, secondary, destructive, disabled, super, and compound buttons,
-button links, buttons with icons, and button groups for Capital Framework.",
+  "description": "Button styles including default, secondary, destructive, disabled, super, and compound buttons, button links, buttons with icons, and button groups for Capital Framework.",
   "version": "0.7.0",
   "author": {
     "name": "Consumer Financial Protection Bureau",
@@ -37,7 +36,7 @@ button links, buttons with icons, and button groups for Capital Framework.",
     "grunt-contrib-less": "~0.8.3",
     "grunt-string-replace": "latest",
     "grunt-topdoc": "~0.2.0",
-    "fj-component-demo": "git://fake.ghe.domain/flapjack/fj-component-demo.git"
+    "cf-component-demo": "git://fake.ghe.domain/flapjack/fj-component-demo.git"
   },
   "keywords": []
 }
