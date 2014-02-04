@@ -171,7 +171,7 @@ module.exports = function(grunt) {
           templateData: {
             family: '<%= pkg.name %>',
             title: '<%= pkg.name %> demo',
-            repo: '<%= pkg.repository.url %>',
+            repo: '<%= pkg.homepage %>',
             ltIE8Source: 'static/css/main.lt-ie8.min.css',
             custom: '<%= grunt.file.read("demo/custom.html") %>'
           }
@@ -185,7 +185,7 @@ module.exports = function(grunt) {
           templateData: {
             family: '<%= pkg.name %>',
             title: '<%= pkg.name %> docs',
-            repo: '<%= pkg.repository.url %>'
+            repo: '<%= pkg.homepage %>'
           }
         }
       }
