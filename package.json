@@ -1,6 +1,7 @@
 {
   "name": "cf-buttons",
-  "description": "Basic form styling for the Flapjack front-end framework.",
+  "description": "Button styles including default, secondary, destructive, disabled, super, and compound buttons,
+button links, buttons with icons, and button groups for Capital Framework.",
   "version": "0.7.0",
   "author": {
     "name": "Consumer Financial Protection Bureau",

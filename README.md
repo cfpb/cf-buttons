@@ -1,18 +1,19 @@
 # cf-buttons
 
-Bustton styles including default, secondary, destructive, disabled, super, and compound buttons,
+Button styles including default, secondary, destructive, disabled, super, and compound buttons,
 button links, buttons with icons, and button groups.
-Includes [Font Awesome](http://fontawesome.io/) for icons until the CFPB icon font is released.
 This component can be used by itself, but it was made for Capital Framework, a new front end framework
 developed at the [Consumer Financial Protection Bureau](http://cfpb.github.io/).
 
+(Includes [Font Awesome](http://fontawesome.io/) for icons until the CFPB icon font is released.)
+
 If you would like to take advantage of more components or if you're new to Capital Framework,
-we encourage you to [start here](/cfpb/capital-framework).
+we encourage you to [start here](https://github.com/cfpb/capital-framework).
 
 - [View the docs](http://cfpb.github.io/cf-buttons/docs/)
 - [See the raw demo](http://cfpb.github.io/cf-buttons/demo/)
 
-(Docs and demo built with the excellent [Topdoc](http://github.com/topcoat/topdoc/).)
+(Docs and demo built with the excellent [Topdoc](https://github.com/topcoat/topdoc/).)
 
 
 ## Contributing
@@ -39,9 +40,9 @@ We welcome your feedback and contributions.
 4. `grunt` – Compiles LESS files and generates the docs and demo pages.
 
 
-## Using cf-buttons independent of Capital Framework
+## Using this component independent of Capital Framework
 
-If you're already using [Bower](http://bower.io/), simply add cf-buttons as a dependency
+If you're already using [Bower](http://bower.io/), simply add this component as a dependency
 and integrate it into your build process.
 It's not currently in the Bower registry, so you'll have to point to this Git repo's URL.
 
