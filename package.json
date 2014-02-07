@@ -11,9 +11,7 @@
     "type": "git",
     "url": "https://github.com/cfpb/cf-buttons.git"
   },
-  "bugs": {
-    "url": "https://github.com/cfpb/cf-buttons/issues"
-  },
+  "bugs": "https://github.com/cfpb/cf-buttons/issues",
   "licenses": [
     {
       "type": "Public Domain",
