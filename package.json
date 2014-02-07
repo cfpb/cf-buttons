@@ -36,5 +36,5 @@
     "grunt-topdoc": "~0.2.0",
     "cf-component-demo": "git://fake.ghe.domain/flapjack/fj-component-demo.git"
   },
-  "keywords": []
+  "keywords": ["capital-framework", "capital", "buttons", "less"]
 }
