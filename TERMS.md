@@ -1,7 +1,7 @@
-As a work of the United States Government, this package is in the
-public domain within the United States. Additionally, we waive
-copyright and related rights in the work worldwide through the CC0 1.0
-Universal public domain dedication.
+As a work of the United States Government, this package (excluding the
+exceptions below) is in the public domain within the United States.
+Additionally, we waive copyright and related rights in the work worldwide
+through the CC0 1.0 Universal public domain dedication.
 
 Software source code previously released under an open source license and then
 modified by CFPB staff is considered a "joint work" (see 17 USC § 101); it is
@@ -40,3 +40,12 @@ author or the affirmer.
 
 [policy]: http://github.com/cfpb/source-code-policy/
 [CC0]: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+## Exceptions
+
+- The Brackets Theme by Garth Braithwaite is licensed under Apache V 2.0
+- [HTML5Shiv](https://github.com/aFarkas/html5shiv) by Alexander Farakas, et al.
+  is licensed under MIT/GPL2.
+- [Rainbow](https://github.com/ccampbell/rainbow) by Craig Campbell is licensed
+  under Apache Version 2.0.
+- [Font Awesome](http://fontawesome.io) by Dave Gandy.

@@ -1,7 +1,19 @@
 {
   "name": "cf-buttons",
-  "private": true,
   "version": "0.7.0",
+  "keywords": ["capital-framework", "capital", "buttons", "less"],
+  "authors": [
+    {
+      "name": "Consumer Financial Protection Bureau",
+      "url": "http://cfpb.github.io/"
+    }
+  ],
+  "homepage": "https://github.com/cfpb/cf-buttons",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cfpb/cf-buttons.git"
+  },
+  "license": "https://github.com/cfpb/cf-buttons/blob/master/TERMS.md",
   "main": "src/buttons.less",
   "dependencies": {
     "fj-colors": "git://fake.ghe.domain/flapjack/fj-colors.git",
