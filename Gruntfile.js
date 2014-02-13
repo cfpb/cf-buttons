@@ -31,7 +31,7 @@ module.exports = function(grunt) {
 
     clean: {
       vendor: [
-        'src/vendor/fj-fe/fj.less'
+        'src/vendor/cf-concat/cf.less'
       ]
     },
 
@@ -39,11 +39,10 @@ module.exports = function(grunt) {
       main: {
         src: [
           'src/*.less',
-          'src/vendor/fj-*/*.less',
           'src/vendor/cf-*/*.less',
           'src/vendor/font-awesome/font-awesome.css'
         ],
-        dest: 'src/vendor/fj-fe/fj.less',
+        dest: 'src/vendor/cf-concat/cf.less',
       },
       'lt-ie8': {
         src: [
@@ -63,7 +62,7 @@ module.exports = function(grunt) {
         files: {
           'demo/static/css/main.css': [
             'src/vendor/normalize-css/normalize.css',
-            'src/vendor/fj-fe/fj.less'
+            'src/vendor/cf-concat/cf.less'
           ]
         }
       }
