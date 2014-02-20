@@ -20,7 +20,7 @@ we encourage you to [start here](https://github.com/cfpb/capital-framework). (Co
 
 We welcome your feedback and contributions.
 
-- [Find out about contributing](https://github.com/cfpb/cf-buttons/blob/master/CONTRIBUTING.md)
+- [Find out about contributing](https://github.com/cfpb/cf-buttons/blob/gh-pages/CONTRIBUTING.md)
 - [File a bug](https://github.com/cfpb/cf-buttons/issues/new?body=%23%23%20URL%0D%0D%0D%23%23%20Actual%20Behavior%0D%0D%0D%23%23%20Expected%20Behavior%0D%0D%0D%23%23%20Steps%20to%20Reproduce%0D%0D%0D%23%23%20Screenshot&labels=bug)
 
 
