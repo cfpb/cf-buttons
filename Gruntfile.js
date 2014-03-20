@@ -4,30 +4,31 @@ module.exports = function(grunt) {
 
   var path = require('path');
 
-  grunt.initConfig({
+  var config = {
 
     pkg: grunt.file.readJSON('package.json'),
+    env: process.env,
 
-    bower: {
-      install: {
-        options: {
-          targetDir: 'src/vendor/',
-          install: true,
-          verbose: true,
-          cleanBowerDir: true,
-          cleanTargetDir: true,
-          layout: function(type, component) {
-            if (type === 'img') {
-              return path.join('../../demo/static/img');
-            } else if (type === 'fonts') {
-              return path.join('../../demo/static/fonts');
-            } else {
-              return path.join(component);
-            }
-          }
-        }
-      }
-    },
+    // bower: {
+    //   install: {
+    //     options: {
+    //       targetDir: 'src/vendor/',
+    //       install: true,
+    //       verbose: true,
+    //       cleanBowerDir: true,
+    //       cleanTargetDir: true,
+    //       layout: function(type, component) {
+    //         if (type === 'img') {
+    //           return path.join('../../demo/static/img');
+    //         } else if (type === 'fonts') {
+    //           return path.join('../../demo/static/fonts');
+    //         } else {
+    //           return path.join(component);
+    //         }
+    //       }
+    //     }
+    //   }
+    // },
 
     clean: {
       vendor: [
@@ -190,7 +191,25 @@ module.exports = function(grunt) {
       }
     }
 
-  });
+  }; // closes var config
+
+  function loadConfig(path) {
+    var glob = require('glob');
+    var object = {};
+    var key;
+
+    glob.sync('*', {cwd: path}).forEach(function(option) {
+      key = option.replace(/\.js$/,'');
+      object[key] = require(path + option);
+      grunt.verbose.writeln("External config item - " + key + ": " + object[key]);
+    });
+
+    return object;
+  }
+
+  grunt.util._.extend(config, loadConfig('./node_modules/cf-grunt-config/tasks/options/'));
+
+  grunt.initConfig(config);
 
   /**
    * The above tasks are loaded here.
