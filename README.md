@@ -10,7 +10,7 @@ a new front end framework developed at the
 font is released.)
 
 If you would like to take advantage of more components or if you're new to
-Capital Framework, we encourage you to [start here](https://github.com/cfpb/capital-framework).
+Capital Framework, we encourage you to [start here](http://cfpb.github.io/capital-framework/).
 
 - [View the docs](http://cfpb.github.io/cf-buttons/docs/)
 - [See the raw demo](http://cfpb.github.io/cf-buttons/demo/)
