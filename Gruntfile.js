@@ -4,13 +4,25 @@ module.exports = function(grunt) {
 
   var path = require('path');
 
+
+  /**
+   * Initialize a variable to represent the Grunt task configuration.
+   */
   var config = {
 
+    // Define a couple of utility variables that may be used in task options.
     pkg: grunt.file.readJSON('package.json'),
     env: process.env,
-    
+
+    // Define tasks specific to this project here
+
   };
 
+
+  /**
+   * Define a function that, given the path argument, returns an object
+   * containing all JS files in that directory.
+   */
   function loadConfig(path) {
     var glob = require('glob');
     var object = {};
@@ -25,23 +37,35 @@ module.exports = function(grunt) {
     return object;
   }
 
+
+  /**
+   * Combine the config variable defined above with the results of calling the
+   * loadConfig function with the given path, which is where our external
+   * task options get installed by npm.
+   */
   grunt.util._.extend(config, loadConfig('./node_modules/cf-grunt-config/tasks/options/'));
 
   grunt.initConfig(config);
 
-  /**
-   * The above tasks are loaded here.
-   */
-  grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-bower-task');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-string-replace');
-  grunt.loadNpmTasks('grunt-topdoc');
 
   /**
-   * Create custom task aliases and combinations
+   * Load the tasks we want to use, which are specified as dependencies in
+   * the package.json file of cf-grunt-config.
+   */
+
+  // Sets the CWD to the cf-grunt-config package so that the loadNpmTasks method
+  // (employed in load-grunt-tasks) looks in the correct place.
+  grunt.file.setBase('./node_modules/cf-grunt-config/');
+  // Loads all Grunt tasks in the node_modules directory within the new CWD.
+  require('load-grunt-tasks')(grunt);
+  // Sets the CWD back to the project root so that the tasks work as expected.
+  grunt.file.setBase('../../');
+  // Load any project-specific tasks installed in the customary location.
+  require('load-grunt-tasks')(grunt);
+
+
+  /**
+   * Create custom task aliases for our component build workflow.
    */
   grunt.registerTask('vendor', ['bower', 'copy:docs_assets', 'concat']);
   grunt.registerTask('default', ['concat', 'less', 'string-replace', 'autoprefixer', 'copy:docs', 'topdoc']);
