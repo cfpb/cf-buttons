@@ -70,7 +70,7 @@ module.exports = function(grunt) {
   /**
    * Load any project-specific tasks installed in the customary location.
    */
-  require('jit-grunt')(grunt);
+  require('load-grunt-tasks')(grunt);
 
 
   /**
