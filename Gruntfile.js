@@ -2,7 +2,26 @@ module.exports = function(grunt) {
 
   'use strict';
 
+  require('time-grunt')(grunt);
+
   var path = require('path');
+
+
+  /**
+   * Load the tasks we want to use, which are specified as dependencies in
+   * the package.json file of cf-grunt-config.
+   */
+
+  // Sets the CWD to the cf-grunt-config package so that the loadTasks method
+  // (employed in jit-grunt) looks in the correct place.
+  grunt.file.setBase('./node_modules/cf-grunt-config/');
+  // Loads all Grunt tasks in the node_modules directory within the new CWD.
+  require('jit-grunt')(grunt, {
+    // Below line needed because task name does not match package name
+    bower: 'grunt-bower-task'
+  });
+  // Sets the CWD back to the project root so that the tasks work as expected.
+  grunt.file.setBase('../../');
 
 
   /**
@@ -49,18 +68,8 @@ module.exports = function(grunt) {
 
 
   /**
-   * Load the tasks we want to use, which are specified as dependencies in
-   * the package.json file of cf-grunt-config.
+   * Load any project-specific tasks installed in the customary location.
    */
-
-  // Sets the CWD to the cf-grunt-config package so that the loadNpmTasks method
-  // (employed in load-grunt-tasks) looks in the correct place.
-  grunt.file.setBase('./node_modules/cf-grunt-config/');
-  // Loads all Grunt tasks in the node_modules directory within the new CWD.
-  require('load-grunt-tasks')(grunt);
-  // Sets the CWD back to the project root so that the tasks work as expected.
-  grunt.file.setBase('../../');
-  // Load any project-specific tasks installed in the customary location.
   require('load-grunt-tasks')(grunt);
 
 

@@ -33,6 +33,8 @@
     "cf-grunt-config": "git://github.com/cfpb/cf-grunt-config.git",
     "glob": "~3.2.9",
     "grunt": "latest",
-    "load-grunt-tasks": "latest"
+    "jit-grunt": "latest",
+    "load-grunt-tasks": "latest",
+    "time-grunt": "latest"
   }
 }
