@@ -31,6 +31,19 @@ module.exports = function(grunt) {
 
     // Define a couple of utility variables that may be used in task options.
     pkg: grunt.file.readJSON('package.json'),
+    opt: {
+      // Include path to compiled extra CSS for IE7 and below.
+      // Definitely needed if this component depends on an icon font.
+      // ltIE8Source: 'static/css/main.lt-ie8.min.css',
+
+      // Include path to compiled alternate CSS for IE8 and below.
+      // Definitely needed if this component depends on media queries.
+      // ltIE9AltSource: 'static/css/main.lt-ie9.min.css',
+
+      // Set whether or not to include html5shiv for demoing a component.
+      // Only necessary if component patterns include new HTML5 elements
+      // html5Shiv: false,
+    },
     env: process.env,
 
     // Define tasks specific to this project here
