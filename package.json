@@ -1,6 +1,6 @@
 {
   "name": "cf-buttons",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Button styles including default, secondary, destructive, disabled, super, and compound buttons, button links, buttons with icons, and button groups for Capital Framework.",
   "keywords": [
     "capital-framework",
@@ -10,7 +10,7 @@
   ],
   "author": {
     "name": "Consumer Financial Protection Bureau",
-    "url": "http://cfpb.github.io/"
+    "url": "https://cfpb.github.io/"
   },
   "homepage": "https://github.com/cfpb/cf-buttons",
   "repository": {
@@ -21,7 +21,7 @@
   "licenses": [
     {
       "type": "Public Domain",
-      "url": "https://github.com/cfpb/cf-buttons/blob/master/TERMS.md"
+      "url": "https://github.com/cfpb/cf-buttons/blob/gh-pages/TERMS.md"
     }
   ],
   "main": "src/cf-buttons.less",
@@ -32,9 +32,9 @@
     "cf-component-demo": "git://github.com/cfpb/cf-component-demo.git",
     "cf-grunt-config": "git://github.com/cfpb/cf-grunt-config.git",
     "glob": "~3.2.9",
-    "grunt": "latest",
-    "jit-grunt": "latest",
-    "load-grunt-tasks": "latest",
-    "time-grunt": "latest"
+    "grunt": "~0.4.4",
+    "jit-grunt": "~0.4.1",
+    "load-grunt-tasks": "~0.4.0",
+    "time-grunt": "~0.3.1"
   }
 }
