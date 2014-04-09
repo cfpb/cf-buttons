@@ -30,11 +30,11 @@ module.exports = function(grunt) {
   var config = {
 
     // Define a couple of utility variables that may be used in task options.
-    pkg: grunt.file.readJSON('package.json'),
+    pkg: grunt.file.readJSON('bower.json'),
     opt: {
       // Include path to compiled extra CSS for IE7 and below.
       // Definitely needed if this component depends on an icon font.
-      // ltIE8Source: 'static/css/main.lt-ie8.min.css',
+      ltIE8Source: 'static/css/main.lt-ie8.min.css',
 
       // Include path to compiled alternate CSS for IE8 and below.
       // Definitely needed if this component depends on media queries.
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
     glob.sync('*', {cwd: path}).forEach(function(option) {
       key = option.replace(/\.js$/,'');
       object[key] = require(path + option);
-      grunt.verbose.writeln("External config item - " + key + ": " + object[key]);
+      grunt.verbose.writeln("External config item - " + key);
     });
 
     return object;
@@ -101,7 +101,7 @@ module.exports = function(grunt) {
   /**
    * Create custom task aliases for our component build workflow.
    */
-  grunt.registerTask('vendor', ['bower', 'copy:docs_assets', 'concat']);
-  grunt.registerTask('default', ['concat', 'less', 'string-replace', 'autoprefixer', 'copy:docs', 'topdoc']);
+  grunt.registerTask('vendor', ['bower', 'copy:docs_assets', 'concat:main', 'concat:lt-ie8']);
+  grunt.registerTask('default', ['concat:main', 'concat:lt-ie8', 'less', 'string-replace', 'autoprefixer', 'copy:docs', 'topdoc']);
 
 };
