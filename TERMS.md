@@ -52,3 +52,5 @@ author or the affirmer.
 - [Font Awesome](http://fontawesome.io) by Dave Gandy:
   - Font licensed under the SIL OFL 1.1.
   - CSS licensed under the MIT License.
+- [Normalize](http://necolas.github.io/normalize.css/) by Nicolas Gallagher,
+  co-created with Jonathan Neal is licensed under MIT.
