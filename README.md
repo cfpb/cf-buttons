@@ -9,9 +9,6 @@ This component can be used by itself, but it was made for Capital Framework,
 a new front end framework developed at the
 [Consumer Financial Protection Bureau](https://cfpb.github.io/).
 
-(Includes [Font Awesome](http://fontawesome.io/) for icons until the CFPB icon
-font is released.)
-
 If you would like to take advantage of more components or if you're new to
 Capital Framework, we encourage you to [start here](https://cfpb.github.io/capital-framework/).
 
