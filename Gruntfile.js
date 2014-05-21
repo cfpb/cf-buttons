@@ -103,6 +103,6 @@ module.exports = function(grunt) {
    * Create custom task aliases for our component build workflow.
    */
   grunt.registerTask('vendor', ['bower', 'copy:docs_assets', 'concat:main', 'concat:lt-ie8']);
-  grunt.registerTask('default', ['concat:main', 'concat:lt-ie8', 'less', 'string-replace', 'autoprefixer', 'copy:docs', 'topdoc']);
+  grunt.registerTask('default', ['concat:main', 'concat:lt-ie8', 'less', 'autoprefixer', 'copy:docs', 'topdoc']);
 
 };
