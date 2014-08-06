@@ -10,12 +10,12 @@
     <link rel="stylesheet" type="text/css" href="static/demo/brackets.css">
   </head>
   <body>
-    <div class="demo-wrapper">
+    <div class="wrapper">
       <header class="demo_header">
         <h1 class="h5">cf-buttons docs</h1>
       </header>
       <ul class="demo-component-list">
-        <li id="less-notes" class="demo-component-list_item demo-wrapper">
+        <li id="less-notes" class="demo-component-list_item wrapper">
           <h1 class="demo-component-list_header">LESS notes</h1>
           <ul class="demo-pattern-list">
             <li class="demo-pattern-list_item">
@@ -39,7 +39,7 @@
             </li>
           </ul>
         </li>
-        <li id="default-button" class="demo-component-list_item demo-wrapper">
+        <li id="default-button" class="demo-component-list_item wrapper">
           <h1 class="demo-component-list_header">Default button</h1>
           <ul class="demo_notes">
             <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not  be used in production.</li>
@@ -122,6 +122,11 @@
 .lt-ie9 .btn:visited {
   font-weight: normal !important;
 }
+.lt-ie9 .btn,
+.lt-ie9 .btn:link,
+.lt-ie9 .btn:visited {
+  font-weight: normal !important;
+}
 .btn:hover,
 .btn:focus,
 .btn.hover {
@@ -149,7 +154,7 @@ input.btn::-moz-focus-inner {
 }</code></pre>
           </div>
         </li>
-        <li id="secondary-button" class="demo-component-list_item demo-wrapper">
+        <li id="secondary-button" class="demo-component-list_item wrapper">
           <h1 class="demo-component-list_header">Secondary button</h1>
           <ul class="demo_notes">
             <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not  be used in production.</li>
@@ -219,7 +224,7 @@ input.btn::-moz-focus-inner {
 }</code></pre>
           </div>
         </li>
-        <li id="destructive-action-button" class="demo-component-list_item demo-wrapper">
+        <li id="destructive-action-button" class="demo-component-list_item wrapper">
           <h1 class="demo-component-list_header">Destructive action button</h1>
           <ul class="demo_notes">
             <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not  be used in production.</li>
@@ -289,7 +294,7 @@ input.btn::-moz-focus-inner {
 }</code></pre>
           </div>
         </li>
-        <li id="disabled-button" class="demo-component-list_item demo-wrapper">
+        <li id="disabled-button" class="demo-component-list_item wrapper">
           <h1 class="demo-component-list_header">Disabled button</h1>
           <ul class="demo_notes">
             <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not  be used in production.</li>
@@ -327,7 +332,7 @@ input.btn::-moz-focus-inner {
 }</code></pre>
           </div>
         </li>
-        <li id="super-button" class="demo-component-list_item demo-wrapper">
+        <li id="super-button" class="demo-component-list_item wrapper">
           <h1 class="demo-component-list_header">Super button</h1>
           <ul class="demo-pattern-list">
             <li class="demo-pattern-list_item">
@@ -393,7 +398,7 @@ input.btn::-moz-focus-inner {
 }</code></pre>
           </div>
         </li>
-        <li id="button-with-icons" class="demo-component-list_item demo-wrapper">
+        <li id="button-with-icons" class="demo-component-list_item wrapper">
           <h1 class="demo-component-list_header">Button with icons</h1>
           <ul class="demo-pattern-list">
             <li class="demo-pattern-list_item">
@@ -490,7 +495,7 @@ input.btn::-moz-focus-inner {
 }</code></pre>
           </div>
         </li>
-        <li id="button-group" class="demo-component-list_item demo-wrapper">
+        <li id="button-group" class="demo-component-list_item wrapper">
           <h1 class="demo-component-list_header">Button group</h1>
           <ul class="demo-pattern-list">
             <li class="demo-pattern-list_item">
@@ -592,7 +597,7 @@ input.btn::-moz-focus-inner {
 }</code></pre>
           </div>
         </li>
-        <li id="compound-button" class="demo-component-list_item demo-wrapper">
+        <li id="compound-button" class="demo-component-list_item wrapper">
           <h1 class="demo-component-list_header">Compound button</h1>
           <ul class="demo_notes">
             <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not  be used in production.</li>
@@ -699,7 +704,7 @@ input.btn::-moz-focus-inner {
 }</code></pre>
           </div>
         </li>
-        <li id="button-link" class="demo-component-list_item demo-wrapper">
+        <li id="button-link" class="demo-component-list_item wrapper">
           <h1 class="demo-component-list_header">Button link</h1>
           <ul class="demo_notes">
             <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not  be used in production.</li>
@@ -801,7 +806,7 @@ input.btn::-moz-focus-inner {
 }</code></pre>
           </div>
         </li>
-        <li id="destructive-action-button-link" class="demo-component-list_item demo-wrapper">
+        <li id="destructive-action-button-link" class="demo-component-list_item wrapper">
           <h1 class="demo-component-list_header">Destructive action button link</h1>
           <ul class="demo_notes">
             <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not  be used in production.</li>
