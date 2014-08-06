@@ -1,6 +1,6 @@
 {
   "name": "cf-buttons",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "Button styles including default, secondary, destructive, disabled, super, and compound buttons, button links, buttons with icons, and button groups for Capital Framework.",
   "keywords": [
     "capital-framework",

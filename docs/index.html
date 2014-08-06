@@ -92,9 +92,7 @@
             </li>
           </ul>
           <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.btn,
-.btn:link,
-.btn:visited {
+            <pre class="css"><code data-language="css">.btn {
   display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -104,8 +102,6 @@
   border-radius: 0.28571429em;
   margin: 0;
   vertical-align: middle;
-  background-color: #0072ce;
-  color: #ffffff;
   font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -117,15 +113,17 @@
   transition: .1s;
   -webkit-appearance: none;
 }
-.lt-ie9 .btn,
-.lt-ie9 .btn:link,
-.lt-ie9 .btn:visited {
+.lt-ie9 .btn {
   font-weight: normal !important;
 }
-.lt-ie9 .btn,
-.lt-ie9 .btn:link,
-.lt-ie9 .btn:visited {
+.lt-ie9 .btn {
   font-weight: normal !important;
+}
+.btn,
+.btn:link,
+.btn:visited {
+  background-color: #0072ce;
+  color: #ffffff;
 }
 .btn:hover,
 .btn:focus,
@@ -135,9 +133,6 @@
 .btn:active,
 .btn.active {
   background-color: #33578e;
-}
-.btn + .btn {
-  margin-left: 0.42857143em;
 }
 button.btn::-moz-focus-inner,
 input.btn::-moz-focus-inner {
@@ -382,14 +377,9 @@ input.btn::-moz-focus-inner {
             </li>
           </ul>
           <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.btn__super,
-.btn__super:link,
-.btn__super:visited {
+            <pre class="css"><code data-language="css">.btn__super {
   padding: 0.83333333em 1.66666667em;
   font-size: 1.125em;
-}
-.btn__super + .btn__super {
-  margin-left: 0.33333333em;
 }
 .lt-ie8 button.btn__super,
 .lt-ie8 input.btn__super {
@@ -454,20 +444,27 @@ input.btn::-moz-focus-inner {
             <li class="demo-pattern-list_item">
               <header class="demo-pattern-list_header">
                 <h3>Just an icon</h3>
+                <ul class="demo_notes">
+                  <li>For accessibility please use the .u-visually-hidden utility class to add hidden text for screen readers.</li>
+                </ul>
               </header>
               <section>
 <a href="#" class="btn">
+    <span class="u-visually-hidden">Search</span>
     <span class="cf-icon cf-icon-search"></span>
 </a>
 <button class="btn">
+    <span class="u-visually-hidden">Search</span>
     <span class="cf-icon cf-icon-search"></span>
 </button>
 </section>
               <footer class="demo-pattern-list_footer">
                 <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;
+    &lt;span class=&quot;u-visually-hidden&quot;&gt;Search&lt;/span&gt;
     &lt;span class=&quot;cf-icon cf-icon-search&quot;&gt;&lt;/span&gt;
 &lt;/a&gt;
 &lt;button class=&quot;btn&quot;&gt;
+    &lt;span class=&quot;u-visually-hidden&quot;&gt;Search&lt;/span&gt;
     &lt;span class=&quot;cf-icon cf-icon-search&quot;&gt;&lt;/span&gt;
 &lt;/button&gt;</code></pre>
               </footer>
@@ -495,46 +492,42 @@ input.btn::-moz-focus-inner {
 }</code></pre>
           </div>
         </li>
-        <li id="button-group" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Button group</h1>
+        <li id="button-group-modifiers" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">Button group modifiers</h1>
           <ul class="demo-pattern-list">
             <li class="demo-pattern-list_item">
               <header class="demo-pattern-list_header">
                 <h3>Default buttons in a button group</h3>
               </header>
               <section>
-<div class="btn-group">
-    <a href="#" class="btn">Anchor 1</a>
-    <a href="#" class="btn">Anchor 2</a>
-    <a href="#" class="btn">Anchor 3</a>
-</div><br>
-<div class="btn-group">
-    <button class="btn">Button 1</button>
-    <button class="btn">Button 2</button>
-    <button class="btn">Button 3</button>
-</div><br>
-<div class="btn-group">
-    <input type="button" value="Input 1" class="btn">
-    <input type="button" value="Input 2" class="btn">
-    <input type="button" value="Input 3" class="btn">
-</div>
+<a href="#" class="btn btn__grouped-first">Anchor 1</a>
+<a href="#" class="btn btn__grouped">Anchor 2</a>
+<a href="#" class="btn btn__grouped-last">Anchor 3</a>
+<br>
+<br>
+<button class="btn btn__grouped-first">Button 1</button>
+<button class="btn btn__grouped">Button 2</button>
+<button class="btn btn__grouped-last">Button 3</button>
+<br>
+<br>
+<input type="button" value="Input 1" class="btn btn__grouped-first">
+<input type="button" value="Input 2" class="btn btn__grouped">
+<input type="button" value="Input 3" class="btn btn__grouped-last">
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;div class=&quot;btn-group&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Anchor 1&lt;/a&gt;
-    &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Anchor 2&lt;/a&gt;
-    &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Anchor 3&lt;/a&gt;
-&lt;/div&gt;&lt;br&gt;
-&lt;div class=&quot;btn-group&quot;&gt;
-    &lt;button class=&quot;btn&quot;&gt;Button 1&lt;/button&gt;
-    &lt;button class=&quot;btn&quot;&gt;Button 2&lt;/button&gt;
-    &lt;button class=&quot;btn&quot;&gt;Button 3&lt;/button&gt;
-&lt;/div&gt;&lt;br&gt;
-&lt;div class=&quot;btn-group&quot;&gt;
-    &lt;input type=&quot;button&quot; value=&quot;Input 1&quot; class=&quot;btn&quot;&gt;
-    &lt;input type=&quot;button&quot; value=&quot;Input 2&quot; class=&quot;btn&quot;&gt;
-    &lt;input type=&quot;button&quot; value=&quot;Input 3&quot; class=&quot;btn&quot;&gt;
-&lt;/div&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-first&quot;&gt;Anchor 1&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped&quot;&gt;Anchor 2&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-last&quot;&gt;Anchor 3&lt;/a&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;button class=&quot;btn btn__grouped-first&quot;&gt;Button 1&lt;/button&gt;
+&lt;button class=&quot;btn btn__grouped&quot;&gt;Button 2&lt;/button&gt;
+&lt;button class=&quot;btn btn__grouped-last&quot;&gt;Button 3&lt;/button&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;input type=&quot;button&quot; value=&quot;Input 1&quot; class=&quot;btn btn__grouped-first&quot;&gt;
+&lt;input type=&quot;button&quot; value=&quot;Input 2&quot; class=&quot;btn btn__grouped&quot;&gt;
+&lt;input type=&quot;button&quot; value=&quot;Input 3&quot; class=&quot;btn btn__grouped-last&quot;&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -542,57 +535,55 @@ input.btn::-moz-focus-inner {
                 <h3>Super buttons in a button group</h3>
               </header>
               <section>
-<div class="btn-group">
-    <a href="#" class="btn btn__super">Anchor 1</a>
-    <a href="#" class="btn btn__super">Anchor 2</a>
-    <a href="#" class="btn btn__super">Anchor 3</a>
-</div><br>
-<div class="btn-group">
-    <button class="btn btn__super">Button 1</button>
-    <button class="btn btn__super">Button 2</button>
-    <button class="btn btn__super">Button 3</button>
-</div><br>
-<div class="btn-group">
-    <input type="button" value="Input 1" class="btn btn__super">
-    <input type="button" value="Input 2" class="btn btn__super">
-    <input type="button" value="Input 3" class="btn btn__super">
-</div>
+<a href="#" class="btn btn__grouped-first btn__super">Anchor 1</a>
+<a href="#" class="btn btn__grouped btn__super">Anchor 2</a>
+<a href="#" class="btn btn__grouped-last btn__super">Anchor 3</a>
+<br>
+<br>
+<button class="btn btn__grouped-first btn__super">Button 1</button>
+<button class="btn btn__grouped btn__super">Button 2</button>
+<button class="btn btn__grouped-last btn__super">Button 3</button>
+<br>
+<br>
+<input type="button" value="Input 1" class="btn btn__grouped-first btn__super">
+<input type="button" value="Input 2" class="btn btn__grouped btn__super">
+<input type="button" value="Input 3" class="btn btn__grouped-last btn__super">
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;div class=&quot;btn-group&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;btn btn__super&quot;&gt;Anchor 1&lt;/a&gt;
-    &lt;a href=&quot;#&quot; class=&quot;btn btn__super&quot;&gt;Anchor 2&lt;/a&gt;
-    &lt;a href=&quot;#&quot; class=&quot;btn btn__super&quot;&gt;Anchor 3&lt;/a&gt;
-&lt;/div&gt;&lt;br&gt;
-&lt;div class=&quot;btn-group&quot;&gt;
-    &lt;button class=&quot;btn btn__super&quot;&gt;Button 1&lt;/button&gt;
-    &lt;button class=&quot;btn btn__super&quot;&gt;Button 2&lt;/button&gt;
-    &lt;button class=&quot;btn btn__super&quot;&gt;Button 3&lt;/button&gt;
-&lt;/div&gt;&lt;br&gt;
-&lt;div class=&quot;btn-group&quot;&gt;
-    &lt;input type=&quot;button&quot; value=&quot;Input 1&quot; class=&quot;btn btn__super&quot;&gt;
-    &lt;input type=&quot;button&quot; value=&quot;Input 2&quot; class=&quot;btn btn__super&quot;&gt;
-    &lt;input type=&quot;button&quot; value=&quot;Input 3&quot; class=&quot;btn btn__super&quot;&gt;
-&lt;/div&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-first btn__super&quot;&gt;Anchor 1&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped btn__super&quot;&gt;Anchor 2&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-last btn__super&quot;&gt;Anchor 3&lt;/a&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;button class=&quot;btn btn__grouped-first btn__super&quot;&gt;Button 1&lt;/button&gt;
+&lt;button class=&quot;btn btn__grouped btn__super&quot;&gt;Button 2&lt;/button&gt;
+&lt;button class=&quot;btn btn__grouped-last btn__super&quot;&gt;Button 3&lt;/button&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;input type=&quot;button&quot; value=&quot;Input 1&quot; class=&quot;btn btn__grouped-first btn__super&quot;&gt;
+&lt;input type=&quot;button&quot; value=&quot;Input 2&quot; class=&quot;btn btn__grouped btn__super&quot;&gt;
+&lt;input type=&quot;button&quot; value=&quot;Input 3&quot; class=&quot;btn btn__grouped-last btn__super&quot;&gt;</code></pre>
               </footer>
             </li>
           </ul>
           <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.btn-group .btn:first-child:not(:last-child) {
+            <pre class="css"><code data-language="css">.btn__grouped {
+  border-radius: 0;
+}
+.btn__grouped-first {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.btn-group .btn + .btn {
-  margin-left: -0.21428571em;
-}
-.btn-group .btn + .btn:not(:last-child) {
-  border-radius: 0;
-}
-.btn-group .btn:last-child {
+.btn__grouped-last {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
-.btn-group .btn__super + .btn__super {
+.btn__grouped,
+.btn__grouped-last {
+  margin-left: -0.21428571em;
+}
+.btn__grouped.btn__super,
+.btn__grouped-last.btn__super {
   margin-left: -0.16666667em;
 }</code></pre>
           </div>
@@ -600,6 +591,7 @@ input.btn::-moz-focus-inner {
         <li id="compound-button" class="demo-component-list_item wrapper">
           <h1 class="demo-component-list_header">Compound button</h1>
           <ul class="demo_notes">
+            <li>This pattern requires combining .btn__grouped modifiers with the .btn__compound-action modifier.</li>
             <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
           </ul>
           <ul class="demo-pattern-list">
@@ -608,32 +600,28 @@ input.btn::-moz-focus-inner {
                 <h3>Default button style</h3>
               </header>
               <section>
-<div class="btn-group">
-    <a href="#" class="btn">Anchor</a>
-    <a href="#" class="btn btn__compound-action">
-        <span class="cf-icon cf-icon-down"></span>
-    </a>
-</div><br>
-<div class="btn-group">
-    <button class="btn">Button</button>
-    <button class="btn btn__compound-action">
-        <span class="cf-icon cf-icon-down"></span>
-    </button>
-</div><br>
+<a href="#" class="btn btn__grouped-first">Anchor</a>
+<a href="#" class="btn btn__grouped-last btn__compound-action">
+    <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+</a>
+<br>
+<br>
+<button class="btn btn__grouped-first">Button</button>
+<button class="btn btn__grouped-last btn__compound-action">
+    <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+</button>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;div class=&quot;btn-group&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Anchor&lt;/a&gt;
-    &lt;a href=&quot;#&quot; class=&quot;btn btn__compound-action&quot;&gt;
-        &lt;span class=&quot;cf-icon cf-icon-down&quot;&gt;&lt;/span&gt;
-    &lt;/a&gt;
-&lt;/div&gt;&lt;br&gt;
-&lt;div class=&quot;btn-group&quot;&gt;
-    &lt;button class=&quot;btn&quot;&gt;Button&lt;/button&gt;
-    &lt;button class=&quot;btn btn__compound-action&quot;&gt;
-        &lt;span class=&quot;cf-icon cf-icon-down&quot;&gt;&lt;/span&gt;
-    &lt;/button&gt;
-&lt;/div&gt;&lt;br&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-first&quot;&gt;Anchor&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-last btn__compound-action&quot;&gt;
+    &lt;span class=&quot;cf-icon cf-icon-down btn__grouped-last&quot;&gt;&lt;/span&gt;
+&lt;/a&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;button class=&quot;btn btn__grouped-first&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn btn__grouped-last btn__compound-action&quot;&gt;
+    &lt;span class=&quot;cf-icon cf-icon-down btn__grouped-last&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -641,32 +629,28 @@ input.btn::-moz-focus-inner {
                 <h3>Secondary button style</h3>
               </header>
               <section>
-<div class="btn-group">
-    <a href="#" class="btn btn__secondary">Anchor</a>
-    <a href="#" class="btn btn__secondary btn__compound-action">
-        <span class="cf-icon cf-icon-down"></span>
-    </a>
-</div><br>
-<div class="btn-group">
-    <button class="btn btn__secondary">Button</button>
-    <button class="btn btn__secondary btn__compound-action">
-        <span class="cf-icon cf-icon-down"></span>
-    </button>
-</div>
+<a href="#" class="btn btn__grouped-first btn__secondary">Anchor</a>
+<a href="#" class="btn btn__grouped-last btn__secondary btn__compound-action">
+    <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+</a>
+<br>
+<br>
+<button class="btn btn__grouped-first btn__secondary">Button</button>
+<button class="btn btn__grouped-last btn__secondary btn__compound-action">
+    <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+</button>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;div class=&quot;btn-group&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;btn btn__secondary&quot;&gt;Anchor&lt;/a&gt;
-    &lt;a href=&quot;#&quot; class=&quot;btn btn__secondary btn__compound-action&quot;&gt;
-        &lt;span class=&quot;cf-icon cf-icon-down&quot;&gt;&lt;/span&gt;
-    &lt;/a&gt;
-&lt;/div&gt;&lt;br&gt;
-&lt;div class=&quot;btn-group&quot;&gt;
-    &lt;button class=&quot;btn btn__secondary&quot;&gt;Button&lt;/button&gt;
-    &lt;button class=&quot;btn btn__secondary btn__compound-action&quot;&gt;
-        &lt;span class=&quot;cf-icon cf-icon-down&quot;&gt;&lt;/span&gt;
-    &lt;/button&gt;
-&lt;/div&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-first btn__secondary&quot;&gt;Anchor&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-last btn__secondary btn__compound-action&quot;&gt;
+    &lt;span class=&quot;cf-icon cf-icon-down btn__grouped-last&quot;&gt;&lt;/span&gt;
+&lt;/a&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;button class=&quot;btn btn__grouped-first btn__secondary&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn btn__grouped-last btn__secondary btn__compound-action&quot;&gt;
+    &lt;span class=&quot;cf-icon cf-icon-down btn__grouped-last&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -674,32 +658,28 @@ input.btn::-moz-focus-inner {
                 <h3>Super button style</h3>
               </header>
               <section>
-<div class="btn-group">
-    <a href="#" class="btn btn__super">Anchor</a>
-    <a href="#" class="btn btn__super btn__compound-action">
-        <span class="cf-icon cf-icon-down"></span>
-    </a>
-</div><br>
-<div class="btn-group">
-    <button class="btn btn__super">Button</button>
-    <button class="btn btn__super btn__compound-action">
-        <span class="cf-icon cf-icon-down"></span>
-    </button>
-</div>
+<a href="#" class="btn btn__grouped-first btn__super">Anchor</a>
+<a href="#" class="btn btn__grouped-last btn__super btn__compound-action">
+    <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+</a>
+<br>
+<br>
+<button class="btn btn__grouped-first btn__super">Button</button>
+<button class="btn btn__grouped-last btn__super btn__compound-action">
+    <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+</button>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;div class=&quot;btn-group&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;btn btn__super&quot;&gt;Anchor&lt;/a&gt;
-    &lt;a href=&quot;#&quot; class=&quot;btn btn__super btn__compound-action&quot;&gt;
-        &lt;span class=&quot;cf-icon cf-icon-down&quot;&gt;&lt;/span&gt;
-    &lt;/a&gt;
-&lt;/div&gt;&lt;br&gt;
-&lt;div class=&quot;btn-group&quot;&gt;
-    &lt;button class=&quot;btn btn__super&quot;&gt;Button&lt;/button&gt;
-    &lt;button class=&quot;btn btn__super btn__compound-action&quot;&gt;
-        &lt;span class=&quot;cf-icon cf-icon-down&quot;&gt;&lt;/span&gt;
-    &lt;/button&gt;
-&lt;/div&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-first btn__super&quot;&gt;Anchor&lt;/a&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-last btn__super btn__compound-action&quot;&gt;
+    &lt;span class=&quot;cf-icon cf-icon-down btn__grouped-last&quot;&gt;&lt;/span&gt;
+&lt;/a&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;button class=&quot;btn btn__grouped-first btn__super&quot;&gt;Button&lt;/button&gt;
+&lt;button class=&quot;btn btn__grouped-last btn__super btn__compound-action&quot;&gt;
+    &lt;span class=&quot;cf-icon cf-icon-down btn__grouped-last&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;</code></pre>
               </footer>
             </li>
           </ul>
@@ -796,13 +776,15 @@ input.btn::-moz-focus-inner {
             </li>
           </ul>
           <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.btn__link,
-.btn__link:link,
-.btn__link:visited {
+            <pre class="css"><code data-language="css">.btn__link {
   padding: 0;
   border-bottom: 1px dotted #0072ce;
   border-radius: 0;
   margin: 0.64285714em 0;
+}
+.btn__link,
+.btn__link:link,
+.btn__link:visited {
   background-color: transparent;
   color: #0072ce;
 }

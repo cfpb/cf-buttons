@@ -59,9 +59,7 @@
 
 .btn {
 
-    &,
-    &:link,
-    &:visited {
+    & {
         display: inline-block;
         box-sizing: border-box;
         padding:
@@ -73,9 +71,6 @@
 
         vertical-align: middle;
 
-        background-color: @pacific;
-
-        color: @white;
         .webfont-medium();
         font-size: unit( @btn-font-size / @base-font-size-px, em );
         line-height: normal;
@@ -84,6 +79,13 @@
         cursor: pointer;
         transition: .1s;
         -webkit-appearance: none;
+    }
+
+    &,
+    &:link,
+    &:visited {
+        background-color: @pacific;
+        color: @white;
     }
 
     &:hover,
@@ -97,9 +99,9 @@
         background-color: @navy-80;
     }
 
-    & + & {
-        margin-left: unit( 6px / @btn-font-size, em);
-    }
+    // & + & {
+    //     margin-left: unit( 6px / @btn-font-size, em);
+    // }
 
     button&::-moz-focus-inner,
     input&::-moz-focus-inner {
@@ -325,18 +327,16 @@
 
 .btn__super {
 
-    &,
-    &:link,
-    &:visited {
+    & {
         padding:
             unit( 15px / @super-btn-font-size, em )
             unit( 30px / @super-btn-font-size, em );
         font-size: unit( @super-btn-font-size / @base-font-size-px, em );
     }
 
-    & + & {
-        margin-left: unit( 6px / @super-btn-font-size, em);
-    }
+    // & + & {
+    //     margin-left: unit( 6px / @super-btn-font-size, em);
+    // }
 
 }
 
@@ -380,11 +380,16 @@
     - name: Just an icon
       markup: |
         <a href="#" class="btn">
+            <span class="u-visually-hidden">Search</span>
             <span class="cf-icon cf-icon-search"></span>
         </a>
         <button class="btn">
+            <span class="u-visually-hidden">Search</span>
             <span class="cf-icon cf-icon-search"></span>
         </button>
+      notes:
+        - "For accessibility please use the .u-visually-hidden utility class
+           to add hidden text for screen readers."
     tags:
     - cf-buttons
     - fj-icons
@@ -415,68 +420,70 @@
 
 
 /* topdoc
-    name: Button group
+    name: Button group modifiers
     family: cf-buttons
     patterns:
     - name: Default buttons in a button group
       markup: |
-        <div class="btn-group">
-            <a href="#" class="btn">Anchor 1</a>
-            <a href="#" class="btn">Anchor 2</a>
-            <a href="#" class="btn">Anchor 3</a>
-        </div><br>
-        <div class="btn-group">
-            <button class="btn">Button 1</button>
-            <button class="btn">Button 2</button>
-            <button class="btn">Button 3</button>
-        </div><br>
-        <div class="btn-group">
-            <input type="button" value="Input 1" class="btn">
-            <input type="button" value="Input 2" class="btn">
-            <input type="button" value="Input 3" class="btn">
-        </div>
+        <a href="#" class="btn btn__grouped-first">Anchor 1</a>
+        <a href="#" class="btn btn__grouped">Anchor 2</a>
+        <a href="#" class="btn btn__grouped-last">Anchor 3</a>
+        <br>
+        <br>
+        <button class="btn btn__grouped-first">Button 1</button>
+        <button class="btn btn__grouped">Button 2</button>
+        <button class="btn btn__grouped-last">Button 3</button>
+        <br>
+        <br>
+        <input type="button" value="Input 1" class="btn btn__grouped-first">
+        <input type="button" value="Input 2" class="btn btn__grouped">
+        <input type="button" value="Input 3" class="btn btn__grouped-last">
     - name: Super buttons in a button group
       markup: |
-        <div class="btn-group">
-            <a href="#" class="btn btn__super">Anchor 1</a>
-            <a href="#" class="btn btn__super">Anchor 2</a>
-            <a href="#" class="btn btn__super">Anchor 3</a>
-        </div><br>
-        <div class="btn-group">
-            <button class="btn btn__super">Button 1</button>
-            <button class="btn btn__super">Button 2</button>
-            <button class="btn btn__super">Button 3</button>
-        </div><br>
-        <div class="btn-group">
-            <input type="button" value="Input 1" class="btn btn__super">
-            <input type="button" value="Input 2" class="btn btn__super">
-            <input type="button" value="Input 3" class="btn btn__super">
-        </div>
+        <a href="#" class="btn btn__grouped-first btn__super">Anchor 1</a>
+        <a href="#" class="btn btn__grouped btn__super">Anchor 2</a>
+        <a href="#" class="btn btn__grouped-last btn__super">Anchor 3</a>
+        <br>
+        <br>
+        <button class="btn btn__grouped-first btn__super">Button 1</button>
+        <button class="btn btn__grouped btn__super">Button 2</button>
+        <button class="btn btn__grouped-last btn__super">Button 3</button>
+        <br>
+        <br>
+        <input type="button" value="Input 1" class="btn btn__grouped-first btn__super">
+        <input type="button" value="Input 2" class="btn btn__grouped btn__super">
+        <input type="button" value="Input 3" class="btn btn__grouped-last btn__super">
     tags:
     - cf-buttons
 */
 
-.btn-group {
+.btn__grouped {
 
-     .btn:first-child:not(:last-child) {
+    // Borders
+
+    &-first {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
     }
 
-    .btn + .btn {
-        margin-left: unit( -3px / @btn-font-size, em );
-    }
-
-    .btn + .btn:not(:last-child) {
+    & {
         border-radius: 0;
     }
 
-    .btn:last-child {
+    &-last {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
 
-    .btn__super + .btn__super {
+    // Margins
+
+    &,
+    &-last {
+        margin-left: unit( -3px / @btn-font-size, em );
+    }
+
+    &.btn__super,
+    &-last.btn__super {
         margin-left: unit( -3px / @super-btn-font-size, em );
     }
 
@@ -487,51 +494,47 @@
     name: Compound button
     family: cf-buttons
     notes:
+      - "This pattern requires combining .btn__grouped modifiers with
+         the .btn__compound-action modifier."
       - "Note that the .visited, .hover, .focus, .active classes are for
          demonstration purposes only and should not be used in production."
     patterns:
     - name: Default button style
       markup: |
-        <div class="btn-group">
-            <a href="#" class="btn">Anchor</a>
-            <a href="#" class="btn btn__compound-action">
-                <span class="cf-icon cf-icon-down"></span>
-            </a>
-        </div><br>
-        <div class="btn-group">
-            <button class="btn">Button</button>
-            <button class="btn btn__compound-action">
-                <span class="cf-icon cf-icon-down"></span>
-            </button>
-        </div><br>
+        <a href="#" class="btn btn__grouped-first">Anchor</a>
+        <a href="#" class="btn btn__grouped-last btn__compound-action">
+            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+        </a>
+        <br>
+        <br>
+        <button class="btn btn__grouped-first">Button</button>
+        <button class="btn btn__grouped-last btn__compound-action">
+            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+        </button>
     - name: Secondary button style
       markup: |
-        <div class="btn-group">
-            <a href="#" class="btn btn__secondary">Anchor</a>
-            <a href="#" class="btn btn__secondary btn__compound-action">
-                <span class="cf-icon cf-icon-down"></span>
-            </a>
-        </div><br>
-        <div class="btn-group">
-            <button class="btn btn__secondary">Button</button>
-            <button class="btn btn__secondary btn__compound-action">
-                <span class="cf-icon cf-icon-down"></span>
-            </button>
-        </div>
+        <a href="#" class="btn btn__grouped-first btn__secondary">Anchor</a>
+        <a href="#" class="btn btn__grouped-last btn__secondary btn__compound-action">
+            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+        </a>
+        <br>
+        <br>
+        <button class="btn btn__grouped-first btn__secondary">Button</button>
+        <button class="btn btn__grouped-last btn__secondary btn__compound-action">
+            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+        </button>
     - name: Super button style
       markup: |
-        <div class="btn-group">
-            <a href="#" class="btn btn__super">Anchor</a>
-            <a href="#" class="btn btn__super btn__compound-action">
-                <span class="cf-icon cf-icon-down"></span>
-            </a>
-        </div><br>
-        <div class="btn-group">
-            <button class="btn btn__super">Button</button>
-            <button class="btn btn__super btn__compound-action">
-                <span class="cf-icon cf-icon-down"></span>
-            </button>
-        </div>
+        <a href="#" class="btn btn__grouped-first btn__super">Anchor</a>
+        <a href="#" class="btn btn__grouped-last btn__super btn__compound-action">
+            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+        </a>
+        <br>
+        <br>
+        <button class="btn btn__grouped-first btn__super">Button</button>
+        <button class="btn btn__grouped-last btn__super btn__compound-action">
+            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+        </button>
     tags:
     - cf-buttons
     - fj-icons
@@ -602,15 +605,18 @@
 
 .btn__link {
 
-    &,
-    &:link,
-    &:visited {
+    & {
         padding: 0;
         border-bottom: 1px dotted @pacific;
         border-radius: 0;
         // This margin is necessary to vertically align link buttons with
         // regular buttons.
         margin: unit( @btn-v-padding / @btn-font-size, em) 0;
+    }
+
+    &,
+    &:link,
+    &:visited {
         background-color: transparent;
         color: @pacific;
     }
