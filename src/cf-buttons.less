@@ -13,8 +13,10 @@
         - "@btn-v-padding: 9px;"
         - "@btn-v-padding-modifier-ie: .8;"
       notes:
-        - "@btn-v-padding-modifier-ie is used to fix the vertical padding bug in IE for <button>'s and <inputs>'s
-          across various .btn styles. We should revisit this after adding normalize.css to see if this is still needed."
+        - "@btn-v-padding-modifier-ie is used to fix the vertical padding bug in
+           IE for <button>'s and <inputs>'s across various .btn styles.
+           We should revisit this after adding normalize.css to see if this is
+           still needed."
     tags:
     - cf-buttons
     - less
@@ -24,7 +26,8 @@
 @btn-font-size: 14px;
 @btn-v-padding: 9px;
 
-// Used to fix the vertical padding bug in IE for <button>'s and <inputs>'s across various .btn styles
+// Used to fix the vertical padding bug in IE for <button>'s and <inputs>'s
+// across various .btn styles
 @btn-v-padding-modifier-ie: .8;
 
 
@@ -32,8 +35,8 @@
     name: Default button
     family: cf-buttons
     notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
-        be used in production."
+      - "Note that the .visited, .hover, .focus, .active classes are for
+         demonstration purposes only and should not be used in production."
     patterns:
     - name: Default state
       markup: |
@@ -131,8 +134,8 @@
     name: Secondary button
     family: cf-buttons
     notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
-        be used in production."
+      - "Note that the .visited, .hover, .focus, .active classes are for
+         demonstration purposes only and should not be used in production."
     patterns:
     - name: Default state
       markup: |
@@ -215,8 +218,8 @@
     name: Destructive action button
     family: cf-buttons
     notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
-        be used in production."
+      - "Note that the .visited, .hover, .focus, .active classes are for
+         demonstration purposes only and should not be used in production."
     patterns:
     - name: Default state
       markup: |
@@ -264,8 +267,8 @@
     name: Disabled button
     family: cf-buttons
     notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
-        be used in production."
+      - "Note that the .visited, .hover, .focus, .active classes are for
+         demonstration purposes only and should not be used in production."
     patterns:
     - name: Default/hovered/focused/active state
       markup: |
@@ -484,38 +487,50 @@
     name: Compound button
     family: cf-buttons
     notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
-        be used in production."
+      - "Note that the .visited, .hover, .focus, .active classes are for
+         demonstration purposes only and should not be used in production."
     patterns:
     - name: Default button style
       markup: |
         <div class="btn-group">
             <a href="#" class="btn">Anchor</a>
-            <a href="#" class="btn btn__compound-action"><span class="cf-icon cf-icon-down"></span></a>
+            <a href="#" class="btn btn__compound-action">
+                <span class="cf-icon cf-icon-down"></span>
+            </a>
         </div><br>
         <div class="btn-group">
             <button class="btn">Button</button>
-            <button class="btn btn__compound-action"><span class="cf-icon cf-icon-down"></span></button>
+            <button class="btn btn__compound-action">
+                <span class="cf-icon cf-icon-down"></span>
+            </button>
         </div><br>
     - name: Secondary button style
       markup: |
         <div class="btn-group">
             <a href="#" class="btn btn__secondary">Anchor</a>
-            <a href="#" class="btn btn__secondary btn__compound-action"><span class="cf-icon cf-icon-down"></span></a>
+            <a href="#" class="btn btn__secondary btn__compound-action">
+                <span class="cf-icon cf-icon-down"></span>
+            </a>
         </div><br>
         <div class="btn-group">
             <button class="btn btn__secondary">Button</button>
-            <button class="btn btn__secondary btn__compound-action"><span class="cf-icon cf-icon-down"></span></button>
+            <button class="btn btn__secondary btn__compound-action">
+                <span class="cf-icon cf-icon-down"></span>
+            </button>
         </div>
     - name: Super button style
       markup: |
         <div class="btn-group">
             <a href="#" class="btn btn__super">Anchor</a>
-            <a href="#" class="btn btn__super btn__compound-action"><span class="cf-icon cf-icon-down"></span></a>
+            <a href="#" class="btn btn__super btn__compound-action">
+                <span class="cf-icon cf-icon-down"></span>
+            </a>
         </div><br>
         <div class="btn-group">
             <button class="btn btn__super">Button</button>
-            <button class="btn btn__super btn__compound-action"><span class="cf-icon cf-icon-down"></span></button>
+            <button class="btn btn__super btn__compound-action">
+                <span class="cf-icon cf-icon-down"></span>
+            </button>
         </div>
     tags:
     - cf-buttons
@@ -558,8 +573,8 @@
     name: Button link
     family: cf-buttons
     notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
-        be used in production."
+      - "Note that the .visited, .hover, .focus, .active classes are for
+         demonstration purposes only and should not be used in production."
     patterns:
     - name: Default state
       markup: |
@@ -593,7 +608,8 @@
         padding: 0;
         border-bottom: 1px dotted @pacific;
         border-radius: 0;
-        // This margin is necessary to vertically align link buttons with regular buttons.
+        // This margin is necessary to vertically align link buttons with
+        // regular buttons.
         margin: unit( @btn-v-padding / @btn-font-size, em) 0;
         background-color: transparent;
         color: @pacific;
@@ -636,8 +652,8 @@
     name: Destructive action button link
     family: cf-buttons
     notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
-        be used in production."
+      - "Note that the .visited, .hover, .focus, .active classes are for
+         demonstration purposes only and should not be used in production."
     patterns:
     - name: Default state
       markup: |
