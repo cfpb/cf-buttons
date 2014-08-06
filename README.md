@@ -15,6 +15,7 @@ a new front end framework developed at the
 
 The current version number can be found in [bower.json](bower.json#L3)
 and follows [semver](http://semver.org/).
+Release notes are recorded in the [releases page](https://github.com/cfpb/cf-buttons/releases/)
 
 If you would like to take advantage of more components or if you're new to
 Capital Framework, we encourage you to [start here](https://cfpb.github.io/capital-framework/).
