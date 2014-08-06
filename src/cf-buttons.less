@@ -99,10 +99,6 @@
         background-color: @navy-80;
     }
 
-    // & + & {
-    //     margin-left: unit( 6px / @btn-font-size, em);
-    // }
-
     button&::-moz-focus-inner,
     input&::-moz-focus-inner {
         // Fixes inconsistent button.btn height in FireFox
@@ -110,6 +106,9 @@
         border: 0;
     }
 
+    & + & {
+        margin-left: unit( 6px / @btn-font-size, em);
+    }
 }
 
 .lt-ie8 {
@@ -334,9 +333,9 @@
         font-size: unit( @super-btn-font-size / @base-font-size-px, em );
     }
 
-    // & + & {
-    //     margin-left: unit( 6px / @super-btn-font-size, em);
-    // }
+    & + & {
+        margin-left: unit( 6px / @super-btn-font-size, em);
+    }
 
 }
 
@@ -477,13 +476,21 @@
 
     // Margins
 
+    &-first + &,
+    &-first + &-last,
     &,
-    &-last {
+    & + &,
+    &-last,
+    & + &-last {
         margin-left: unit( -3px / @btn-font-size, em );
     }
 
+    &-first.btn__super + &.btn__super,
+    &-first.btn__super + &-last.btn__super,
     &.btn__super,
-    &-last.btn__super {
+    &-last.btn__super,
+    &.btn__super + &.btn__super,
+    &.btn__super + &-last.btn__super {
         margin-left: unit( -3px / @super-btn-font-size, em );
     }
 

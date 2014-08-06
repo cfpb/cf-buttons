@@ -138,6 +138,9 @@ button.btn::-moz-focus-inner,
 input.btn::-moz-focus-inner {
   border: 0;
 }
+.btn + .btn {
+  margin-left: 0.42857143em;
+}
 .lt-ie8 {
   background: url(null) fixed no-repeat;
 }
@@ -381,6 +384,9 @@ input.btn::-moz-focus-inner {
   padding: 0.83333333em 1.66666667em;
   font-size: 1.125em;
 }
+.btn__super + .btn__super {
+  margin-left: 0.33333333em;
+}
 .lt-ie8 button.btn__super,
 .lt-ie8 input.btn__super {
   padding-top: 0.66666667em;
@@ -578,12 +584,20 @@ input.btn::-moz-focus-inner {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+.btn__grouped-first + .btn__grouped,
+.btn__grouped-first + .btn__grouped-last,
 .btn__grouped,
-.btn__grouped-last {
+.btn__grouped + .btn__grouped,
+.btn__grouped-last,
+.btn__grouped + .btn__grouped-last {
   margin-left: -0.21428571em;
 }
+.btn__grouped-first.btn__super + .btn__grouped.btn__super,
+.btn__grouped-first.btn__super + .btn__grouped-last.btn__super,
 .btn__grouped.btn__super,
-.btn__grouped-last.btn__super {
+.btn__grouped-last.btn__super,
+.btn__grouped.btn__super + .btn__grouped.btn__super,
+.btn__grouped.btn__super + .btn__grouped-last.btn__super {
   margin-left: -0.16666667em;
 }</code></pre>
           </div>
