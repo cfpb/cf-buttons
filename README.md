@@ -16,6 +16,9 @@ Capital Framework, we encourage you to [start here](https://cfpb.github.io/capit
 - [View the docs](https://cfpb.github.io/cf-buttons/docs/)
 - [See the raw demo](https://cfpb.github.io/cf-buttons/demo/)
 
+The current version number can be found in <bower.json>.
+We follow [semver](http://semver.org/).
+
 ![](screenshot.png)
 
 
