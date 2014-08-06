@@ -25,7 +25,7 @@ Capital Framework, we encourage you to [start here](https://cfpb.github.io/capit
 ## How to get this running or how to use it
 
 Detailed instructions can be found in the Capital Framework
-[documentation site](https://cfpb.github.io/capital-framework/components/)
+[documentation site](https://cfpb.github.io/capital-framework/components/).
 
 
 ## Getting involved
