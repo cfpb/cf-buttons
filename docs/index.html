@@ -5,94 +5,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>cf-buttons docs</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="static/demo/demo.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic">
+    <link rel="stylesheet" type="text/css" href="static/docs/brackets.css">
+    <link rel="stylesheet" type="text/css" href="static/docs/docs.css">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
-    <link rel="stylesheet" type="text/css" href="static/demo/brackets.css">
   </head>
   <body>
-    <div class="wrapper">
-      <header class="demo_header">
-        <h1 class="h5">cf-buttons docs</h1>
-      </header>
-      <ul class="demo-component-list">
-        <li id="less-notes" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Less notes</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Variables</h3>
-                <ul class="demo_codenotes">
-                  <li>
-                    <pre class="code"><code>@btn-font-size: 14px;</code></pre>
-                  </li>
-                  <li>
-                    <pre class="code"><code>@btn-v-padding: 9px;</code></pre>
-                  </li>
-                  <li>
-                    <pre class="code"><code>@btn-v-padding-modifier-ie: .8;</code></pre>
-                  </li>
-                </ul>
-                <ul class="demo_notes">
-                  <li>@btn-v-padding-modifier-ie is used to fix the vertical padding bug in IE for &lt;button&gt;'s and &lt;inputs&gt;'s across various .btn styles. We should revisit this after adding normalize.css to see if this is still needed.</li>
-                </ul>
-              </header>
-            </li>
-          </ul>
-        </li>
-        <li id="default-button" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Default button</h1>
-          <ul class="demo_notes">
-            <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
-          </ul>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default state</h3>
-              </header>
-              <section>
+    <div class="docs-masthead">
+      <h1 class="docs-title"><span class="docs-icon">&lt;/&gt;</span> cf-buttons docs
+      </h1><a href="https://github.com/cfpb/cf-buttons" class="docs-repo">view the repository</a>
+    </div>
+    <div id="less-notes" class="docs-component">
+      <h2 class="docs-component_header"><span>Less notes</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Variables</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>@btn-font-size: 14px;</code></pre>
+              </li>
+              <li>
+                <pre class="docs-code"><code>@btn-v-padding: 9px;</code></pre>
+              </li>
+              <li>
+                <pre class="docs-code"><code>@btn-v-padding-modifier-ie: .8;</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>@btn-v-padding-modifier-ie is used to fix the vertical padding bug in IE for &lt;button&gt;'s and &lt;inputs&gt;'s across various .btn styles. We should revisit this after adding normalize.css to see if this is still needed.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div id="default-button" class="docs-component">
+      <h2 class="docs-component_header"><span>Default button</span></h2>
+      <div class="docs-component_intro">
+        <ul class="docs-notes">
+          <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
+        </ul>
+      </div>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Default state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn">Anchor Tag</a>
 <button class="btn">Button Tag</button>
 <input type="submit" value="Input Tag" class="btn">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Input Tag&quot; class=&quot;btn&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Hovered/focused state</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Hovered/focused state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn hover">Anchor Tag</a>
 <button class="btn hover">Button Tag</button>
 <input type="submit" value="Input Tag" class="btn hover">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn hover&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn hover&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn hover&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Input Tag&quot; class=&quot;btn hover&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Active state</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Active state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn active">Anchor Tag</a>
 <button class="btn active">Button Tag</button>
 <input type="submit" value="Input Tag" class="btn active">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn active&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn active&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn active&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Input Tag&quot; class=&quot;btn active&quot;&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.btn {
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.btn {
   display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -150,62 +149,61 @@ input.btn::-moz-focus-inner {
   padding-top: 0.51428571em;
   padding-bottom: 0.51428571em;
 }</code></pre>
-          </div>
-        </li>
-        <li id="secondary-button" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Secondary button</h1>
-          <ul class="demo_notes">
-            <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
-          </ul>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default state</h3>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="secondary-button" class="docs-component">
+      <h2 class="docs-component_header"><span>Secondary button</span></h2>
+      <div class="docs-component_intro">
+        <ul class="docs-notes">
+          <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
+        </ul>
+      </div>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Default state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__secondary">Anchor Tag</a>
 <button class="btn btn__secondary">Button Tag</button>
 <input type="submit" value="Input Tag" class="btn btn__secondary">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__secondary&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__secondary&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__secondary&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__secondary&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Hovered/focused state</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Hovered/focused state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__secondary hover">Anchor Tag</a>
 <button class="btn btn__secondary hover">Button Tag</button>
 <input type="submit" value="Input Tag" class="btn btn__secondary hover">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__secondary hover&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__secondary hover&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__secondary hover&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__secondary hover&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Active state</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Active state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__secondary active">Anchor Tag</a>
 <button class="btn btn__secondary active">Button Tag</button>
 <input type="submit" value="Input Tag" class="btn btn__secondary active">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__secondary active&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__secondary active&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__secondary active&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__secondary active&quot;&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.btn__secondary,
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.btn__secondary,
 .btn__secondary:link,
 .btn__secondary:visited {
   background-color: #75787b;
@@ -220,62 +218,61 @@ input.btn::-moz-focus-inner {
 .btn__secondary.active {
   background-color: #43484e;
 }</code></pre>
-          </div>
-        </li>
-        <li id="destructive-action-button" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Destructive action button</h1>
-          <ul class="demo_notes">
-            <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
-          </ul>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default state</h3>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="destructive-action-button" class="docs-component">
+      <h2 class="docs-component_header"><span>Destructive action button</span></h2>
+      <div class="docs-component_intro">
+        <ul class="docs-notes">
+          <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
+        </ul>
+      </div>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Default state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__warning">Anchor Tag</a>
 <button class="btn btn__warning">Button Tag</button>
 <input type="submit" value="Input Tag" class="btn btn__warning">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__warning&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__warning&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__warning&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__warning&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Hovered/focused state</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Hovered/focused state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__warning hover">Anchor Tag</a>
 <button class="btn btn__warning hover">Button Tag</button>
 <input type="submit" value="Input Tag" class="btn btn__warning hover">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__warning hover&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__warning hover&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__warning hover&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__warning hover&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Active state</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Active state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__warning active">Anchor Tag</a>
 <button class="btn btn__warning active">Button Tag</button>
 <input type="submit" value="Input Tag" class="btn btn__warning active">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__warning active&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__warning active&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__warning active&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__warning active&quot;&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.btn__warning,
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.btn__warning,
 .btn__warning:link,
 .btn__warning:visited {
   background-color: #d12124;
@@ -290,32 +287,33 @@ input.btn::-moz-focus-inner {
 .btn__warning.active {
   background-color: #9c301b;
 }</code></pre>
-          </div>
-        </li>
-        <li id="disabled-button" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Disabled button</h1>
-          <ul class="demo_notes">
-            <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
-          </ul>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default/hovered/focused/active state</h3>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="disabled-button" class="docs-component">
+      <h2 class="docs-component_header"><span>Disabled button</span></h2>
+      <div class="docs-component_intro">
+        <ul class="docs-notes">
+          <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
+        </ul>
+      </div>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Default/hovered/focused/active state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__disabled">Anchor Tag</a>
 <button class="btn btn__disabled">Button Tag</button>
 <input type="submit" value="Input Tag" class="btn btn__disabled">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__disabled&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__disabled&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__disabled&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__disabled&quot;&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.btn__disabled,
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.btn__disabled,
 .btn__disabled:link,
 .btn__disabled:visited,
 .btn__disabled:hover,
@@ -328,59 +326,56 @@ input.btn::-moz-focus-inner {
   cursor: default;
   cursor: not-allowed;
 }</code></pre>
-          </div>
-        </li>
-        <li id="super-button" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Super button</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default state</h3>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="super-button" class="docs-component">
+      <h2 class="docs-component_header"><span>Super button</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Default state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__super">Anchor Tag</a>
 <button class="btn btn__super">Button Tag</button>
 <input type="submit" value="Input Tag" class="btn btn__super">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__super&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__super&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__super&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__super&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Hovered/focused state</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Hovered/focused state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__super hover">Anchor Tag</a>
 <button class="btn btn__super hover">Button Tag</button>
 <input type="submit" value="Input Tag" class="btn btn__super hover">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__super hover&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__super hover&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__super hover&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__super hover&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Active state</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Active state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__super active">Anchor Tag</a>
 <button class="btn btn__super active">Button Tag</button>
 <input type="submit" value="Input Tag" class="btn btn__super active">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__super active&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__super active&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__super active&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;submit&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__super active&quot;&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.btn__super {
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.btn__super {
   padding: 0.83333333em 1.66666667em;
   font-size: 1.125em;
 }
@@ -392,16 +387,14 @@ input.btn::-moz-focus-inner {
   padding-top: 0.66666667em;
   padding-bottom: 0.66666667em;
 }</code></pre>
-          </div>
-        </li>
-        <li id="button-with-icons" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Button with icons</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Button icon left</h3>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="button-with-icons" class="docs-component">
+      <h2 class="docs-component_header"><span>Button with icons</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Button icon left</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn">
     <span class="btn_icon__left cf-icon cf-icon-left"></span>
     Anchor Tag
@@ -410,9 +403,10 @@ input.btn::-moz-focus-inner {
     <span class="btn_icon__left cf-icon cf-icon-left"></span>
     Button Tag
 </button>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;
     &lt;span class=&quot;btn_icon__left cf-icon cf-icon-left&quot;&gt;&lt;/span&gt;
     Anchor Tag
 &lt;/a&gt;
@@ -420,13 +414,11 @@ input.btn::-moz-focus-inner {
     &lt;span class=&quot;btn_icon__left cf-icon cf-icon-left&quot;&gt;&lt;/span&gt;
     Button Tag
 &lt;/button&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Button icon right</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Button icon right</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn">
     Anchor Tag
     <span class="btn_icon__right cf-icon cf-icon-right"></span>
@@ -435,9 +427,10 @@ input.btn::-moz-focus-inner {
     Button Tag
     <span class="btn_icon__right cf-icon cf-icon-right"></span>
 </button>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;
     Anchor Tag
     &lt;span class=&quot;btn_icon__right cf-icon cf-icon-right&quot;&gt;&lt;/span&gt;
 &lt;/a&gt;
@@ -445,16 +438,11 @@ input.btn::-moz-focus-inner {
     Button Tag
     &lt;span class=&quot;btn_icon__right cf-icon cf-icon-right&quot;&gt;&lt;/span&gt;
 &lt;/button&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Just an icon</h3>
-                <ul class="demo_notes">
-                  <li>For accessibility please use the .u-visually-hidden utility class to add hidden text for screen readers.</li>
-                </ul>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Just an icon</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn">
     <span class="u-visually-hidden">Search</span>
     <span class="cf-icon cf-icon-search"></span>
@@ -463,9 +451,10 @@ input.btn::-moz-focus-inner {
     <span class="u-visually-hidden">Search</span>
     <span class="cf-icon cf-icon-search"></span>
 </button>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;
     &lt;span class=&quot;u-visually-hidden&quot;&gt;Search&lt;/span&gt;
     &lt;span class=&quot;cf-icon cf-icon-search&quot;&gt;&lt;/span&gt;
 &lt;/a&gt;
@@ -473,11 +462,14 @@ input.btn::-moz-focus-inner {
     &lt;span class=&quot;u-visually-hidden&quot;&gt;Search&lt;/span&gt;
     &lt;span class=&quot;cf-icon cf-icon-search&quot;&gt;&lt;/span&gt;
 &lt;/button&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.btn_icon__left {
+            <ul class="docs-notes">
+              <li>For accessibility please use the .u-visually-hidden utility class to add hidden text for screen readers.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.btn_icon__left {
   padding: 0 0.75em 0 0;
   border-right: 1px solid #ffffff;
   border-right: 1px solid rgba(255, 255, 255, 0.4);
@@ -496,16 +488,14 @@ input.btn::-moz-focus-inner {
 .btn__disabled .btn_icon__right {
   border-left-color: #babbbd;
 }</code></pre>
-          </div>
-        </li>
-        <li id="button-group-modifiers" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Button group modifiers</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default buttons in a button group</h3>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="button-group-modifiers" class="docs-component">
+      <h2 class="docs-component_header"><span>Button group modifiers</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Default buttons in a button group</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__grouped-first">Anchor 1</a>
 <a href="#" class="btn btn__grouped">Anchor 2</a>
 <a href="#" class="btn btn__grouped-last">Anchor 3</a>
@@ -519,9 +509,10 @@ input.btn::-moz-focus-inner {
 <input type="button" value="Input 1" class="btn btn__grouped-first">
 <input type="button" value="Input 2" class="btn btn__grouped">
 <input type="button" value="Input 3" class="btn btn__grouped-last">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-first&quot;&gt;Anchor 1&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-first&quot;&gt;Anchor 1&lt;/a&gt;
 &lt;a href=&quot;#&quot; class=&quot;btn btn__grouped&quot;&gt;Anchor 2&lt;/a&gt;
 &lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-last&quot;&gt;Anchor 3&lt;/a&gt;
 &lt;br&gt;
@@ -534,13 +525,11 @@ input.btn::-moz-focus-inner {
 &lt;input type=&quot;button&quot; value=&quot;Input 1&quot; class=&quot;btn btn__grouped-first&quot;&gt;
 &lt;input type=&quot;button&quot; value=&quot;Input 2&quot; class=&quot;btn btn__grouped&quot;&gt;
 &lt;input type=&quot;button&quot; value=&quot;Input 3&quot; class=&quot;btn btn__grouped-last&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Super buttons in a button group</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Super buttons in a button group</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__grouped-first btn__super">Anchor 1</a>
 <a href="#" class="btn btn__grouped btn__super">Anchor 2</a>
 <a href="#" class="btn btn__grouped-last btn__super">Anchor 3</a>
@@ -554,9 +543,10 @@ input.btn::-moz-focus-inner {
 <input type="button" value="Input 1" class="btn btn__grouped-first btn__super">
 <input type="button" value="Input 2" class="btn btn__grouped btn__super">
 <input type="button" value="Input 3" class="btn btn__grouped-last btn__super">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-first btn__super&quot;&gt;Anchor 1&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-first btn__super&quot;&gt;Anchor 1&lt;/a&gt;
 &lt;a href=&quot;#&quot; class=&quot;btn btn__grouped btn__super&quot;&gt;Anchor 2&lt;/a&gt;
 &lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-last btn__super&quot;&gt;Anchor 3&lt;/a&gt;
 &lt;br&gt;
@@ -569,11 +559,11 @@ input.btn::-moz-focus-inner {
 &lt;input type=&quot;button&quot; value=&quot;Input 1&quot; class=&quot;btn btn__grouped-first btn__super&quot;&gt;
 &lt;input type=&quot;button&quot; value=&quot;Input 2&quot; class=&quot;btn btn__grouped btn__super&quot;&gt;
 &lt;input type=&quot;button&quot; value=&quot;Input 3&quot; class=&quot;btn btn__grouped-last btn__super&quot;&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.btn__grouped {
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.btn__grouped {
   border-radius: 0;
 }
 .btn__grouped-first {
@@ -600,20 +590,20 @@ input.btn::-moz-focus-inner {
 .btn__grouped.btn__super + .btn__grouped-last.btn__super {
   margin-left: -0.16666667em;
 }</code></pre>
-          </div>
-        </li>
-        <li id="compound-button" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Compound button</h1>
-          <ul class="demo_notes">
-            <li>This pattern requires combining .btn__grouped modifiers with the .btn__compound-action modifier.</li>
-            <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
-          </ul>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default button style</h3>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="compound-button" class="docs-component">
+      <h2 class="docs-component_header"><span>Compound button</span></h2>
+      <div class="docs-component_intro">
+        <ul class="docs-notes">
+          <li>This pattern requires combining .btn__grouped modifiers with the .btn__compound-action modifier.</li>
+          <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
+        </ul>
+      </div>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Default button style</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__grouped-first">Anchor</a>
 <a href="#" class="btn btn__grouped-last btn__compound-action">
     <span class="cf-icon cf-icon-down btn__grouped-last"></span>
@@ -624,9 +614,10 @@ input.btn::-moz-focus-inner {
 <button class="btn btn__grouped-last btn__compound-action">
     <span class="cf-icon cf-icon-down btn__grouped-last"></span>
 </button>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-first&quot;&gt;Anchor&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-first&quot;&gt;Anchor&lt;/a&gt;
 &lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-last btn__compound-action&quot;&gt;
     &lt;span class=&quot;cf-icon cf-icon-down btn__grouped-last&quot;&gt;&lt;/span&gt;
 &lt;/a&gt;
@@ -636,13 +627,11 @@ input.btn::-moz-focus-inner {
 &lt;button class=&quot;btn btn__grouped-last btn__compound-action&quot;&gt;
     &lt;span class=&quot;cf-icon cf-icon-down btn__grouped-last&quot;&gt;&lt;/span&gt;
 &lt;/button&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Secondary button style</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Secondary button style</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__grouped-first btn__secondary">Anchor</a>
 <a href="#" class="btn btn__grouped-last btn__secondary btn__compound-action">
     <span class="cf-icon cf-icon-down btn__grouped-last"></span>
@@ -653,9 +642,10 @@ input.btn::-moz-focus-inner {
 <button class="btn btn__grouped-last btn__secondary btn__compound-action">
     <span class="cf-icon cf-icon-down btn__grouped-last"></span>
 </button>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-first btn__secondary&quot;&gt;Anchor&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-first btn__secondary&quot;&gt;Anchor&lt;/a&gt;
 &lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-last btn__secondary btn__compound-action&quot;&gt;
     &lt;span class=&quot;cf-icon cf-icon-down btn__grouped-last&quot;&gt;&lt;/span&gt;
 &lt;/a&gt;
@@ -665,13 +655,11 @@ input.btn::-moz-focus-inner {
 &lt;button class=&quot;btn btn__grouped-last btn__secondary btn__compound-action&quot;&gt;
     &lt;span class=&quot;cf-icon cf-icon-down btn__grouped-last&quot;&gt;&lt;/span&gt;
 &lt;/button&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Super button style</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Super button style</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__grouped-first btn__super">Anchor</a>
 <a href="#" class="btn btn__grouped-last btn__super btn__compound-action">
     <span class="cf-icon cf-icon-down btn__grouped-last"></span>
@@ -682,9 +670,10 @@ input.btn::-moz-focus-inner {
 <button class="btn btn__grouped-last btn__super btn__compound-action">
     <span class="cf-icon cf-icon-down btn__grouped-last"></span>
 </button>
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-first btn__super&quot;&gt;Anchor&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-first btn__super&quot;&gt;Anchor&lt;/a&gt;
 &lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-last btn__super btn__compound-action&quot;&gt;
     &lt;span class=&quot;cf-icon cf-icon-down btn__grouped-last&quot;&gt;&lt;/span&gt;
 &lt;/a&gt;
@@ -694,11 +683,11 @@ input.btn::-moz-focus-inner {
 &lt;button class=&quot;btn btn__grouped-last btn__super btn__compound-action&quot;&gt;
     &lt;span class=&quot;cf-icon cf-icon-down btn__grouped-last&quot;&gt;&lt;/span&gt;
 &lt;/button&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.btn__compound-action,
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.btn__compound-action,
 .btn__compound-action:link,
 .btn__compound-action:visited {
   background-color: #328ed8;
@@ -720,77 +709,75 @@ input.btn::-moz-focus-inner {
   padding-left: 1.22222222em;
   padding-right: 1.22222222em;
 }</code></pre>
-          </div>
-        </li>
-        <li id="button-link" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Button link</h1>
-          <ul class="demo_notes">
-            <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
-          </ul>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default state</h3>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="button-link" class="docs-component">
+      <h2 class="docs-component_header"><span>Button link</span></h2>
+      <div class="docs-component_intro">
+        <ul class="docs-notes">
+          <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
+        </ul>
+      </div>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Default state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__link">Anchor Tag</a>
 <button class="btn btn__link">Button Tag</button>
 <input type="button" value="Input Tag" class="btn btn__link">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__link&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;button&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__link&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Hovered state</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Hovered state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__link hover">Anchor Tag</a>
 <button class="btn btn__link hover">Button Tag</button>
 <input type="button" value="Input Tag" class="btn btn__link hover">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link hover&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link hover&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__link hover&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;button&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__link hover&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Focused state</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Focused state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__link focus">Anchor Tag</a>
 <button class="btn btn__link focus">Button Tag</button>
 <input type="button" value="Input Tag" class="btn btn__link focus">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link focus&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link focus&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__link focus&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;button&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__link focus&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Active state</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Active state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__link active">Anchor Tag</a>
 <button class="btn btn__link active">Button Tag</button>
 <input type="button" value="Input Tag" class="btn btn__link active">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link active&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link active&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__link active&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;button&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__link active&quot;&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.btn__link {
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.btn__link {
   padding: 0;
   border-bottom: 1px dotted #0072ce;
   border-radius: 0;
@@ -824,77 +811,75 @@ input.btn::-moz-focus-inner {
 .lt-ie8 input.btn__link {
   padding: 0;
 }</code></pre>
-          </div>
-        </li>
-        <li id="destructive-action-button-link" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Destructive action button link</h1>
-          <ul class="demo_notes">
-            <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
-          </ul>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Default state</h3>
-              </header>
-              <section>
+      </div>
+    </div>
+    <div id="destructive-action-button-link" class="docs-component">
+      <h2 class="docs-component_header"><span>Destructive action button link</span></h2>
+      <div class="docs-component_intro">
+        <ul class="docs-notes">
+          <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
+        </ul>
+      </div>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Default state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__link btn__warning">Anchor Tag</a>
 <button class="btn btn__link btn__warning">Button Tag</button>
 <input type="button" value="Input Tag" class="btn btn__link btn__warning">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link btn__warning&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link btn__warning&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__link btn__warning&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;button&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__link btn__warning&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Hovered state</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Hovered state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__link btn__warning hover">Anchor Tag</a>
 <button class="btn btn__link btn__warning hover">Button Tag</button>
 <input type="button" value="Input Tag" class="btn btn__link btn__warning hover">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link btn__warning hover&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link btn__warning hover&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__link btn__warning hover&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;button&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__link btn__warning hover&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Focused state</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Focused state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__link btn__warning focus">Anchor Tag</a>
 <button class="btn btn__link btn__warning focus">Button Tag</button>
 <input type="button" value="Input Tag" class="btn btn__link btn__warning focus">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link btn__warning focus&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link btn__warning focus&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__link btn__warning focus&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;button&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__link btn__warning focus&quot;&gt;</code></pre>
-              </footer>
-            </li>
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Active state</h3>
-              </header>
-              <section>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Active state</h3>
+          <section class="docs-pattern_pattern">
 <a href="#" class="btn btn__link btn__warning active">Anchor Tag</a>
 <button class="btn btn__link btn__warning active">Button Tag</button>
 <input type="button" value="Input Tag" class="btn btn__link btn__warning active">
-</section>
-              <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link btn__warning active&quot;&gt;Anchor Tag&lt;/a&gt;
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link btn__warning active&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__link btn__warning active&quot;&gt;Button Tag&lt;/button&gt;
 &lt;input type=&quot;button&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__link btn__warning active&quot;&gt;</code></pre>
-              </footer>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.btn__link.btn__warning,
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.btn__link.btn__warning,
 .btn__link.btn__warning:link,
 .btn__link.btn__warning:visited {
   border-bottom-color: #d12124;
@@ -916,13 +901,8 @@ input.btn::-moz-focus-inner {
   border-bottom-color: #9c301b;
   color: #9c301b;
 }</code></pre>
-          </div>
-        </li>
-      </ul>
-      <footer class="wrapper-footer">
-        <h4><a href="https://github.com/cfpb/cf-buttons">View the repository</a></h4>
-      </footer>
+      </div>
     </div>
-    <script src="static/demo/main.min.js"></script>
+    <script src="static/docs/main.min.js"></script>
   </body>
 </html>
