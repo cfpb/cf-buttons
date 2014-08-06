@@ -10,14 +10,14 @@ This component can be used by itself, but it was made for Capital Framework,
 a new front end framework developed at the
 [Consumer Financial Protection Bureau](https://cfpb.github.io/).
 
-If you would like to take advantage of more components or if you're new to
-Capital Framework, we encourage you to [start here](https://cfpb.github.io/capital-framework/).
-
 - [View the docs](https://cfpb.github.io/cf-buttons/docs/)
 - [See the raw demo](https://cfpb.github.io/cf-buttons/demo/)
 
 The current version number can be found in <bower.json>.
 We follow [semver](http://semver.org/).
+
+If you would like to take advantage of more components or if you're new to
+Capital Framework, we encourage you to [start here](https://cfpb.github.io/capital-framework/).
 
 ![](screenshot.png)
 
