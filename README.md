@@ -13,8 +13,8 @@ a new front end framework developed at the
 - [View the docs](https://cfpb.github.io/cf-buttons/docs/)
 - [See the raw demo](https://cfpb.github.io/cf-buttons/demo/)
 
-The current version number can be found in [bower.json](bower.json#L3).
-We follow [semver](http://semver.org/).
+The current version number can be found in [bower.json](bower.json#L3)
+and follows [semver](http://semver.org/).
 
 If you would like to take advantage of more components or if you're new to
 Capital Framework, we encourage you to [start here](https://cfpb.github.io/capital-framework/).
