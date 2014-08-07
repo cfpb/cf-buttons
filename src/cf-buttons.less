@@ -59,27 +59,25 @@
 
 .btn {
 
-    & {
-        display: inline-block;
-        box-sizing: border-box;
-        padding:
-            unit( @btn-v-padding / @btn-font-size, em )
-            unit( 14px / @btn-font-size, em );
-        border: 0;
-        border-radius: unit( 4px / @btn-font-size, em );
-        margin: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    padding:
+        unit( @btn-v-padding / @btn-font-size, em )
+        unit( 14px / @btn-font-size, em );
+    border: 0;
+    border-radius: unit( 4px / @btn-font-size, em );
+    margin: 0;
 
-        vertical-align: middle;
+    vertical-align: middle;
 
-        .webfont-medium();
-        font-size: unit( @btn-font-size / @base-font-size-px, em );
-        line-height: normal;
-        text-decoration: none;
+    .webfont-medium();
+    font-size: unit( @btn-font-size / @base-font-size-px, em );
+    line-height: normal;
+    text-decoration: none;
 
-        cursor: pointer;
-        transition: .1s;
-        -webkit-appearance: none;
-    }
+    cursor: pointer;
+    transition: .1s;
+    -webkit-appearance: none;
 
     &,
     &:link,
@@ -326,12 +324,10 @@
 
 .btn__super {
 
-    & {
-        padding:
-            unit( 15px / @super-btn-font-size, em )
-            unit( 30px / @super-btn-font-size, em );
-        font-size: unit( @super-btn-font-size / @base-font-size-px, em );
-    }
+    padding:
+        unit( 15px / @super-btn-font-size, em )
+        unit( 30px / @super-btn-font-size, em );
+    font-size: unit( @super-btn-font-size / @base-font-size-px, em );
 
     & + & {
         margin-left: unit( 6px / @super-btn-font-size, em);
@@ -612,14 +608,12 @@
 
 .btn__link {
 
-    & {
-        padding: 0;
-        border-bottom: 1px dotted @pacific;
-        border-radius: 0;
-        // This margin is necessary to vertically align link buttons with
-        // regular buttons.
-        margin: unit( @btn-v-padding / @btn-font-size, em) 0;
-    }
+    padding: 0;
+    border-bottom: 1px dotted @pacific;
+    border-radius: 0;
+    // This margin is necessary to vertically align link buttons with
+    // regular buttons.
+    margin: unit( @btn-v-padding / @btn-font-size, em) 0;
 
     &,
     &:link,
