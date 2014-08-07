@@ -1,11 +1,11 @@
-As a work of the United States Government, this package (excluding the
-exceptions below) is in the public domain within the United States.
+As a work of the United States Government, this package (excluding any
+exceptions listed below) is in the public domain within the United States.
 Additionally, we waive copyright and related rights in the work worldwide
 through the CC0 1.0 Universal public domain dedication.
 
 Software source code previously released under an open source license and then
-modified by CFPB staff is considered a "joint work" (see 17 USC § 101); it is
-partially copyrighted, partially public domain, and as a whole is protected by
+modified by CFPB staff or its contractors is considered a "joint work" (see 17 USC § 101); 
+it is partially copyrighted, partially public domain, and as a whole is protected by
 the copyrights of the non-government authors and must be released according to
 the terms of the original open-source license.
 
