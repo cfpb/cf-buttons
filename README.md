@@ -2,7 +2,7 @@
 # cf-buttons
 
 [![Bower dependency status](https://www.versioneye.com/user/projects/5345b61fe97a46bd58000150/badge.png)](https://www.versioneye.com/user/projects/5345b61fe97a46bd58000150)
-[![npm dependency status](https://gemnasium.com/cfpb/cf-typography.svg)](https://gemnasium.com/cfpb/cf-buttons)
+[![npm dependency status](https://gemnasium.com/cfpb/cf-buttons.svg)](https://gemnasium.com/cfpb/cf-buttons)
 
 Button styles including default, secondary, destructive, disabled, super, and
 compound buttons, button links, buttons with icons, and button groups.
