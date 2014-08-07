@@ -14,7 +14,7 @@ a new front end framework developed at the
 - [See the raw demo](https://cfpb.github.io/cf-buttons/demo/)
 
 The current version number can be found in [bower.json](bower.json#L3)
-and follows [semver](http://semver.org/).
+and follows [Semantic Versioning 2.0](http://semver.org/).
 Release notes are recorded in the [releases page](https://github.com/cfpb/cf-buttons/releases/)
 
 If you would like to take advantage of more components or if you're new to
