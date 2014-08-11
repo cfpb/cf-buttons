@@ -608,7 +608,7 @@ input[type="radio"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0.64285714em 1em;
+  padding: 0.57142857em 1em;
   border: 0;
   border-radius: 0.28571429em;
   margin: 0;
@@ -658,8 +658,8 @@ input.btn::-moz-focus-inner {
 .lt-ie8 button.btn,
 .lt-ie8 input.btn {
   overflow: visible;
-  padding-top: 0.51428571em;
-  padding-bottom: 0.51428571em;
+  padding-top: 0.45714286em;
+  padding-bottom: 0.45714286em;
 }
 /* topdoc
     name: Secondary button
@@ -792,7 +792,7 @@ input.btn::-moz-focus-inner {
     - cf-buttons
 */
 .btn__super {
-  padding: 0.83333333em 1.66666667em;
+  padding: 0.61111111em 1.61111111em;
   font-size: 1.125em;
 }
 .btn__super + .btn__super {
@@ -1032,7 +1032,7 @@ input.btn::-moz-focus-inner {
   padding: 0;
   border-bottom: 1px dotted #0072ce;
   border-radius: 0;
-  margin: 0.64285714em 0;
+  margin: 0.57142857em 0;
 }
 .btn__link,
 .btn__link:link,
