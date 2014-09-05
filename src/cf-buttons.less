@@ -43,11 +43,16 @@
         <a href="#" class="btn">Anchor Tag</a>
         <button class="btn">Button Tag</button>
         <input type="submit" value="Input Tag" class="btn">
-    - name: Hovered/focused state
+    - name: Hovered state
       markup: |
         <a href="#" class="btn hover">Anchor Tag</a>
         <button class="btn hover">Button Tag</button>
         <input type="submit" value="Input Tag" class="btn hover">
+    - name: Focused state
+      markup: |
+        <a href="#" class="btn focus">Anchor Tag</a>
+        <button class="btn focus">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn focus">
     - name: Active state
       markup: |
         <a href="#" class="btn active">Anchor Tag</a>
@@ -87,9 +92,17 @@
     }
 
     &:hover,
-    &:focus,
     &.hover {
         background-color: @pacific-80;
+    }
+
+    &:focus,
+    &.focus {
+        background-color: @pacific-80;
+        outline: 1px dotted @pacific;
+        // outline-offset is not supported everywhere but it adds a nice touch
+        // in browsers where it is.
+        outline-offset: 1px;
     }
 
     &:active,
@@ -141,11 +154,16 @@
         <a href="#" class="btn btn__secondary">Anchor Tag</a>
         <button class="btn btn__secondary">Button Tag</button>
         <input type="submit" value="Input Tag" class="btn btn__secondary">
-    - name: Hovered/focused state
+    - name: Hovered state
       markup: |
         <a href="#" class="btn btn__secondary hover">Anchor Tag</a>
         <button class="btn btn__secondary hover">Button Tag</button>
         <input type="submit" value="Input Tag" class="btn btn__secondary hover">
+    - name: Focused state
+      markup: |
+        <a href="#" class="btn btn__secondary focus">Anchor Tag</a>
+        <button class="btn btn__secondary focus">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn btn__secondary focus">
     - name: Active state
       markup: |
         <a href="#" class="btn btn__secondary active">Anchor Tag</a>
@@ -165,9 +183,14 @@
     }
 
     &:hover,
-    &:focus,
     &.hover {
         background-color: @gray-80;
+    }
+
+    &:focus,
+    &.focus {
+        background-color: @gray-80;
+        outline-color: @gray;
     }
 
     &:active,
@@ -177,31 +200,52 @@
 
 }
 
-///* topdoc
-    // name: Tertiary button
-    // family: cf-buttons
-    // patterns:
-    // - name: Default state
-    //   markup: <button class="btn btn__tertiary">Clear</button>
-    // - name: Hovered/focused state
-    //   markup: <button class="btn btn__tertiary hover">Clear</button>
-    // - name: Active state
-    //   markup: <button class="btn btn__tertiary active">Clear</button>
-    // tags:
-    // - cf-buttons
-//*/
+// /* topdoc
+//     name: Tertiary button
+//     family: cf-buttons
+//     patterns:
+//     - name: Default state
+//       markup: |
+//         <a href="#" class="btn btn__tertiary">Anchor Tag</a>
+//         <button class="btn btn__tertiary">Button Tag</button>
+//         <input type="submit" value="Input Tag" class="btn btn__tertiary">
+//     - name: Hovered state
+//       markup: |
+//         <a href="#" class="btn btn__tertiary hover">Anchor Tag</a>
+//         <button class="btn btn__tertiary hover">Button Tag</button>
+//         <input type="submit" value="Input Tag" class="btn btn__tertiary hover">
+//     - name: Focused state
+//       markup: |
+//         <a href="#" class="btn btn__tertiary focus">Anchor Tag</a>
+//         <button class="btn btn__tertiary focus">Button Tag</button>
+//         <input type="submit" value="Input Tag" class="btn btn__tertiary focus">
+//     - name: Active state
+//       markup: |
+//         <a href="#" class="btn btn__tertiary active">Anchor Tag</a>
+//         <button class="btn btn__tertiary active">Button Tag</button>
+//         <input type="submit" value="Input Tag" class="btn btn__tertiary active">
+//     tags:
+//     - cf-buttons
+// */
 
 // .btn__tertiary {
 
-//     & {
+//     &,
+//     &:link,
+//     &:visited {
 //         background-color: @gray-20;
 //         color: @black;
 //     }
 
 //     &:hover,
-//     &:focus,
 //     &.hover {
 //         background-color: @green-midtone;
+//     }
+
+//     &:focus,
+//     &.focus {
+//         background-color: @green-midtone;
+//         outline-color: @gray-20;
 //     }
 
 //     &:active,
@@ -225,11 +269,16 @@
         <a href="#" class="btn btn__warning">Anchor Tag</a>
         <button class="btn btn__warning">Button Tag</button>
         <input type="submit" value="Input Tag" class="btn btn__warning">
-    - name: Hovered/focused state
+    - name: Hovered state
       markup: |
         <a href="#" class="btn btn__warning hover">Anchor Tag</a>
         <button class="btn btn__warning hover">Button Tag</button>
         <input type="submit" value="Input Tag" class="btn btn__warning hover">
+    - name: Focused state
+      markup: |
+        <a href="#" class="btn btn__warning focus">Anchor Tag</a>
+        <button class="btn btn__warning focus">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn btn__warning focus">
     - name: Active state
       markup: |
         <a href="#" class="btn btn__warning active">Anchor Tag</a>
@@ -249,9 +298,14 @@
     }
 
     &:hover,
-    &:focus,
     &.hover {
         background-color: @redorange-80;
+    }
+
+    &:focus,
+    &.focus {
+        background-color: @redorange-80;
+        outline-color: @redorange;
     }
 
     &:active,
@@ -274,6 +328,16 @@
         <a href="#" class="btn btn__disabled">Anchor Tag</a>
         <button class="btn btn__disabled">Button Tag</button>
         <input type="submit" value="Input Tag" class="btn btn__disabled">
+    - name: Default/hovered/active state
+      markup: |
+        <a href="#" class="btn btn__disabled">Anchor Tag</a>
+        <button class="btn btn__disabled">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn btn__disabled">
+    - name: Focused state
+      markup: |
+        <a href="#" class="btn btn__disabled focus">Anchor Tag</a>
+        <button class="btn btn__disabled focus">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn btn__disabled focus">
     tags:
     - cf-buttons
 */
@@ -286,12 +350,18 @@
     &:hover,
     &.hover,
     &:focus,
+    &.focus,
     &:active,
     &.active {
         background-color: @gray-20;
         color: @gray;
         cursor: default; // Fallback for IE/Opera
         cursor: not-allowed;
+    }
+
+    &:focus,
+    &.focus {
+        outline-color: @gray;
     }
 
 }
@@ -306,11 +376,16 @@
         <a href="#" class="btn btn__super">Anchor Tag</a>
         <button class="btn btn__super">Button Tag</button>
         <input type="submit" value="Input Tag" class="btn btn__super">
-    - name: Hovered/focused state
+    - name: Hovered state
       markup: |
         <a href="#" class="btn btn__super hover">Anchor Tag</a>
         <button class="btn btn__super hover">Button Tag</button>
         <input type="submit" value="Input Tag" class="btn btn__super hover">
+    - name: Focused state
+      markup: |
+        <a href="#" class="btn btn__super focus">Anchor Tag</a>
+        <button class="btn btn__super focus">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn btn__super focus">
     - name: Active state
       markup: |
         <a href="#" class="btn btn__super active">Anchor Tag</a>
