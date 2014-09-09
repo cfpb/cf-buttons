@@ -1025,7 +1025,7 @@ input.btn::-moz-focus-inner {
 .btn__link.focus {
   border-bottom-style: solid;
   background-color: transparent;
-  outline: thin dotted;
+  outline: thin dotted #0072ce;
 }
 .btn__link:active,
 .btn__link.active {
@@ -1036,6 +1036,111 @@ input.btn::-moz-focus-inner {
 .lt-ie8 button.btn__link,
 .lt-ie8 input.btn__link {
   padding: 0;
+}</code></pre>
+      </div>
+    </div>
+    <div id="secondary-button-link" class="docs-component">
+      <h2 class="docs-component_header"><span>Secondary button link</span></h2>
+      <div class="docs-component_intro">
+        <ul class="docs-notes">
+          <li>Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not be used in production.</li>
+        </ul>
+      </div>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Default state</h3>
+          <section class="docs-pattern_pattern">
+<a href="#" class="btn btn__link btn__secondary">Anchor Tag</a>
+<button class="btn btn__link btn__secondary">Button Tag</button>
+<input type="button" value="Input Tag" class="btn btn__link btn__secondary">
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link btn__secondary&quot;&gt;Anchor Tag&lt;/a&gt;
+&lt;button class=&quot;btn btn__link btn__secondary&quot;&gt;Button Tag&lt;/button&gt;
+&lt;input type=&quot;button&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__link btn__secondary&quot;&gt;</code></pre>
+            <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-buttons/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__link btn__secondary\&amp;quot;&gt;Anchor Tag&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__link btn__secondary\&amp;quot;&gt;Button Tag&lt;/button&gt;\n&lt;input type=\&amp;quot;button\&amp;quot; value=\&amp;quot;Input Tag\&amp;quot; class=\&amp;quot;btn btn__link btn__secondary\&amp;quot;&gt;\n&amp;quot;}">
+              <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+            </form>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Hovered state</h3>
+          <section class="docs-pattern_pattern">
+<a href="#" class="btn btn__link btn__secondary hover">Anchor Tag</a>
+<button class="btn btn__link btn__secondary hover">Button Tag</button>
+<input type="button" value="Input Tag" class="btn btn__link btn__secondary hover">
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link btn__secondary hover&quot;&gt;Anchor Tag&lt;/a&gt;
+&lt;button class=&quot;btn btn__link btn__secondary hover&quot;&gt;Button Tag&lt;/button&gt;
+&lt;input type=&quot;button&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__link btn__secondary hover&quot;&gt;</code></pre>
+            <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-buttons/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__link btn__secondary hover\&amp;quot;&gt;Anchor Tag&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__link btn__secondary hover\&amp;quot;&gt;Button Tag&lt;/button&gt;\n&lt;input type=\&amp;quot;button\&amp;quot; value=\&amp;quot;Input Tag\&amp;quot; class=\&amp;quot;btn btn__link btn__secondary hover\&amp;quot;&gt;\n&amp;quot;}">
+              <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+            </form>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Focused state</h3>
+          <section class="docs-pattern_pattern">
+<a href="#" class="btn btn__link btn__secondary focus">Anchor Tag</a>
+<button class="btn btn__link btn__secondary focus">Button Tag</button>
+<input type="button" value="Input Tag" class="btn btn__link btn__secondary focus">
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link btn__secondary focus&quot;&gt;Anchor Tag&lt;/a&gt;
+&lt;button class=&quot;btn btn__link btn__secondary focus&quot;&gt;Button Tag&lt;/button&gt;
+&lt;input type=&quot;button&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__link btn__secondary focus&quot;&gt;</code></pre>
+            <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-buttons/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__link btn__secondary focus\&amp;quot;&gt;Anchor Tag&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__link btn__secondary focus\&amp;quot;&gt;Button Tag&lt;/button&gt;\n&lt;input type=\&amp;quot;button\&amp;quot; value=\&amp;quot;Input Tag\&amp;quot; class=\&amp;quot;btn btn__link btn__secondary focus\&amp;quot;&gt;\n&amp;quot;}">
+              <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+            </form>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Active state</h3>
+          <section class="docs-pattern_pattern">
+<a href="#" class="btn btn__link btn__secondary active">Anchor Tag</a>
+<button class="btn btn__link btn__secondary active">Button Tag</button>
+<input type="button" value="Input Tag" class="btn btn__link btn__secondary active">
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__link btn__secondary active&quot;&gt;Anchor Tag&lt;/a&gt;
+&lt;button class=&quot;btn btn__link btn__secondary active&quot;&gt;Button Tag&lt;/button&gt;
+&lt;input type=&quot;button&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__link btn__secondary active&quot;&gt;</code></pre>
+            <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-buttons/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__link btn__secondary active\&amp;quot;&gt;Anchor Tag&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__link btn__secondary active\&amp;quot;&gt;Button Tag&lt;/button&gt;\n&lt;input type=\&amp;quot;button\&amp;quot; value=\&amp;quot;Input Tag\&amp;quot; class=\&amp;quot;btn btn__link btn__secondary active\&amp;quot;&gt;\n&amp;quot;}">
+              <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+            </form>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">.btn__link.btn__secondary,
+.btn__link.btn__secondary:link,
+.btn__link.btn__secondary:visited {
+  border-bottom-color: #75787b;
+  background-color: transparent;
+  color: #75787b;
+}
+.btn__link.btn__secondary:hover,
+.btn__link.btn__secondary.hover {
+  border-bottom-color: #43484e;
+  color: #43484e;
+}
+.btn__link.btn__secondary:focus,
+.btn__link.btn__secondary.focus {
+  outline-color: #75787b;
+}
+.btn__link.btn__secondary:active,
+.btn__link.btn__secondary.active {
+  border-bottom-color: #101820;
+  color: #101820;
 }</code></pre>
       </div>
     </div>
@@ -1135,8 +1240,7 @@ input.btn::-moz-focus-inner {
 }
 .btn__link.btn__warning:focus,
 .btn__link.btn__warning.focus {
-  border-bottom-color: #da6750;
-  outline: thin dotted;
+  outline-color: #d12124;
 }
 .btn__link.btn__warning:active,
 .btn__link.btn__warning.active {
