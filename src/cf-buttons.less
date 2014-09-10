@@ -708,7 +708,7 @@
     &.focus {
         border-bottom-style: solid;
         background-color: transparent;
-        outline: thin dotted;
+        outline: thin dotted @pacific;
     }
 
     &:active,
@@ -725,6 +725,67 @@
     button.btn__link,
     input.btn__link {
         padding: 0;
+    }
+
+}
+
+
+/* topdoc
+    name: Secondary button link
+    family: cf-buttons
+    notes:
+      - "Note that the .visited, .hover, .focus, .active classes are for
+         demonstration purposes only and should not be used in production."
+    patterns:
+    - name: Default state
+      markup: |
+        <a href="#" class="btn btn__link btn__secondary">Anchor Tag</a>
+        <button class="btn btn__link btn__secondary">Button Tag</button>
+        <input type="button" value="Input Tag" class="btn btn__link btn__secondary">
+    - name: Hovered state
+      markup: |
+        <a href="#" class="btn btn__link btn__secondary hover">Anchor Tag</a>
+        <button class="btn btn__link btn__secondary hover">Button Tag</button>
+        <input type="button" value="Input Tag" class="btn btn__link btn__secondary hover">
+    - name: Focused state
+      markup: |
+        <a href="#" class="btn btn__link btn__secondary focus">Anchor Tag</a>
+        <button class="btn btn__link btn__secondary focus">Button Tag</button>
+        <input type="button" value="Input Tag" class="btn btn__link btn__secondary focus">
+    - name: Active state
+      markup: |
+        <a href="#" class="btn btn__link btn__secondary active">Anchor Tag</a>
+        <button class="btn btn__link btn__secondary active">Button Tag</button>
+        <input type="button" value="Input Tag" class="btn btn__link btn__secondary active">
+    tags:
+    - cf-buttons
+*/
+
+.btn__link.btn__secondary {
+
+    &,
+    &:link,
+    &:visited {
+        border-bottom-color: @gray;
+        background-color: transparent;
+        color: @gray;
+    }
+
+    &:hover,
+    &.hover {
+        border-bottom-color: @darkgray;
+        color: @darkgray;
+    }
+
+    &:focus,
+    &.focus {
+        outline-color: @gray;
+    }
+
+    &:active,
+    &.active {
+        border-bottom-color: @black;
+        color: @black;
     }
 
 }
@@ -779,8 +840,7 @@
 
     &:focus,
     &.focus {
-        border-bottom-color: @redorange-80;
-        outline: thin dotted;
+        outline-color: @redorange;
     }
 
     &:active,
