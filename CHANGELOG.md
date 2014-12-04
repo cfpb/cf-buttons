@@ -2,6 +2,21 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 1.3.1 - 2014-11-02
+
+### Added
+- Nothing.
+
+### Deprecated
+- Nothing.
+
+### Removed
+- Nothing.
+
+### Fixed
+- Updated npm and bower deps and recompiled. This updates the docs template.
+
+
 ## 1.3.0 - 2014-09-09
 
 ### Added
