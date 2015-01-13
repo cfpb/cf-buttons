@@ -4,14 +4,37 @@
    ========================================================================== */
 
 /* topdoc
-    name: Less notes
+    name: Theme variables
     family: cf-buttons
+    notes:
+      - "The following color and sizing variables are exposed, allowing you to
+         easily override them before compiling."
     patterns:
-    - name: Variables
+    - name: Colors
       codenotes:
-        - "@btn-font-size: 14px;"
-        - "@btn-v-padding: 9px;"
-        - "@btn-v-padding-modifier-ie: .8;"
+        - |
+          @btn-text
+          @btn-bg
+          @btn-bg-hover
+          @btn-bg-active
+          @btn__secondary-text
+          @btn__secondary-bg
+          @btn__secondary-bg-hover
+          @btn__secondary-bg-active
+          @btn__warning-text
+          @btn__warning-bg
+          @btn__warning-bg-hover
+          @btn__warning-bg-active
+          @btn__disabled-text
+          @btn__disabled-bg
+          @btn__disabled-outline
+    - name: Sizing
+      codenotes:
+        - |
+          @btn-font-size
+          @btn-v-padding
+          @btn-v-padding-modifier-ie
+          @super-btn-font-size
       notes:
         - "@btn-v-padding-modifier-ie is used to fix the vertical padding bug in
            IE for <button>'s and <inputs>'s across various .btn styles.
@@ -22,6 +45,29 @@
     - less
 */
 
+// .btn
+@btn-text: #FFF;
+@btn-bg: #D4598A;
+@btn-bg-hover: darken(@btn-bg, 10%);
+@btn-bg-active: darken(@btn-bg, 15%);
+
+// .btn__secondary
+@btn__secondary-text: #FFF;
+@btn__secondary-bg: #A3729D;
+@btn__secondary-bg-hover: darken(@btn__secondary-bg, 10%);
+@btn__secondary-bg-active: darken(@btn__secondary-bg, 15%);
+
+// .btn__warning
+@btn__warning-text: #FFF;
+@btn__warning-bg: #F53A33;
+@btn__warning-bg-hover: darken(@btn__warning-bg, 10%);
+@btn__warning-bg-active: darken(@btn__warning-bg, 15%);
+
+// .btn__disabled
+@btn__disabled-text: greyscale(#A3729D);
+@btn__disabled-bg: lighten(greyscale(#A3729D), 40%);
+@btn__disabled-outline: greyscale(#A3729D);
+
 // Used across the various .btn styles
 @btn-font-size: 14px;
 @btn-v-padding: 8px;
@@ -29,6 +75,9 @@
 // Used to fix the vertical padding bug in IE for <button>'s and <inputs>'s
 // across various .btn styles
 @btn-v-padding-modifier-ie: .8;
+
+// Used in the `__super` modifier.
+@super-btn-font-size: 18px;
 
 
 /* topdoc
@@ -87,19 +136,19 @@
     &,
     &:link,
     &:visited {
-        background-color: @pacific;
-        color: @white;
+        background-color: @btn-bg;
+        color: @btn-text;
     }
 
     &:hover,
     &.hover {
-        background-color: @pacific-80;
+        background-color: @btn-bg-hover;
     }
 
     &:focus,
     &.focus {
-        background-color: @pacific-80;
-        outline: 1px dotted @pacific;
+        background-color: @btn-bg-hover;
+        outline: 1px dotted @btn-bg;
         // outline-offset is not supported everywhere but it adds a nice touch
         // in browsers where it is.
         outline-offset: 1px;
@@ -107,7 +156,7 @@
 
     &:active,
     &.active {
-        background-color: @navy-80;
+        background-color: @btn-bg-active;
     }
 
     button&::-moz-focus-inner,
@@ -178,24 +227,24 @@
     &,
     &:link,
     &:visited {
-        background-color: @gray;
-        color: @white;
+        background-color: @btn__secondary-bg;
+        color: @btn__secondary-text;
     }
 
     &:hover,
     &.hover {
-        background-color: @gray-80;
+        background-color: @btn__secondary-bg-hover;
     }
 
     &:focus,
     &.focus {
-        background-color: @gray-80;
-        outline-color: @gray;
+        background-color: @btn__secondary-bg-hover;
+        outline-color: @btn__secondary-bg;
     }
 
     &:active,
     &.active {
-        background-color: @darkgray;
+        background-color: @btn__secondary-bg-active;
     }
 
 }
@@ -293,24 +342,24 @@
     &,
     &:link,
     &:visited {
-        background-color: @redorange;
-        color: @white;
+        background-color: @btn__warning-bg;
+        color: @btn__warning-text;
     }
 
     &:hover,
     &.hover {
-        background-color: @redorange-80;
+        background-color: @btn__warning-bg-hover;
     }
 
     &:focus,
     &.focus {
-        background-color: @redorange-80;
-        outline-color: @redorange;
+        background-color: @btn__warning-bg-hover;
+        outline-color: @btn__warning-bg;
     }
 
     &:active,
     &.active {
-        background-color: @dark-redorange;
+        background-color: @btn__warning-bg-active;
     }
 
 }
@@ -320,14 +369,11 @@
     name: Disabled button
     family: cf-buttons
     notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for
-         demonstration purposes only and should not be used in production."
+      - "Disabled buttons do not contain separate hover and active states since
+         they should not be interacted with."
+      - "Note that the .focus class is for demonstration purposes only and
+         should not be used in production."
     patterns:
-    - name: Default/hovered/focused/active state
-      markup: |
-        <a href="#" class="btn btn__disabled">Anchor Tag</a>
-        <button class="btn btn__disabled">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn btn__disabled">
     - name: Default/hovered/active state
       markup: |
         <a href="#" class="btn btn__disabled">Anchor Tag</a>
@@ -353,15 +399,15 @@
     &.focus,
     &:active,
     &.active {
-        background-color: @gray-20;
-        color: @gray;
+        background-color: @btn__disabled-bg;
+        color: @btn__disabled-text;
         cursor: default; // Fallback for IE/Opera
         cursor: not-allowed;
     }
 
     &:focus,
     &.focus {
-        outline-color: @gray;
+        outline-color: @btn__disabled-outline;
     }
 
 }
@@ -394,8 +440,6 @@
     tags:
     - cf-buttons
 */
-
-@super-btn-font-size: 18px;
 
 .btn__super {
 
@@ -437,6 +481,36 @@
             <span class="btn_icon__left cf-icon cf-icon-left"></span>
             Button Tag
         </button>
+        <br>
+        <br>
+        <a href="#" class="btn btn__secondary">
+            <span class="btn_icon__left cf-icon cf-icon-left"></span>
+            Anchor Tag
+        </a>
+        <button class="btn btn__secondary">
+            <span class="btn_icon__left cf-icon cf-icon-left"></span>
+            Button Tag
+        </button>
+        <br>
+        <br>
+        <a href="#" class="btn btn__warning">
+            <span class="btn_icon__left cf-icon cf-icon-left"></span>
+            Anchor Tag
+        </a>
+        <button class="btn btn__warning">
+            <span class="btn_icon__left cf-icon cf-icon-left"></span>
+            Button Tag
+        </button>
+        <br>
+        <br>
+        <a href="#" class="btn btn__disabled">
+            <span class="btn_icon__left cf-icon cf-icon-left"></span>
+            Anchor Tag
+        </a>
+        <button class="btn btn__disabled">
+            <span class="btn_icon__left cf-icon cf-icon-left"></span>
+            Button Tag
+        </button>
     - name: Button icon right
       markup: |
         <a href="#" class="btn">
@@ -444,6 +518,36 @@
             <span class="btn_icon__right cf-icon cf-icon-right"></span>
         </a>
         <button class="btn">
+            Button Tag
+            <span class="btn_icon__right cf-icon cf-icon-right"></span>
+        </button>
+        <br>
+        <br>
+        <a href="#" class="btn btn__secondary">
+            Anchor Tag
+            <span class="btn_icon__right cf-icon cf-icon-right"></span>
+        </a>
+        <button class="btn btn__secondary">
+            Button Tag
+            <span class="btn_icon__right cf-icon cf-icon-right"></span>
+        </button>
+        <br>
+        <br>
+        <a href="#" class="btn btn__warning">
+            Anchor Tag
+            <span class="btn_icon__right cf-icon cf-icon-right"></span>
+        </a>
+        <button class="btn btn__warning">
+            Button Tag
+            <span class="btn_icon__right cf-icon cf-icon-right"></span>
+        </button>
+        <br>
+        <br>
+        <a href="#" class="btn btn__disabled">
+            Anchor Tag
+            <span class="btn_icon__right cf-icon cf-icon-right"></span>
+        </a>
+        <button class="btn btn__disabled">
             Button Tag
             <span class="btn_icon__right cf-icon cf-icon-right"></span>
         </button>
@@ -467,24 +571,42 @@
 
 .btn_icon__left {
     padding: 0 unit( 10.5px / @btn-font-size, em) 0 0;
-    border-right: 1px solid @white; // Fallback
-    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid @btn-text; // Fallback
+    border-right: 1px solid fade(@btn-text, 40%);
     margin: 0 unit( 7px / @btn-font-size, em) 0 0;
 
+    .btn__secondary & {
+        border-right-color: @btn__secondary-text; // Fallback
+        border-right-color: fade(@btn__secondary-text, 40%);
+    }
+    .btn__warning & {
+        border-right-color: @btn__warning-text; // Fallback
+        border-right-color: fade(@btn__warning-text, 40%);
+    }
     .btn__disabled & {
-        border-right-color: @gray-50;
+        border-right-color: @btn__disabled-text; // Fallback
+        border-right-color: fade(@btn__disabled-text, 40%);
     }
 }
 
 .btn_icon__right {
     padding: 0 0 0 unit( 10.5px / @btn-font-size, em);
     border-right: 0;
-    border-left: 1px solid @white; // Fallback
-    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid @btn-text; // Fallback
+    border-left: 1px solid fade(@btn-text, 40%);
     margin: 0 0 0 unit( 7px / @btn-font-size, em);
 
+    .btn__secondary & {
+        border-left-color: @btn__secondary-text; // Fallback
+        border-left-color: fade(@btn__secondary-text, 40%);
+    }
+    .btn__warning & {
+        border-left-color: @btn__warning-text; // Fallback
+        border-left-color: fade(@btn__warning-text, 40%);
+    }
     .btn__disabled & {
-        border-left-color: @gray-50;
+        border-left-color: @btn__disabled-text; // Fallback
+        border-left-color: fade(@btn__disabled-text, 40%);
     }
 }
 
@@ -577,7 +699,7 @@
       - "Note that the .visited, .hover, .focus, .active classes are for
          demonstration purposes only and should not be used in production."
     patterns:
-    - name: Default button style
+    - name: All button styles
       markup: |
         <a href="#" class="btn btn__grouped-first">Anchor</a>
         <a href="#" class="btn btn__grouped-last btn__compound-action">
@@ -589,8 +711,8 @@
         <button class="btn btn__grouped-last btn__compound-action">
             <span class="cf-icon cf-icon-down btn__grouped-last"></span>
         </button>
-    - name: Secondary button style
-      markup: |
+        <br>
+        <br>
         <a href="#" class="btn btn__grouped-first btn__secondary">Anchor</a>
         <a href="#" class="btn btn__grouped-last btn__secondary btn__compound-action">
             <span class="cf-icon cf-icon-down btn__grouped-last"></span>
@@ -601,8 +723,32 @@
         <button class="btn btn__grouped-last btn__secondary btn__compound-action">
             <span class="cf-icon cf-icon-down btn__grouped-last"></span>
         </button>
-    - name: Super button style
-      markup: |
+        <br>
+        <br>
+        <a href="#" class="btn btn__grouped-first btn__warning">Anchor</a>
+        <a href="#" class="btn btn__grouped-last btn__warning btn__compound-action">
+            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+        </a>
+        <br>
+        <br>
+        <button class="btn btn__grouped-first btn__warning">Button</button>
+        <button class="btn btn__grouped-last btn__warning btn__compound-action">
+            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+        </button>
+        <br>
+        <br>
+        <a href="#" class="btn btn__grouped-first btn__disabled">Anchor</a>
+        <a href="#" class="btn btn__grouped-last btn__disabled btn__compound-action">
+            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+        </a>
+        <br>
+        <br>
+        <button class="btn btn__grouped-first btn__disabled">Button</button>
+        <button class="btn btn__grouped-last btn__disabled btn__compound-action">
+            <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+        </button>
+        <br>
+        <br>
         <a href="#" class="btn btn__grouped-first btn__super">Anchor</a>
         <a href="#" class="btn btn__grouped-last btn__super btn__compound-action">
             <span class="cf-icon cf-icon-down btn__grouped-last"></span>
@@ -623,23 +769,40 @@
     &,
     &:link,
     &:visited {
-        background-color: @pacific-80;
+        background-color: @btn-bg-hover;
     }
 
     &:hover,
     &:focus,
     &.hover {
-        background-color: @pacific;
+        background-color: @btn-bg;
     }
 
     &.btn__secondary {
-        background-color: @gray-80;
+        background-color: @btn__secondary-bg-hover;
     }
 
     &.btn__secondary:hover,
     &.btn__secondary:focus,
     &.btn__secondary.hover {
-        background-color: @gray;
+        background-color: @btn__secondary-bg;
+    }
+
+    &.btn__warning {
+        background-color: @btn__warning-bg-hover;
+    }
+
+    &.btn__warning:hover,
+    &.btn__warning:focus,
+    &.btn__warning.hover {
+        background-color: @btn__warning-bg;
+    }
+
+    &.btn__disabled,
+    &.btn__disabled:hover,
+    &.btn__disabled:focus,
+    &.btn__disabled.hover {
+        background-color: @btn__disabled-bg;
     }
 
     &.btn__super {
@@ -684,7 +847,7 @@
 .btn__link {
 
     padding: 0;
-    border-bottom: 1px dotted @pacific;
+    border-bottom: 1px dotted @btn-bg;
     border-radius: 0;
     // This margin is necessary to vertically align link buttons with
     // regular buttons.
@@ -693,29 +856,30 @@
     &,
     &:link,
     &:visited {
+        border-bottom-color: @btn-bg;
         background-color: transparent;
-        color: @pacific;
+        color: @btn-bg;
     }
 
     &:hover,
     &.hover {
-        border-bottom: 1px solid @pacific-50;
+        border-bottom: 1px solid @btn-bg-hover;
         background-color: transparent;
-        color: @pacific-50;
+        color: @btn-bg-hover;
     }
 
     &:focus,
     &.focus {
         border-bottom-style: solid;
         background-color: transparent;
-        outline: thin dotted @pacific;
+        outline: thin dotted @btn-bg;
     }
 
     &:active,
     &.active {
-        border-bottom: 1px solid @navy;
+        border-bottom: 1px solid @btn-bg-active;
         background-color: transparent;
-        color: @navy;
+        color: @btn-bg-active;
     }
 
 }
@@ -766,26 +930,26 @@
     &,
     &:link,
     &:visited {
-        border-bottom-color: @gray;
+        border-bottom-color: @btn__secondary-bg;
         background-color: transparent;
-        color: @gray;
+        color: @btn__secondary-bg;
     }
 
     &:hover,
     &.hover {
-        border-bottom-color: @darkgray;
-        color: @darkgray;
+        border-bottom-color: @btn__secondary-bg-hover;
+        color: @btn__secondary-bg-hover;
     }
 
     &:focus,
     &.focus {
-        outline-color: @gray;
+        outline-color: @btn__secondary-bg;
     }
 
     &:active,
     &.active {
-        border-bottom-color: @black;
-        color: @black;
+        border-bottom-color: @btn__secondary-bg-active;
+        color: @btn__secondary-bg-active;
     }
 
 }
@@ -827,26 +991,26 @@
     &,
     &:link,
     &:visited {
-        border-bottom-color: @redorange;
+        border-bottom-color: @btn__warning-bg;
         background-color: transparent;
-        color: @redorange;
+        color: @btn__warning-bg;
     }
 
     &:hover,
     &.hover {
-        border-bottom-color: @redorange-80;
-        color: @redorange-80;
+        border-bottom-color: @btn__warning-bg-hover;
+        color: @btn__warning-bg-hover;
     }
 
     &:focus,
     &.focus {
-        outline-color: @redorange;
+        outline-color: @btn__warning-bg;
     }
 
     &:active,
     &.active {
-        border-bottom-color: @dark-redorange;
-        color: @dark-redorange;
+        border-bottom-color: @btn__warning-bg-active;
+        color: @btn__warning-bg-active;
     }
 
 }
