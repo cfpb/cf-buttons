@@ -12,6 +12,9 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
   Background info on the new Capital Framework color variables can be found at
   <https://github.com/cfpb/capital-framework/issues/115>.
 
+### Updated
+- NPM dependencies.
+
 
 ## 1.3.1 - 2014-11-02
 
