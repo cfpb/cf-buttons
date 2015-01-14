@@ -263,14 +263,14 @@ input.btn::-moz-focus-inner {
 .btn__disabled.focus,
 .btn__disabled:active,
 .btn__disabled.active {
-  background-color: #f1f1f1;
-  color: #717171;
+  background-color: #e3e3e3;
+  color: #646464;
   cursor: default;
   cursor: not-allowed;
 }
 .btn__disabled:focus,
 .btn__disabled.focus {
-  outline-color: #8b8b8b;
+  outline-color: #7d7d7d;
 }
 /* topdoc
     name: Super button
@@ -427,8 +427,8 @@ input.btn::-moz-focus-inner {
   border-right-color: rgba(255, 255, 255, 0.4);
 }
 .btn__disabled .btn_icon__left {
-  border-right-color: #717171;
-  border-right-color: rgba(113, 113, 113, 0.4);
+  border-right-color: #646464;
+  border-right-color: rgba(100, 100, 100, 0.4);
 }
 .btn_icon__right {
   padding: 0 0 0 0.75em;
@@ -446,8 +446,8 @@ input.btn::-moz-focus-inner {
   border-left-color: rgba(255, 255, 255, 0.4);
 }
 .btn__disabled .btn_icon__right {
-  border-left-color: #717171;
-  border-left-color: rgba(113, 113, 113, 0.4);
+  border-left-color: #646464;
+  border-left-color: rgba(100, 100, 100, 0.4);
 }
 /* topdoc
     name: Button group modifiers
@@ -616,7 +616,7 @@ input.btn::-moz-focus-inner {
 .btn__compound-action.btn__disabled:hover,
 .btn__compound-action.btn__disabled:focus,
 .btn__compound-action.btn__disabled.hover {
-  background-color: #f1f1f1;
+  background-color: #e3e3e3;
 }
 .btn__compound-action.btn__super {
   padding-left: 1.22222222em;
