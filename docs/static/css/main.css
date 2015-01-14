@@ -101,22 +101,22 @@
 .btn,
 .btn:link,
 .btn:visited {
-  background-color: #d4598a;
+  background-color: #c7336e;
   color: #ffffff;
 }
 .btn:hover,
 .btn.hover {
-  background-color: #c7336e;
+  background-color: #9e2958;
 }
 .btn:focus,
 .btn.focus {
-  background-color: #c7336e;
-  outline: 1px dotted #d4598a;
+  background-color: #9e2958;
+  outline: 1px dotted #c7336e;
   outline-offset: 1px;
 }
 .btn:active,
 .btn.active {
-  background-color: #b22e63;
+  background-color: #8a234c;
 }
 button.btn::-moz-focus-inner,
 input.btn::-moz-focus-inner {
@@ -167,21 +167,21 @@ input.btn::-moz-focus-inner {
 .btn__secondary,
 .btn__secondary:link,
 .btn__secondary:visited {
-  background-color: #a3729d;
+  background-color: #895983;
   color: #ffffff;
 }
 .btn__secondary:hover,
 .btn__secondary.hover {
-  background-color: #895983;
+  background-color: #6a4565;
 }
 .btn__secondary:focus,
 .btn__secondary.focus {
-  background-color: #895983;
-  outline-color: #a3729d;
+  background-color: #6a4565;
+  outline-color: #895983;
 }
 .btn__secondary:active,
 .btn__secondary.active {
-  background-color: #794f74;
+  background-color: #5b3b57;
 }
 /* topdoc
     name: Destructive action button
@@ -216,21 +216,21 @@ input.btn::-moz-focus-inner {
 .btn__warning,
 .btn__warning:link,
 .btn__warning:visited {
-  background-color: #f53a33;
+  background-color: #ea130b;
   color: #ffffff;
 }
 .btn__warning:hover,
 .btn__warning.hover {
-  background-color: #ea130b;
+  background-color: #b90f09;
 }
 .btn__warning:focus,
 .btn__warning.focus {
-  background-color: #ea130b;
-  outline-color: #f53a33;
+  background-color: #b90f09;
+  outline-color: #ea130b;
 }
 .btn__warning:active,
 .btn__warning.active {
-  background-color: #d1110a;
+  background-color: #a10d08;
 }
 /* topdoc
     name: Disabled button
@@ -264,7 +264,7 @@ input.btn::-moz-focus-inner {
 .btn__disabled:active,
 .btn__disabled.active {
   background-color: #f1f1f1;
-  color: #8b8b8b;
+  color: #717171;
   cursor: default;
   cursor: not-allowed;
 }
@@ -427,8 +427,8 @@ input.btn::-moz-focus-inner {
   border-right-color: rgba(255, 255, 255, 0.4);
 }
 .btn__disabled .btn_icon__left {
-  border-right-color: #8b8b8b;
-  border-right-color: rgba(139, 139, 139, 0.4);
+  border-right-color: #717171;
+  border-right-color: rgba(113, 113, 113, 0.4);
 }
 .btn_icon__right {
   padding: 0 0 0 0.75em;
@@ -446,8 +446,8 @@ input.btn::-moz-focus-inner {
   border-left-color: rgba(255, 255, 255, 0.4);
 }
 .btn__disabled .btn_icon__right {
-  border-left-color: #8b8b8b;
-  border-left-color: rgba(139, 139, 139, 0.4);
+  border-left-color: #717171;
+  border-left-color: rgba(113, 113, 113, 0.4);
 }
 /* topdoc
     name: Button group modifiers
@@ -589,28 +589,28 @@ input.btn::-moz-focus-inner {
 .btn__compound-action,
 .btn__compound-action:link,
 .btn__compound-action:visited {
-  background-color: #c7336e;
+  background-color: #9e2958;
 }
 .btn__compound-action:hover,
 .btn__compound-action:focus,
 .btn__compound-action.hover {
-  background-color: #d4598a;
+  background-color: #c7336e;
 }
 .btn__compound-action.btn__secondary {
-  background-color: #895983;
+  background-color: #6a4565;
 }
 .btn__compound-action.btn__secondary:hover,
 .btn__compound-action.btn__secondary:focus,
 .btn__compound-action.btn__secondary.hover {
-  background-color: #a3729d;
+  background-color: #895983;
 }
 .btn__compound-action.btn__warning {
-  background-color: #ea130b;
+  background-color: #b90f09;
 }
 .btn__compound-action.btn__warning:hover,
 .btn__compound-action.btn__warning:focus,
 .btn__compound-action.btn__warning.hover {
-  background-color: #f53a33;
+  background-color: #ea130b;
 }
 .btn__compound-action.btn__disabled,
 .btn__compound-action.btn__disabled:hover,
@@ -654,34 +654,34 @@ input.btn::-moz-focus-inner {
 */
 .btn__link {
   padding: 0;
-  border-bottom: 1px dotted #d4598a;
+  border-bottom: 1px dotted #c7336e;
   border-radius: 0;
   margin: 0.57142857em 0;
 }
 .btn__link,
 .btn__link:link,
 .btn__link:visited {
-  border-bottom-color: #d4598a;
+  border-bottom-color: #c7336e;
   background-color: transparent;
-  color: #d4598a;
+  color: #c7336e;
 }
 .btn__link:hover,
 .btn__link.hover {
-  border-bottom: 1px solid #c7336e;
+  border-bottom: 1px solid #9e2958;
   background-color: transparent;
-  color: #c7336e;
+  color: #9e2958;
 }
 .btn__link:focus,
 .btn__link.focus {
   border-bottom-style: solid;
   background-color: transparent;
-  outline: thin dotted #d4598a;
+  outline: thin dotted #c7336e;
 }
 .btn__link:active,
 .btn__link.active {
-  border-bottom: 1px solid #b22e63;
+  border-bottom: 1px solid #8a234c;
   background-color: transparent;
-  color: #b22e63;
+  color: #8a234c;
 }
 .lt-ie8 button.btn__link,
 .lt-ie8 input.btn__link {
@@ -720,23 +720,23 @@ input.btn::-moz-focus-inner {
 .btn__link.btn__secondary,
 .btn__link.btn__secondary:link,
 .btn__link.btn__secondary:visited {
-  border-bottom-color: #a3729d;
+  border-bottom-color: #895983;
   background-color: transparent;
-  color: #a3729d;
+  color: #895983;
 }
 .btn__link.btn__secondary:hover,
 .btn__link.btn__secondary.hover {
-  border-bottom-color: #895983;
-  color: #895983;
+  border-bottom-color: #6a4565;
+  color: #6a4565;
 }
 .btn__link.btn__secondary:focus,
 .btn__link.btn__secondary.focus {
-  outline-color: #a3729d;
+  outline-color: #895983;
 }
 .btn__link.btn__secondary:active,
 .btn__link.btn__secondary.active {
-  border-bottom-color: #794f74;
-  color: #794f74;
+  border-bottom-color: #5b3b57;
+  color: #5b3b57;
 }
 /* topdoc
     name: Destructive action button link
@@ -771,23 +771,23 @@ input.btn::-moz-focus-inner {
 .btn__link.btn__warning,
 .btn__link.btn__warning:link,
 .btn__link.btn__warning:visited {
-  border-bottom-color: #f53a33;
+  border-bottom-color: #ea130b;
   background-color: transparent;
-  color: #f53a33;
+  color: #ea130b;
 }
 .btn__link.btn__warning:hover,
 .btn__link.btn__warning.hover {
-  border-bottom-color: #ea130b;
-  color: #ea130b;
+  border-bottom-color: #b90f09;
+  color: #b90f09;
 }
 .btn__link.btn__warning:focus,
 .btn__link.btn__warning.focus {
-  outline-color: #f53a33;
+  outline-color: #ea130b;
 }
 .btn__link.btn__warning:active,
 .btn__link.btn__warning.active {
-  border-bottom-color: #d1110a;
-  color: #d1110a;
+  border-bottom-color: #a10d08;
+  color: #a10d08;
 }
 /* topdoc
   name: EOF
