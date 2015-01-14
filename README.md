@@ -20,9 +20,7 @@ Release notes are recorded on the
 If you would like to take advantage of more components or if you're new to
 Capital Framework, we encourage you to [start here](https://cfpb.github.io/capital-framework/).
 
-<div style="width:464px;">
-    <img src="screenshot.png" alt="">
-</div>
+![](screenshot.png)
 
 
 ## How to use this component
