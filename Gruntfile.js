@@ -20,6 +20,9 @@ module.exports = function(grunt) {
   require('jit-grunt')(grunt, {
     // Below line needed because task name does not match package name
     bower: 'grunt-bower-task'
+  })({
+    pluginsRoot: './node_modules/cf-grunt-config/node_modules',
+    customTasksDir: './node_modules/cf-grunt-config/tasks/options',
   });
   // Sets the CWD back to the project root so that the tasks work as expected.
   grunt.file.setBase('../../');
