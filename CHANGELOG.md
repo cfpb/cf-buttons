@@ -6,9 +6,10 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 ### Changed
 - Replaces all CFPB color variables with non-CFPB colors. To add the CFPB theme
-  to your project you will need to the CFPB color palette and an Capital Framework
-  theme overrides file. Both files can be found in the generator-cf repo here:
-  <https://github.com/himedlooff/generator-cf/tree/dev/app/templates/src/static/css>
+  to your project you will need to include the CFPB color palette and the
+  Capital Framework theme overrides file. Both files can be found in the
+  generator-cf repo here:
+  <https://github.com/cfpb/generator-cf/tree/master/app/templates/src/static/css>
   Background info on the new Capital Framework color variables can be found at
   <https://github.com/cfpb/capital-framework/issues/115>.
 
