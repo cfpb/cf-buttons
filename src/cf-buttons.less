@@ -45,39 +45,40 @@
     - less
 */
 
+// Color variables 
+
 // .btn
-@btn-text: #fff;
-@btn-bg: #c7336e;
-@btn-bg-hover: darken(@btn-bg, 10%);
-@btn-bg-active: darken(@btn-bg, 15%);
+@btn-text:                      #fff;
+@btn-bg:                        #c7336e;
+@btn-bg-hover:                  darken(@btn-bg, 10%);
+@btn-bg-active:                 darken(@btn-bg, 15%);
 
 // .btn__secondary
-@btn__secondary-text: #fff;
-@btn__secondary-bg: #895983;
-@btn__secondary-bg-hover: darken(@btn__secondary-bg, 10%);
-@btn__secondary-bg-active: darken(@btn__secondary-bg, 15%);
+@btn__secondary-text:           #fff;
+@btn__secondary-bg:             #895983;
+@btn__secondary-bg-hover:       darken(@btn__secondary-bg, 10%);
+@btn__secondary-bg-active:      darken(@btn__secondary-bg, 15%);
 
 // .btn__warning
-@btn__warning-text: #fff;
-@btn__warning-bg: #ea130b;
-@btn__warning-bg-hover: darken(@btn__warning-bg, 10%);
-@btn__warning-bg-active: darken(@btn__warning-bg, 15%);
+@btn__warning-text:             #fff;
+@btn__warning-bg:               #ea130b;
+@btn__warning-bg-hover:         darken(@btn__warning-bg, 10%);
+@btn__warning-bg-active:        darken(@btn__warning-bg, 15%);
 
 // .btn__disabled
-@btn__disabled-text: darken(greyscale(#c7336e), 10%);
-@btn__disabled-bg: lighten(greyscale(#c7336e), 40%);
-@btn__disabled-outline: greyscale(#c7336e);
+@btn__disabled-text:            darken(greyscale(#c7336e), 10%);
+@btn__disabled-bg:              lighten(greyscale(#c7336e), 40%);
+@btn__disabled-outline:         greyscale(#c7336e);
 
-// Used across the various .btn styles
-@btn-font-size: 14px;
-@btn-v-padding: 8px;
+// Sizing variables 
 
-// Used to fix the vertical padding bug in IE for <button>'s and <inputs>'s
-// across various .btn styles
-@btn-v-padding-modifier-ie: .8;
+// .btn
+@btn-font-size:                 14px;
+@btn-v-padding:                 8px;
+@btn-v-padding-modifier-ie:     .8;
 
-// Used in the `__super` modifier.
-@super-btn-font-size: 18px;
+// .btn__super
+@super-btn-font-size:           18px;
 
 
 /* topdoc
@@ -180,7 +181,6 @@
     }
 
     // Fixes button and input sizes in IE7
-    // Note that the "2" below is a magic number
     button.btn,
     input.btn {
         overflow: visible;
