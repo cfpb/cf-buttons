@@ -7,6 +7,6 @@
     "jit-grunt": "~0.4.1",
     "load-grunt-tasks": "~0.4.0",
     "node.extend": "~1.0.10",
-    "time-grunt": "~0.3.1"
+    "time-grunt": "~1.0.0"
   }
 }
