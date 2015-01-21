@@ -1,4 +1,3 @@
-
 # cf-buttons
 
 [![npm dependency status](https://gemnasium.com/cfpb/cf-buttons.svg)](https://gemnasium.com/cfpb/cf-buttons)
