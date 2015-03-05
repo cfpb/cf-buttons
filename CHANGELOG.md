@@ -2,6 +2,12 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
+## 1.4.1 - 2015-03-05
+
+### Changed
+- Transition no longer affects all button properties, only the background color.
+
+
 ## 1.4.0 - 2015-01-13
 
 ### Changed
@@ -19,7 +25,7 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 ## 1.3.1 - 2014-11-02
 
-### Fixed
+### Changed
 - Updated npm and bower deps and recompiled. This updates the docs template.
 
 
