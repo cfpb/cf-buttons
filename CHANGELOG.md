@@ -1,6 +1,11 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 1.4.2 - 2015-04-15
+
+### Fixed
+- Updated `btn__link` to use link styles from cf-core, instead of btn-bg styles.
+
 
 ## 1.4.1 - 2015-03-05
 
