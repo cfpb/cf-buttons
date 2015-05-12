@@ -1,5 +1,6 @@
 # cf-buttons
 
+[![Build Status](https://img.shields.io/travis/cfpb/cf-buttons.svg)](https://travis-ci.org/cfpb/cf-buttons) 
 [![npm dependency status](https://gemnasium.com/cfpb/cf-buttons.svg)](https://gemnasium.com/cfpb/cf-buttons)
 
 Button styles including default, secondary, destructive, disabled, super, and
