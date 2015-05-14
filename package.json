@@ -1,24 +1,32 @@
 {
+  "scripts": {
+    "test": "node_modules/.bin/babel src/*.jsx --out-dir coverage && node_modules/.bin/babel spec/*.jsx --out-dir coverage && node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -R spec coverage/spec/**/*"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "spec/*.jsx"
+    }
+  },
   "devDependencies": {
+    "babel": "^5.3.3",
+    "babel-core": "^5.3.3",
+    "babel-istanbul": "^0.1.8",
+    "blanket": "^1.1.7",
     "cf-component-demo": "git://github.com/cfpb/cf-component-demo.git#0.9.1",
     "cf-grunt-config": "~0.3.1",
+    "chai": "^2.3.0",
+    "coveralls": "^2.11.2",
     "glob": "~4.3.2",
-    "grunt": "~0.4.4",
-    "jit-grunt": "~0.9.0",
-    "load-grunt-tasks": "~2.0.0",
-    "node.extend": "~1.0.10",
-    "time-grunt": "~1.0.0",
-    "jasmine-node": "1.14.5",
-    "react": "0.13.3",
-    "jsx-test": "0.5.0",
     "gulp": "3.8.11",
-    "gulp-istanbul": "0.9.0",
-    "grunt-jasmine-node-coverage": "~0.4.1",
-    "gulp-jasmine": "~2.0.1"
-  },
-  "dependencies": {
-    "istanbul": "~0.3.14",
-    "istanbul-react": "~1.0.1",
-    "gulp-jsx-coverage": "git+https://github.com/dgreisen-cfpb/gulp-jsx-coverage"
+    "istanbul": "git://github.com/gotwarlost/istanbul#harmony",
+    "jasmine": "^2.3.1",
+    "jit-grunt": "~0.9.0",
+    "jsdom": "^5.4.1",
+    "load-grunt-tasks": "~2.0.0",
+    "mocha": "^2.2.4",
+    "node.extend": "~1.0.10",
+    "react": "0.13.3",
+    "react-tools": "^0.13.3",
+    "time-grunt": "~1.0.0"
   }
 }

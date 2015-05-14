@@ -1,6 +1,6 @@
 var React = require('react');
 
-allowedTypes = [
+var allowedTypes = [
   'super',
   'disabled',
   'warning',
