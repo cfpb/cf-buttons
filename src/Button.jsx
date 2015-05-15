@@ -39,8 +39,6 @@ var Button = React.createClass({
 
     var buttonProps = omit(this.props, 'type', 'rightIcon', 'leftIcon');
 
-    var Component = (this.props.href) ? React.DOM.a : React.DOM.button;
-//    return <Component className={buttonClasses} {...buttonProps}>{this.props.children}</Component>;
     if (this.props.href) {
       return <a className={buttonClasses} {...buttonProps}>{leftIcon}{this.props.children}{rightIcon}</a>
     } else {
