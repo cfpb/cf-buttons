@@ -1,4 +1,5 @@
 var React = require('react');
+require('react/addons')
 
 var allowedTypes = [
   'super',
@@ -27,17 +28,18 @@ var Button = React.createClass({
     var buttonClasses = 'btn' + buttonTypes.map(function(t) {
         return ' btn__' + t
       }).join('');
+    if (this.props.className) {
+      buttonClasses += ' ' + this.props.className;
+    }
 
     if (this.props.rightIcon) {
-      var classes = "btn_icon__right cf-icon cf-icon-" + this.props.rightIcon;
-      rightIcon = <span className={classes}></span>
+      rightIcon = React.addons.cloneWithProps(this.props.rightIcon, {className: 'btn_icon__right'});
     }
     if (this.props.leftIcon) {
-      var classes = "btn_icon__right cf-icon cf-icon-" + this.props.leftIcon;
-      rightIcon = <span className={classes}></span>
+      leftIcon = React.addons.cloneWithProps(this.props.leftIcon, {className: 'btn_icon__left'});
     }
 
-    var buttonProps = omit(this.props, 'type', 'rightIcon', 'leftIcon');
+    var buttonProps = omit(this.props, 'type', 'rightIcon', 'leftIcon', 'className', 'children');
 
     if (this.props.href) {
       return <a className={buttonClasses} {...buttonProps}>{leftIcon}{this.props.children}{rightIcon}</a>
