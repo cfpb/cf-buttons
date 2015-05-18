@@ -9,12 +9,12 @@ var allowedTypes = [
   'warning',
 ];
 
-function genClassName(classes, configPrefix, props) {
+function genClassName(requiredClasses, configPrefix, props) {
   var config = (props.config instanceof Array) ? props.config : [props.config];
   var configClasses = config.map(function(c) {
     return ' ' + configPrefix + '__' + c;
   }).join('')
-  var className = classes + configClasses
+  var className = requiredClasses + configClasses
   if (props.className) {
     className += ' ' + props.className;
   }
@@ -22,6 +22,33 @@ function genClassName(classes, configPrefix, props) {
 }
 
 var CFButton = React.createClass({
+  /*
+  Create a Capital Framework Button.
+
+  Configure the Button:
+  
+  ``` jsx
+  <div>
+    <p><CFButton config="secondary"></p>
+    <p><CFButton config={["warning", "super"]}></p>
+  </div>
+  ```
+
+  Add a left- or right-icon:
+
+  ``` jsx
+  <div>
+    <p><CFButton leftIcon={<CFIcon iconName="left">}></p>
+    <p><CFButton rightIcon={<CFIcon iconName="right"}></p>
+  </div>
+  ```
+
+  All other properties are passed on to the button:
+
+  ``` jsx
+  <CFButton config="secondary" style={{color: "red"}}>
+  ```
+  */
   propTypes: {
     config: React.PropTypes.oneOfType([
       React.PropTypes.string,
