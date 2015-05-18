@@ -3,11 +3,6 @@ var React = require('react/addons');
 var CFButton = require('../coverage/dist/CFButton');
 
 describe('A button', function() {
-  // it('should return true if greater than ten', function() {
-  //   var actual = gtten(20);
-  //   expect(actual).toBe(true);
-  // })
-
   it('should create all children inside the button element', function() {
     var button = jsx.renderComponent(
       CFButton, {href: '#', children: ['hello world']}
