@@ -82,6 +82,5 @@ describe('A button', function() {
     expect(node.childNodes.length).toEqual(2);
     expect(node.childNodes[0].tagName).toBe('I');
     expect(node.childNodes[0].className).toBe('btn_icon__left icon-class');
-
   })
 });
