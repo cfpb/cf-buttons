@@ -1,5 +1,7 @@
-var React = require('react');
-require('react/addons')
+if (typeof module !== 'undefined' && module.exports) {
+  var React = require('react');
+  require('react/addons');
+}
 
 var allowedTypes = [
   'super',
@@ -7,30 +9,36 @@ var allowedTypes = [
   'warning',
 ];
 
-var Button = React.createClass({
+function genClassName(classes, configPrefix, props) {
+  var config = (props.config instanceof Array) ? props.config : [props.config];
+  var configClasses = config.map(function(c) {
+    return ' ' + configPrefix + '__' + c;
+  }).join('')
+  var className = classes + configClasses
+  if (props.className) {
+    className += ' ' + props.className;
+  }
+  return className
+}
+
+var CFButton = React.createClass({
   propTypes: {
-    type: React.PropTypes.oneOfType([
+    config: React.PropTypes.oneOfType([
       React.PropTypes.string,
       React.PropTypes.array
     ]),
-    rightIcon: React.PropTypes.string,
-    leftIcon: React.PropTypes.string,
+    rightIcon: React.PropTypes.element,
+    leftIcon: React.PropTypes.element,
   },
   getDefaultProps: function() {
     return {
-      type: []
+      config: []
     };
   },
   render: function() {
     var rightIcon, leftIcon
 
-    var buttonTypes = (this.props.type instanceof Array) ? this.props.type : [this.props.type];
-    var buttonClasses = 'btn' + buttonTypes.map(function(t) {
-        return ' btn__' + t
-      }).join('');
-    if (this.props.className) {
-      buttonClasses += ' ' + this.props.className;
-    }
+    var btnClassName = genClassName('btn', 'btn', this.props)
 
     if (this.props.rightIcon) {
       rightIcon = React.addons.cloneWithProps(this.props.rightIcon, {className: 'btn_icon__right'});
@@ -39,12 +47,12 @@ var Button = React.createClass({
       leftIcon = React.addons.cloneWithProps(this.props.leftIcon, {className: 'btn_icon__left'});
     }
 
-    var buttonProps = omit(this.props, 'type', 'rightIcon', 'leftIcon', 'className', 'children');
+    var buttonProps = omit(this.props, 'config', 'rightIcon', 'leftIcon', 'className', 'children');
 
     if (this.props.href) {
-      return <a className={buttonClasses} {...buttonProps}>{leftIcon}{this.props.children}{rightIcon}</a>
+      return <a className={btnClassName} {...buttonProps}>{leftIcon}{this.props.children}{rightIcon}</a>
     } else {
-      return <button className={buttonClasses} {...buttonProps}>{leftIcon}{this.props.children}{rightIcon}</button>
+      return <button className={btnClassName} {...buttonProps}>{leftIcon}{this.props.children}{rightIcon}</button>
     }
   }
 });
@@ -62,4 +70,6 @@ function omit(obj) {
   return out
 }
 
-module.exports = Button;
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = CFButton;
+}

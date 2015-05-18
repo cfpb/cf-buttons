@@ -16,26 +16,26 @@ describe('A button', function() {
     expect(node.textContent).toEqual('hello world');
   });
 
-  it('should accept a type and pass it to its class', function() {
+  it('should accept a config and pass it to its class', function() {
     var button = jsx.renderComponent(
-      CFButton, {href: '#', type: 'foo'}
+      CFButton, {href: '#', config: 'foo'}
     );
     var node = button.getDOMNode();
     expect(node.className).toEqual('btn btn__foo');
   });
 
-  it('should accept multiple types and pass them to its class', function() {
+  it('should accept multiple configs and pass them to its class', function() {
     var arr = ['foo', 'bar'];
     var button = jsx.renderComponent(
-      CFButton, {href: '#', type: arr}
+      CFButton, {href: '#', config: arr}
     );
     var node = button.getDOMNode();
     expect(node.className).toEqual('btn btn__foo btn__bar');
   });
 
-  it('should accept className and append to the className generated from type', function() {
+  it('should accept className and append to the className generated from config', function() {
     var button = jsx.renderComponent(
-      CFButton, {href: '#', type: 'foo', className: 'hello world'}
+      CFButton, {href: '#', config: 'foo', className: 'hello world'}
     );
     var node = button.getDOMNode();
     expect(node.className).toEqual('btn btn__foo hello world');
@@ -43,7 +43,7 @@ describe('A button', function() {
 
   it('should create a button when no href is supplied', function() {
     var button = jsx.renderComponent(
-      CFButton, {type: 'foo', className: 'hello world'}
+      CFButton, {config: 'foo', className: 'hello world'}
     );
     var node = button.getDOMNode();
 
@@ -52,7 +52,7 @@ describe('A button', function() {
 
   it('should create an anchor when href is supplied', function() {
     var button = jsx.renderComponent(
-      CFButton, {type: 'foo', href: '#', className: 'hello world'}
+      CFButton, {config: 'foo', href: '#', className: 'hello world'}
     );
     var node = button.getDOMNode();
 
@@ -63,7 +63,7 @@ describe('A button', function() {
     var StubIcon = jsx.stubComponent('i', null, true)
     var rightIcon = React.createElement(StubIcon, {className: 'icon-class'})
     var button = jsx.renderComponent(
-      CFButton, {type: 'foo', children: [React.createElement('span', {})], rightIcon: rightIcon}
+      CFButton, {config: 'foo', children: [React.createElement('span', {})], rightIcon: rightIcon}
     );
     var node = button.getDOMNode();
     expect(node.childNodes.length).toEqual(2);
@@ -75,10 +75,9 @@ describe('A button', function() {
     var StubIcon = jsx.stubComponent('i', null, true)
     var leftIcon = React.createElement(StubIcon, {className: 'icon-class'})
     var button = jsx.renderComponent(
-      CFButton, {type: 'foo', children: [React.createElement('span', {})], leftIcon: leftIcon}
+      CFButton, {config: 'foo', children: [React.createElement('span', {})], leftIcon: leftIcon}
     );
     var node = button.getDOMNode();
-    console.log(node.innerHTML);
     expect(node.childNodes.length).toEqual(2);
     expect(node.childNodes[0].tagName).toBe('I');
     expect(node.childNodes[0].className).toBe('btn_icon__left icon-class');
