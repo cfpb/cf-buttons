@@ -438,14 +438,16 @@ input.btn::-moz-focus-inner {
 <a href="#" class="btn btn__disabled">Anchor Tag</a>
 <button class="btn btn__disabled">Button Tag</button>
 <input type="submit" value="Input Tag" class="btn btn__disabled">
+<button class="btn" disabled>Button Tag w/ disabled attr</button>
 
               </section>
               <footer class="docs-pattern_footer">
                 <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__disabled&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__disabled&quot;&gt;Button Tag&lt;/button&gt;
-&lt;input type=&quot;submit&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__disabled&quot;&gt;</code></pre>
+&lt;input type=&quot;submit&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__disabled&quot;&gt;
+&lt;button class=&quot;btn&quot; disabled&gt;Button Tag w/ disabled attr&lt;/button&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-buttons/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__disabled\&amp;quot;&gt;Anchor Tag&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__disabled\&amp;quot;&gt;Button Tag&lt;/button&gt;\n&lt;input type=\&amp;quot;submit\&amp;quot; value=\&amp;quot;Input Tag\&amp;quot; class=\&amp;quot;btn btn__disabled\&amp;quot;&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-buttons/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__disabled\&amp;quot;&gt;Anchor Tag&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__disabled\&amp;quot;&gt;Button Tag&lt;/button&gt;\n&lt;input type=\&amp;quot;submit\&amp;quot; value=\&amp;quot;Input Tag\&amp;quot; class=\&amp;quot;btn btn__disabled\&amp;quot;&gt;\n&lt;button class=\&amp;quot;btn\&amp;quot; disabled&gt;Button Tag w/ disabled attr&lt;/button&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
               </footer>
@@ -456,14 +458,16 @@ input.btn::-moz-focus-inner {
 <a href="#" class="btn btn__disabled focus">Anchor Tag</a>
 <button class="btn btn__disabled focus">Button Tag</button>
 <input type="submit" value="Input Tag" class="btn btn__disabled focus">
+<button class="btn focus" disabled>Button Tag w/ disabled attr</button>
 
               </section>
               <footer class="docs-pattern_footer">
                 <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;a href=&quot;#&quot; class=&quot;btn btn__disabled focus&quot;&gt;Anchor Tag&lt;/a&gt;
 &lt;button class=&quot;btn btn__disabled focus&quot;&gt;Button Tag&lt;/button&gt;
-&lt;input type=&quot;submit&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__disabled focus&quot;&gt;</code></pre>
+&lt;input type=&quot;submit&quot; value=&quot;Input Tag&quot; class=&quot;btn btn__disabled focus&quot;&gt;
+&lt;button class=&quot;btn focus&quot; disabled&gt;Button Tag w/ disabled attr&lt;/button&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-buttons/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__disabled focus\&amp;quot;&gt;Anchor Tag&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__disabled focus\&amp;quot;&gt;Button Tag&lt;/button&gt;\n&lt;input type=\&amp;quot;submit\&amp;quot; value=\&amp;quot;Input Tag\&amp;quot; class=\&amp;quot;btn btn__disabled focus\&amp;quot;&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-buttons/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__disabled focus\&amp;quot;&gt;Anchor Tag&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__disabled focus\&amp;quot;&gt;Button Tag&lt;/button&gt;\n&lt;input type=\&amp;quot;submit\&amp;quot; value=\&amp;quot;Input Tag\&amp;quot; class=\&amp;quot;btn btn__disabled focus\&amp;quot;&gt;\n&lt;button class=\&amp;quot;btn focus\&amp;quot; disabled&gt;Button Tag w/ disabled attr&lt;/button&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
               </footer>
@@ -471,21 +475,32 @@ input.btn::-moz-focus-inner {
           </div>
           <div class="docs-css">
             <pre class="docs-code"><code data-language="css">.btn__disabled,
+.btn[disabled],
 .btn__disabled:link,
+.btn[disabled]:link,
 .btn__disabled:visited,
+.btn[disabled]:visited,
 .btn__disabled:hover,
+.btn[disabled]:hover,
 .btn__disabled.hover,
+.btn[disabled].hover,
 .btn__disabled:focus,
+.btn[disabled]:focus,
 .btn__disabled.focus,
+.btn[disabled].focus,
 .btn__disabled:active,
-.btn__disabled.active {
+.btn[disabled]:active,
+.btn__disabled.active,
+.btn[disabled].active {
   background-color: #e3e3e3;
   color: #646464;
   cursor: default;
   cursor: not-allowed;
 }
 .btn__disabled:focus,
-.btn__disabled.focus {
+.btn[disabled]:focus,
+.btn__disabled.focus,
+.btn[disabled].focus {
   outline-color: #7d7d7d;
 }</code></pre>
           </div>
@@ -625,6 +640,10 @@ input.btn::-moz-focus-inner {
     <span class="btn_icon__left cf-icon cf-icon-left"></span>
     Button Tag
 </button>
+<button class="btn" disabled>
+    <span class="btn_icon__left cf-icon cf-icon-left"></span>
+    Button Tag w/ disabled attr
+</button>
 
               </section>
               <footer class="docs-pattern_footer">
@@ -665,9 +684,13 @@ input.btn::-moz-focus-inner {
 &lt;button class=&quot;btn btn__disabled&quot;&gt;
     &lt;span class=&quot;btn_icon__left cf-icon cf-icon-left&quot;&gt;&lt;/span&gt;
     Button Tag
+&lt;/button&gt;
+&lt;button class=&quot;btn&quot; disabled&gt;
+    &lt;span class=&quot;btn_icon__left cf-icon cf-icon-left&quot;&gt;&lt;/span&gt;
+    Button Tag w/ disabled attr
 &lt;/button&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-buttons/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;btn_icon__left cf-icon cf-icon-left\&amp;quot;&gt;&lt;/span&gt;\n    Anchor Tag\n&lt;/a&gt;\n&lt;button class=\&amp;quot;btn\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;btn_icon__left cf-icon cf-icon-left\&amp;quot;&gt;&lt;/span&gt;\n    Button Tag\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__secondary\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;btn_icon__left cf-icon cf-icon-left\&amp;quot;&gt;&lt;/span&gt;\n    Anchor Tag\n&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__secondary\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;btn_icon__left cf-icon cf-icon-left\&amp;quot;&gt;&lt;/span&gt;\n    Button Tag\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__warning\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;btn_icon__left cf-icon cf-icon-left\&amp;quot;&gt;&lt;/span&gt;\n    Anchor Tag\n&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__warning\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;btn_icon__left cf-icon cf-icon-left\&amp;quot;&gt;&lt;/span&gt;\n    Button Tag\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__disabled\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;btn_icon__left cf-icon cf-icon-left\&amp;quot;&gt;&lt;/span&gt;\n    Anchor Tag\n&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__disabled\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;btn_icon__left cf-icon cf-icon-left\&amp;quot;&gt;&lt;/span&gt;\n    Button Tag\n&lt;/button&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-buttons/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;btn_icon__left cf-icon cf-icon-left\&amp;quot;&gt;&lt;/span&gt;\n    Anchor Tag\n&lt;/a&gt;\n&lt;button class=\&amp;quot;btn\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;btn_icon__left cf-icon cf-icon-left\&amp;quot;&gt;&lt;/span&gt;\n    Button Tag\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__secondary\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;btn_icon__left cf-icon cf-icon-left\&amp;quot;&gt;&lt;/span&gt;\n    Anchor Tag\n&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__secondary\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;btn_icon__left cf-icon cf-icon-left\&amp;quot;&gt;&lt;/span&gt;\n    Button Tag\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__warning\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;btn_icon__left cf-icon cf-icon-left\&amp;quot;&gt;&lt;/span&gt;\n    Anchor Tag\n&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__warning\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;btn_icon__left cf-icon cf-icon-left\&amp;quot;&gt;&lt;/span&gt;\n    Button Tag\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__disabled\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;btn_icon__left cf-icon cf-icon-left\&amp;quot;&gt;&lt;/span&gt;\n    Anchor Tag\n&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__disabled\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;btn_icon__left cf-icon cf-icon-left\&amp;quot;&gt;&lt;/span&gt;\n    Button Tag\n&lt;/button&gt;\n&lt;button class=\&amp;quot;btn\&amp;quot; disabled&gt;\n    &lt;span class=\&amp;quot;btn_icon__left cf-icon cf-icon-left\&amp;quot;&gt;&lt;/span&gt;\n    Button Tag w/ disabled attr\n&lt;/button&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
               </footer>
@@ -713,6 +736,10 @@ input.btn::-moz-focus-inner {
     Button Tag
     <span class="btn_icon__right cf-icon cf-icon-right"></span>
 </button>
+<button class="btn" disabled>
+    Button Tag w/ disabled attr
+    <span class="btn_icon__right cf-icon cf-icon-right"></span>
+</button>
 
               </section>
               <footer class="docs-pattern_footer">
@@ -753,9 +780,13 @@ input.btn::-moz-focus-inner {
 &lt;button class=&quot;btn btn__disabled&quot;&gt;
     Button Tag
     &lt;span class=&quot;btn_icon__right cf-icon cf-icon-right&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class=&quot;btn&quot; disabled&gt;
+    Button Tag w/ disabled attr
+    &lt;span class=&quot;btn_icon__right cf-icon cf-icon-right&quot;&gt;&lt;/span&gt;
 &lt;/button&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-buttons/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn\&amp;quot;&gt;\n    Anchor Tag\n    &lt;span class=\&amp;quot;btn_icon__right cf-icon cf-icon-right\&amp;quot;&gt;&lt;/span&gt;\n&lt;/a&gt;\n&lt;button class=\&amp;quot;btn\&amp;quot;&gt;\n    Button Tag\n    &lt;span class=\&amp;quot;btn_icon__right cf-icon cf-icon-right\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__secondary\&amp;quot;&gt;\n    Anchor Tag\n    &lt;span class=\&amp;quot;btn_icon__right cf-icon cf-icon-right\&amp;quot;&gt;&lt;/span&gt;\n&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__secondary\&amp;quot;&gt;\n    Button Tag\n    &lt;span class=\&amp;quot;btn_icon__right cf-icon cf-icon-right\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__warning\&amp;quot;&gt;\n    Anchor Tag\n    &lt;span class=\&amp;quot;btn_icon__right cf-icon cf-icon-right\&amp;quot;&gt;&lt;/span&gt;\n&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__warning\&amp;quot;&gt;\n    Button Tag\n    &lt;span class=\&amp;quot;btn_icon__right cf-icon cf-icon-right\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__disabled\&amp;quot;&gt;\n    Anchor Tag\n    &lt;span class=\&amp;quot;btn_icon__right cf-icon cf-icon-right\&amp;quot;&gt;&lt;/span&gt;\n&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__disabled\&amp;quot;&gt;\n    Button Tag\n    &lt;span class=\&amp;quot;btn_icon__right cf-icon cf-icon-right\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-buttons/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn\&amp;quot;&gt;\n    Anchor Tag\n    &lt;span class=\&amp;quot;btn_icon__right cf-icon cf-icon-right\&amp;quot;&gt;&lt;/span&gt;\n&lt;/a&gt;\n&lt;button class=\&amp;quot;btn\&amp;quot;&gt;\n    Button Tag\n    &lt;span class=\&amp;quot;btn_icon__right cf-icon cf-icon-right\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__secondary\&amp;quot;&gt;\n    Anchor Tag\n    &lt;span class=\&amp;quot;btn_icon__right cf-icon cf-icon-right\&amp;quot;&gt;&lt;/span&gt;\n&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__secondary\&amp;quot;&gt;\n    Button Tag\n    &lt;span class=\&amp;quot;btn_icon__right cf-icon cf-icon-right\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__warning\&amp;quot;&gt;\n    Anchor Tag\n    &lt;span class=\&amp;quot;btn_icon__right cf-icon cf-icon-right\&amp;quot;&gt;&lt;/span&gt;\n&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__warning\&amp;quot;&gt;\n    Button Tag\n    &lt;span class=\&amp;quot;btn_icon__right cf-icon cf-icon-right\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__disabled\&amp;quot;&gt;\n    Anchor Tag\n    &lt;span class=\&amp;quot;btn_icon__right cf-icon cf-icon-right\&amp;quot;&gt;&lt;/span&gt;\n&lt;/a&gt;\n&lt;button class=\&amp;quot;btn btn__disabled\&amp;quot;&gt;\n    Button Tag\n    &lt;span class=\&amp;quot;btn_icon__right cf-icon cf-icon-right\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&lt;button class=\&amp;quot;btn\&amp;quot; disabled&gt;\n    Button Tag w/ disabled attr\n    &lt;span class=\&amp;quot;btn_icon__right cf-icon cf-icon-right\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
               </footer>
@@ -807,7 +838,8 @@ input.btn::-moz-focus-inner {
   border-right-color: #ffffff;
   border-right-color: rgba(255, 255, 255, 0.4);
 }
-.btn__disabled .btn_icon__left {
+.btn__disabled .btn_icon__left,
+.btn[disabled] .btn_icon__left {
   border-right-color: #646464;
   border-right-color: rgba(100, 100, 100, 0.4);
 }
@@ -826,7 +858,8 @@ input.btn::-moz-focus-inner {
   border-left-color: #ffffff;
   border-left-color: rgba(255, 255, 255, 0.4);
 }
-.btn__disabled .btn_icon__right {
+.btn__disabled .btn_icon__right,
+.btn[disabled] .btn_icon__right {
   border-left-color: #646464;
   border-left-color: rgba(100, 100, 100, 0.4);
 }</code></pre>
@@ -1002,6 +1035,12 @@ input.btn::-moz-focus-inner {
 </button>
 <br>
 <br>
+<button class="btn btn__grouped-first" disabled>Button w/ disabled attr</button>
+<button class="btn btn__grouped-last btn__compound-action" disabled>
+    <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+</button>
+<br>
+<br>
 <a href="#" class="btn btn__grouped-first btn__super">Anchor</a>
 <a href="#" class="btn btn__grouped-last btn__super btn__compound-action">
     <span class="cf-icon cf-icon-down btn__grouped-last"></span>
@@ -1063,6 +1102,12 @@ input.btn::-moz-focus-inner {
 &lt;/button&gt;
 &lt;br&gt;
 &lt;br&gt;
+&lt;button class=&quot;btn btn__grouped-first&quot; disabled&gt;Button w/ disabled attr&lt;/button&gt;
+&lt;button class=&quot;btn btn__grouped-last btn__compound-action&quot; disabled&gt;
+    &lt;span class=&quot;cf-icon cf-icon-down btn__grouped-last&quot;&gt;&lt;/span&gt;
+&lt;/button&gt;
+&lt;br&gt;
+&lt;br&gt;
 &lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-first btn__super&quot;&gt;Anchor&lt;/a&gt;
 &lt;a href=&quot;#&quot; class=&quot;btn btn__grouped-last btn__super btn__compound-action&quot;&gt;
     &lt;span class=&quot;cf-icon cf-icon-down btn__grouped-last&quot;&gt;&lt;/span&gt;
@@ -1074,7 +1119,7 @@ input.btn::-moz-focus-inner {
     &lt;span class=&quot;cf-icon cf-icon-down btn__grouped-last&quot;&gt;&lt;/span&gt;
 &lt;/button&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-buttons/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-first\&amp;quot;&gt;Anchor&lt;/a&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-last btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/a&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-first\&amp;quot;&gt;Button&lt;/button&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-last btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-first btn__secondary\&amp;quot;&gt;Anchor&lt;/a&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-last btn__secondary btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/a&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-first btn__secondary\&amp;quot;&gt;Button&lt;/button&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-last btn__secondary btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-first btn__warning\&amp;quot;&gt;Anchor&lt;/a&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-last btn__warning btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/a&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-first btn__warning\&amp;quot;&gt;Button&lt;/button&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-last btn__warning btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-first btn__disabled\&amp;quot;&gt;Anchor&lt;/a&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-last btn__disabled btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/a&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-first btn__disabled\&amp;quot;&gt;Button&lt;/button&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-last btn__disabled btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-first btn__super\&amp;quot;&gt;Anchor&lt;/a&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-last btn__super btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/a&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-first btn__super\&amp;quot;&gt;Button&lt;/button&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-last btn__super btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-buttons/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-first\&amp;quot;&gt;Anchor&lt;/a&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-last btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/a&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-first\&amp;quot;&gt;Button&lt;/button&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-last btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-first btn__secondary\&amp;quot;&gt;Anchor&lt;/a&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-last btn__secondary btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/a&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-first btn__secondary\&amp;quot;&gt;Button&lt;/button&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-last btn__secondary btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-first btn__warning\&amp;quot;&gt;Anchor&lt;/a&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-last btn__warning btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/a&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-first btn__warning\&amp;quot;&gt;Button&lt;/button&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-last btn__warning btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-first btn__disabled\&amp;quot;&gt;Anchor&lt;/a&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-last btn__disabled btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/a&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-first btn__disabled\&amp;quot;&gt;Button&lt;/button&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-last btn__disabled btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-first\&amp;quot; disabled&gt;Button w/ disabled attr&lt;/button&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-last btn__compound-action\&amp;quot; disabled&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-first btn__super\&amp;quot;&gt;Anchor&lt;/a&gt;\n&lt;a href=\&amp;quot;#\&amp;quot; class=\&amp;quot;btn btn__grouped-last btn__super btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/a&gt;\n&lt;br&gt;\n&lt;br&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-first btn__super\&amp;quot;&gt;Button&lt;/button&gt;\n&lt;button class=\&amp;quot;btn btn__grouped-last btn__super btn__compound-action\&amp;quot;&gt;\n    &lt;span class=\&amp;quot;cf-icon cf-icon-down btn__grouped-last\&amp;quot;&gt;&lt;/span&gt;\n&lt;/button&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
               </footer>
@@ -1110,7 +1155,11 @@ input.btn::-moz-focus-inner {
 .btn__compound-action.btn__disabled,
 .btn__compound-action.btn__disabled:hover,
 .btn__compound-action.btn__disabled:focus,
-.btn__compound-action.btn__disabled.hover {
+.btn__compound-action.btn__disabled.hover,
+.btn__compound-action[disabled],
+.btn__compound-action[disabled]:hover,
+.btn__compound-action[disabled]:focus,
+.btn__compound-action[disabled].hover {
   background-color: #e3e3e3;
 }
 .btn__compound-action.btn__super {

@@ -379,16 +379,19 @@
       <a href="#" class="btn btn__disabled">Anchor Tag</a>
       <button class="btn btn__disabled">Button Tag</button>
       <input type="submit" value="Input Tag" class="btn btn__disabled">
+      <button class="btn" disabled>Button Tag w/ disabled attr</button>
   - name: Focused state
     markup: |
       <a href="#" class="btn btn__disabled focus">Anchor Tag</a>
       <button class="btn btn__disabled focus">Button Tag</button>
       <input type="submit" value="Input Tag" class="btn btn__disabled focus">
+      <button class="btn focus" disabled>Button Tag w/ disabled attr</button>
   tags:
   - cf-buttons
 */
 
-.btn__disabled {
+.btn__disabled,
+.btn[disabled] {
 
     &,
     &:link,
@@ -511,6 +514,10 @@
           <span class="btn_icon__left cf-icon cf-icon-left"></span>
           Button Tag
       </button>
+      <button class="btn" disabled>
+          <span class="btn_icon__left cf-icon cf-icon-left"></span>
+          Button Tag w/ disabled attr
+      </button>
   - name: Button icon right
     markup: |
       <a href="#" class="btn">
@@ -551,6 +558,10 @@
           Button Tag
           <span class="btn_icon__right cf-icon cf-icon-right"></span>
       </button>
+      <button class="btn" disabled>
+          Button Tag w/ disabled attr
+          <span class="btn_icon__right cf-icon cf-icon-right"></span>
+      </button>
   - name: Just an icon
     markup: |
       <a href="#" class="btn">
@@ -583,7 +594,8 @@
         border-right-color: @btn__warning-text; // Fallback
         border-right-color: fade(@btn__warning-text, 40%);
     }
-    .btn__disabled & {
+    .btn__disabled &,
+    .btn[disabled] & {
         border-right-color: @btn__disabled-text; // Fallback
         border-right-color: fade(@btn__disabled-text, 40%);
     }
@@ -604,7 +616,8 @@
         border-left-color: @btn__warning-text; // Fallback
         border-left-color: fade(@btn__warning-text, 40%);
     }
-    .btn__disabled & {
+    .btn__disabled &,
+    .btn[disabled] & {
         border-left-color: @btn__disabled-text; // Fallback
         border-left-color: fade(@btn__disabled-text, 40%);
     }
@@ -749,6 +762,12 @@
       </button>
       <br>
       <br>
+      <button class="btn btn__grouped-first" disabled>Button w/ disabled attr</button>
+      <button class="btn btn__grouped-last btn__compound-action" disabled>
+          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+      </button>
+      <br>
+      <br>
       <a href="#" class="btn btn__grouped-first btn__super">Anchor</a>
       <a href="#" class="btn btn__grouped-last btn__super btn__compound-action">
           <span class="cf-icon cf-icon-down btn__grouped-last"></span>
@@ -801,7 +820,11 @@
     &.btn__disabled,
     &.btn__disabled:hover,
     &.btn__disabled:focus,
-    &.btn__disabled.hover {
+    &.btn__disabled.hover,
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:focus,
+    &[disabled].hover {
         background-color: @btn__disabled-bg;
     }
 
