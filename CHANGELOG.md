@@ -1,6 +1,20 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 1.7.0 - 2015-07-30
+- Updated the base button font-size to Design Manual spec
+
+## 1.6.2 - 2015-06-05
+- Moved @import rules to top of source file to make compilation cleaner.
+
+## 1.6.1 - 2015-06-01
+
+### Changed
+- Build process now uses @import statements instead of Grunt concatenation.
+
+### Added
+- pa11y accessibility tests running in Travis.
+
 ## 1.5.1 - 2015-05-18
 
 ### Added
